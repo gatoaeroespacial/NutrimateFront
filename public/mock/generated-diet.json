@@ -1,0 +1,42 @@
+[
+  {
+    "id": 1,
+    "name": "Chips de kale",
+    "short_description": "Kale horneado crujiente con aceite y especias (snack saludable)."
+  },
+  {
+    "id": 2,
+    "name": "Guacamole con palitos de zanahoria",
+    "short_description": "Guacamole clásico triturado acompañado de bastones de zanahoria."
+  },
+  {
+    "id": 4,
+    "name": "Hummus de remolacha con crudités",
+    "short_description": "Hummus de garbanzo mezclado con remolacha y tahini, servido con bastones de verduras."
+  },
+  {
+    "id": 7,
+    "name": "Gazpacho de sandía y feta",
+    "short_description": "Gazpacho frío que combina tomate y sandía, servido con dados de sandía y feta."
+  },
+  {
+    "id": 8,
+    "name": "Carpaccio de remolacha y champiñón",
+    "short_description": "Láminas de remolacha y champiñón con rúcula, avellanas y lascas de queso manchego."
+  },
+  {
+    "id": 9,
+    "name": "Dip de guisantes con hierbabuena",
+    "short_description": "Dip cremoso de guisantes y queso fresco con pistachos, servido con totopos caseros."
+  },
+  {
+    "id": 3,
+    "name": "Zanahorias encurtidas",
+    "short_description": "Zanahorias en vinagre con ajo y hierbas (encurtido preparado el día anterior)."
+  },
+  {
+    "id": 6,
+    "name": "Rollitos de pepino rellenos",
+    "short_description": "Pepino cortado en láminas finas relleno de yogur griego, feta y vegetales."
+  }
+]

@@ -1,0 +1,179 @@
+@if (loading) {
+  <div class="loading-container">
+    <div class="spinner"></div>
+    <p>Cargando receta...</p>
+  </div>
+}
+
+@if (!loading && recipe) {
+  <div class="recipe-detail-container">
+    <button class="back-button" (click)="goBack()">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" width="24" height="24">
+        <path d="M20 11H7.83l5.59-5.59L12 4l-8 8 8 8 1.41-1.41L7.83 13H20v-2z"/>
+      </svg>
+      Volver al Plan
+    </button>
+
+    <div class="recipe-header">
+      @if (recipe.image) {
+        <div class="recipe-image-container">
+          <img [src]="recipe.image" [alt]="recipe.name" class="recipe-image">
+        </div>
+      }
+      <div class="recipe-info">
+        <h1 class="recipe-title">{{ recipe.name }}</h1>
+        <p class="recipe-description">{{ recipe.short_description }}</p>
+        
+        @if (recipe.tags) {
+          <div class="recipe-tags">
+            @if (recipe.tags.type) {
+              <span class="tag tag-type">{{ recipe.tags.type }}</span>
+            }
+            @if (recipe.tags.intentions && recipe.tags.intentions.length > 0) {
+              @for (intention of recipe.tags.intentions; track intention) {
+                <span class="tag tag-intention">{{ intention }}</span>
+              }
+            }
+            @if (recipe.tags.conditions && recipe.tags.conditions.length > 0) {
+              @for (condition of recipe.tags.conditions; track condition) {
+                <span class="tag tag-condition">{{ condition }}</span>
+              }
+            }
+          </div>
+        }
+      </div>
+    </div>
+
+    <div class="recipe-content">
+      <!-- Ingredientes -->
+      @if (recipe.ingredients && recipe.ingredients.length > 0) {
+        <div class="section ingredients-section">
+          <h2 class="section-title">
+            <span class="icon">�</span>
+            Ingredientes
+          </h2>
+          <ul class="ingredients-list">
+            @for (ingredient of recipe.ingredients; track $index) {
+              <li class="ingredient-item">
+                <span class="bullet">•</span>
+                {{ ingredient }}
+              </li>
+            }
+          </ul>
+        </div>
+      }
+
+      <!-- Preparación -->
+      @if (recipe.preparation) {
+        <div class="section preparation-section">
+          <h2 class="section-title">
+            <span class="icon">👨‍🍳</span>
+            Modo de Preparación
+          </h2>
+          <p class="preparation-text">{{ recipe.preparation }}</p>
+        </div>
+      }
+
+      <!-- Información Nutricional -->
+      @if (recipe.nutrition) {
+        <div class="section nutrition-section">
+          <h2 class="section-title">
+            <span class="icon">📊</span>
+            Información Nutricional
+          </h2>
+          
+          @if (recipe.nutrition.per_serving) {
+            <div class="nutrition-table">
+              <h3 class="nutrition-subtitle">Por Porción</h3>
+              <div class="nutrition-grid">
+                @if (recipe.nutrition.per_serving.serving_g) {
+                  <div class="nutrition-item">
+                    <span class="nutrition-label">Porción</span>
+                    <span class="nutrition-value">{{ recipe.nutrition.per_serving.serving_g }} g</span>
+                  </div>
+                }
+                @if (recipe.nutrition.per_serving.calories_kcal !== null && recipe.nutrition.per_serving.calories_kcal !== undefined) {
+                  <div class="nutrition-item highlight">
+                    <span class="nutrition-label">Calorías</span>
+                    <span class="nutrition-value">{{ getNutritionValue(recipe.nutrition.per_serving.calories_kcal) }} kcal</span>
+                  </div>
+                }
+                @if (recipe.nutrition.per_serving.protein_g !== null && recipe.nutrition.per_serving.protein_g !== undefined) {
+                  <div class="nutrition-item">
+                    <span class="nutrition-label">Proteínas</span>
+                    <span class="nutrition-value">{{ getNutritionValue(recipe.nutrition.per_serving.protein_g) }} g</span>
+                  </div>
+                }
+                @if (recipe.nutrition.per_serving.carbs_g !== null && recipe.nutrition.per_serving.carbs_g !== undefined) {
+                  <div class="nutrition-item">
+                    <span class="nutrition-label">Carbohidratos</span>
+                    <span class="nutrition-value">{{ getNutritionValue(recipe.nutrition.per_serving.carbs_g) }} g</span>
+                  </div>
+                }
+                @if (recipe.nutrition.per_serving.fat_g !== null && recipe.nutrition.per_serving.fat_g !== undefined) {
+                  <div class="nutrition-item">
+                    <span class="nutrition-label">Grasas</span>
+                    <span class="nutrition-value">{{ getNutritionValue(recipe.nutrition.per_serving.fat_g) }} g</span>
+                  </div>
+                }
+                @if (recipe.nutrition.per_serving.saturated_fat_g !== null && recipe.nutrition.per_serving.saturated_fat_g !== undefined) {
+                  <div class="nutrition-item">
+                    <span class="nutrition-label">Grasas Saturadas</span>
+                    <span class="nutrition-value">{{ getNutritionValue(recipe.nutrition.per_serving.saturated_fat_g) }} g</span>
+                  </div>
+                }
+                @if (recipe.nutrition.per_serving.sugars_g !== null && recipe.nutrition.per_serving.sugars_g !== undefined) {
+                  <div class="nutrition-item">
+                    <span class="nutrition-label">Azúcares</span>
+                    <span class="nutrition-value">{{ getNutritionValue(recipe.nutrition.per_serving.sugars_g) }} g</span>
+                  </div>
+                }
+                @if (recipe.nutrition.per_serving.fiber_g !== null && recipe.nutrition.per_serving.fiber_g !== undefined) {
+                  <div class="nutrition-item">
+                    <span class="nutrition-label">Fibra</span>
+                    <span class="nutrition-value">{{ getNutritionValue(recipe.nutrition.per_serving.fiber_g) }} g</span>
+                  </div>
+                }
+              </div>
+            </div>
+          }
+
+          @if (recipe.nutrition.per_100g) {
+            <div class="nutrition-table">
+              <h3 class="nutrition-subtitle">Por 100g</h3>
+              <div class="nutrition-grid">
+                @if (recipe.nutrition.per_100g.calories_kcal !== null && recipe.nutrition.per_100g.calories_kcal !== undefined) {
+                  <div class="nutrition-item highlight">
+                    <span class="nutrition-label">Calorías</span>
+                    <span class="nutrition-value">{{ getNutritionValue(recipe.nutrition.per_100g.calories_kcal) }} kcal</span>
+                  </div>
+                }
+                @if (recipe.nutrition.per_100g.protein_g !== null && recipe.nutrition.per_100g.protein_g !== undefined) {
+                  <div class="nutrition-item">
+                    <span class="nutrition-label">Proteínas</span>
+                    <span class="nutrition-value">{{ getNutritionValue(recipe.nutrition.per_100g.protein_g) }} g</span>
+                  </div>
+                }
+                @if (recipe.nutrition.per_100g.fat_g !== null && recipe.nutrition.per_100g.fat_g !== undefined) {
+                  <div class="nutrition-item">
+                    <span class="nutrition-label">Grasas</span>
+                    <span class="nutrition-value">{{ getNutritionValue(recipe.nutrition.per_100g.fat_g) }} g</span>
+                  </div>
+                }
+              </div>
+            </div>
+          }
+        </div>
+      }
+    </div>
+  </div>
+}
+
+@if (!loading && !recipe) {
+  <div class="not-found">
+    <div class="not-found-icon">🔍</div>
+    <h2>Receta no encontrada</h2>
+    <p>Lo sentimos, la receta que buscas no está disponible.</p>
+    <button class="back-button" (click)="goBack()">Volver al Plan</button>
+  </div>
+}

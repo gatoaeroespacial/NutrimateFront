@@ -1,0 +1,32 @@
+{
+  "id": 1,
+  "nombre": "Juan Pérez",
+  "email": "juan.perez@example.com",
+  "edad": 28,
+  "peso": 82.5,
+  "altura": 175,
+  "enfermedades": ["Diabetes tipo 2", "Hipertensión"],
+  "idealActual": 75.0,
+  "progreso": [
+    {
+      "bmi": 31.02,
+      "registrationDate": "2025-08-01"
+    },
+    {
+      "bmi": 30.04,
+      "registrationDate": "2025-08-15"
+    },
+    {
+      "bmi": 29.39,
+      "registrationDate": "2025-09-01"
+    },
+    {
+      "bmi": 28.73,
+      "registrationDate": "2025-10-03"
+    },
+    {
+      "bmi": 26.94,
+      "registrationDate": "2025-11-03"
+    }
+  ]
+}

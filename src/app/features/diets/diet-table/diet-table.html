@@ -1,0 +1,55 @@
+<div class="table-wrapper">
+  <table class="diet-table">
+    <thead>
+      <tr>
+        <th class="day-column">Día</th>
+        <th>Desayuno</th>
+        <th>Almuerzo</th>
+        <th>Comida</th>
+      </tr>
+    </thead>
+    <tbody>
+      @for (dayPlan of weekPlan; track dayPlan.day) {
+        <tr>
+          <td class="day-cell">{{ dayPlan.day }}</td>
+          
+          <!-- Desayuno -->
+          <td class="meal-cell" 
+              [class.empty]="!dayPlan.breakfast"
+              (click)="dayPlan.breakfast && viewRecipe(dayPlan.breakfast.id)">
+            @if (dayPlan.breakfast) {
+              <div class="meal-image placeholder">🍽️</div>
+              <span class="meal-name">{{ dayPlan.breakfast.name }}</span>
+            } @else {
+              <span class="empty-text">-</span>
+            }
+          </td>
+          
+          <!-- Almuerzo -->
+          <td class="meal-cell" 
+              [class.empty]="!dayPlan.lunch"
+              (click)="dayPlan.lunch && viewRecipe(dayPlan.lunch.id)">
+            @if (dayPlan.lunch) {
+              <div class="meal-image placeholder">🍽️</div>
+              <span class="meal-name">{{ dayPlan.lunch.name }}</span>
+            } @else {
+              <span class="empty-text">-</span>
+            }
+          </td>
+          
+          <!-- Comida -->
+          <td class="meal-cell" 
+              [class.empty]="!dayPlan.dinner"
+              (click)="dayPlan.dinner && viewRecipe(dayPlan.dinner.id)">
+            @if (dayPlan.dinner) {
+              <div class="meal-image placeholder">🍽️</div>
+              <span class="meal-name">{{ dayPlan.dinner.name }}</span>
+            } @else {
+              <span class="empty-text">-</span>
+            }
+          </td>
+        </tr>
+      }
+    </tbody>
+  </table>
+</div>

@@ -1,0 +1,566 @@
+.progress-container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 2rem;
+  animation: fadeIn 0.5s ease;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.page-title {
+  font-size: 2.5rem;
+  color: #B45253;
+  margin-bottom: 2rem;
+  text-align: center;
+  font-weight: 700;
+}
+
+// Tabs
+.tabs {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 2rem;
+  border-bottom: 2px solid #e0e0e0;
+}
+
+.tab-button {
+  padding: 1rem 2rem;
+  background: transparent;
+  border: none;
+  border-bottom: 3px solid transparent;
+  cursor: pointer;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #666;
+  transition: all 0.3s ease;
+  position: relative;
+
+  &:hover {
+    color: #B45253;
+  }
+
+  &.active {
+    color: #B45253;
+    border-bottom-color: #B45253;
+  }
+
+  .coming-soon {
+    display: inline-block;
+    margin-left: 0.5rem;
+    padding: 0.2rem 0.5rem;
+    background: #FFE797;
+    color: #B45253;
+    font-size: 0.7rem;
+    border-radius: 12px;
+    font-weight: 700;
+  }
+}
+
+// Cards
+.card {
+  background: white;
+  border-radius: 16px;
+  padding: 2rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  margin-bottom: 2rem;
+}
+
+.card-title {
+  font-size: 1.8rem;
+  color: #B45253;
+  margin: 0 0 1rem 0;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  font-weight: 700;
+
+  .icon {
+    font-size: 2rem;
+  }
+}
+
+.card-subtitle {
+  font-size: 1.3rem;
+  color: #B45253;
+  margin: 0 0 1.5rem 0;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-weight: 700;
+
+  .icon {
+    font-size: 1.5rem;
+  }
+}
+
+.card-description {
+  color: #666;
+  margin-bottom: 1.5rem;
+  font-size: 1rem;
+}
+
+// Calculadora de IMC
+.calculator-form {
+  .form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .form-group {
+    display: flex;
+    flex-direction: column;
+
+    label {
+      font-weight: 600;
+      color: #333;
+      margin-bottom: 0.5rem;
+      font-size: 1rem;
+    }
+
+    .form-input {
+      padding: 1rem;
+      border: 2px solid #e0e0e0;
+      border-radius: 8px;
+      font-size: 1rem;
+      transition: all 0.3s ease;
+
+      &:focus {
+        outline: none;
+        border-color: #B45253;
+        box-shadow: 0 0 0 3px rgba(180, 82, 83, 0.1);
+      }
+
+      &::placeholder {
+        color: #999;
+      }
+    }
+  }
+
+  .error-message {
+    background: #fee;
+    color: #c33;
+    padding: 0.75rem 1rem;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+    font-size: 0.9rem;
+  }
+
+  .calculate-button {
+    width: 100%;
+    padding: 1rem 2rem;
+    background: linear-gradient(135deg, #B45253 0%, #9a3f40 100%);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 1.1rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+
+    &:hover:not(.disabled) {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 20px rgba(180, 82, 83, 0.3);
+    }
+
+    &.disabled {
+      opacity: 0.5;
+      cursor: not-allowed;
+    }
+
+    .spinner-small {
+      width: 20px;
+      height: 20px;
+      border: 3px solid rgba(255, 255, 255, 0.3);
+      border-top: 3px solid white;
+      border-radius: 50%;
+      animation: spin 1s linear infinite;
+    }
+  }
+
+  .bmi-result {
+    margin-top: 2rem;
+    padding: 2rem;
+    border-radius: 12px;
+    text-align: center;
+    animation: slideIn 0.5s ease;
+
+    &.underweight {
+      background: linear-gradient(135deg, #e3f2fd 0%, #bbdefb 100%);
+      border-left: 4px solid #2196f3;
+    }
+
+    &.normal {
+      background: linear-gradient(135deg, #e8f5e9 0%, #c8e6c9 100%);
+      border-left: 4px solid #4caf50;
+    }
+
+    &.overweight {
+      background: linear-gradient(135deg, #fff3e0 0%, #ffe0b2 100%);
+      border-left: 4px solid #ff9800;
+    }
+
+    &.obese {
+      background: linear-gradient(135deg, #ffebee 0%, #ffcdd2 100%);
+      border-left: 4px solid #f44336;
+    }
+
+    .bmi-value {
+      font-size: 3rem;
+      font-weight: 700;
+      color: #333;
+      margin-bottom: 0.5rem;
+    }
+
+    .bmi-label {
+      font-size: 1rem;
+      color: #666;
+      margin-bottom: 0.5rem;
+    }
+
+    .bmi-category {
+      font-size: 1.3rem;
+      font-weight: 600;
+      color: #333;
+    }
+  }
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+// Loading
+.loading-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 4rem;
+  gap: 1rem;
+
+  .spinner {
+    width: 60px;
+    height: 60px;
+    border: 5px solid #f3f3f3;
+    border-top: 5px solid #B45253;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+  }
+
+  p {
+    font-size: 1.1rem;
+    color: #666;
+  }
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+// Progress Grid
+.progress-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+
+  .full-width {
+    grid-column: 1 / -1;
+  }
+}
+
+// Stats Cards
+.stats-card {
+  .stats-content {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .stat-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    background: linear-gradient(135deg, #FFE797 0%, #FCB53B 100%);
+    border-radius: 8px;
+    border-left: 4px solid #B45253;
+
+    .stat-label {
+      font-size: 1rem;
+      color: #333;
+      font-weight: 600;
+    }
+
+    .stat-value {
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: #B45253;
+
+      &.improvement {
+        color: #4caf50;
+      }
+
+      &.regression {
+        color: #f44336;
+      }
+
+      &.underweight { color: #2196f3; }
+      &.normal { color: #4caf50; }
+      &.overweight { color: #ff9800; }
+      &.obese { color: #f44336; }
+
+      .trend-icon {
+        margin-left: 0.5rem;
+        font-size: 1.2rem;
+      }
+    }
+
+    .stat-value-small {
+      font-size: 1rem;
+      font-weight: 600;
+      color: #555;
+    }
+  }
+}
+
+// Progress Card
+.progress-card {
+  .progress-info {
+    .progress-stats {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1rem;
+      margin-bottom: 2rem;
+
+      .progress-stat {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 1rem;
+        background: #f8f9fa;
+        border-radius: 8px;
+
+        .label {
+          font-size: 0.9rem;
+          color: #666;
+          margin-bottom: 0.5rem;
+        }
+
+        .value {
+          font-size: 1.5rem;
+          font-weight: 700;
+          color: #333;
+
+          &.highlight {
+            color: #B45253;
+          }
+        }
+      }
+    }
+
+    .progress-bar-container {
+      margin-bottom: 2rem;
+
+      .progress-bar {
+        width: 100%;
+        height: 30px;
+        background: #e0e0e0;
+        border-radius: 15px;
+        overflow: hidden;
+        margin-bottom: 0.5rem;
+
+        .progress-fill {
+          height: 100%;
+          background: linear-gradient(90deg, #B45253 0%, #FCB53B 100%);
+          transition: width 1s ease;
+          border-radius: 15px;
+        }
+      }
+
+      .progress-percentage {
+        display: block;
+        text-align: center;
+        font-size: 1.2rem;
+        font-weight: 700;
+        color: #B45253;
+      }
+    }
+
+    .weight-loss-summary {
+      text-align: center;
+      padding: 1.5rem;
+      background: linear-gradient(135deg, #e8f5e9 0%, #c8e6c9 100%);
+      border-radius: 12px;
+      border-left: 4px solid #4caf50;
+
+      .summary-text {
+        font-size: 1.3rem;
+        color: #2e7d32;
+        margin: 0 0 0.5rem 0;
+      }
+
+      .summary-subtext {
+        font-size: 1rem;
+        color: #558b2f;
+        margin: 0;
+      }
+    }
+  }
+}
+
+// History Table
+.history-card {
+  .history-table-wrapper {
+    overflow-x: auto;
+  }
+
+  .history-table {
+    width: 100%;
+    border-collapse: collapse;
+
+    thead {
+      background: linear-gradient(135deg, #B45253 0%, #9a3f40 100%);
+      color: white;
+
+      th {
+        padding: 1rem;
+        text-align: left;
+        font-weight: 700;
+        font-size: 1rem;
+      }
+    }
+
+    tbody {
+      tr {
+        border-bottom: 1px solid #e0e0e0;
+        transition: background 0.3s ease;
+
+        &:hover {
+          background: #f8f9fa;
+        }
+
+        td {
+          padding: 1rem;
+          font-size: 1rem;
+
+          &.underweight { color: #2196f3; font-weight: 600; }
+          &.normal { color: #4caf50; font-weight: 600; }
+          &.overweight { color: #ff9800; font-weight: 600; }
+          &.obese { color: #f44336; font-weight: 600; }
+
+          .trend-positive {
+            color: #4caf50;
+            font-weight: 600;
+          }
+
+          .trend-negative {
+            color: #f44336;
+            font-weight: 600;
+          }
+
+          .trend-neutral {
+            color: #999;
+          }
+        }
+      }
+    }
+  }
+}
+
+// Coming Soon
+.coming-soon-content {
+  text-align: center;
+  padding: 6rem 2rem;
+
+  h2 {
+    font-size: 2.5rem;
+    color: #B45253;
+    margin-bottom: 1rem;
+  }
+
+  p {
+    font-size: 1.2rem;
+    color: #666;
+  }
+}
+
+// Responsive
+@media (max-width: 1024px) {
+  .progress-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .calculator-form .form-row {
+    grid-template-columns: 1fr;
+  }
+
+  .progress-card .progress-info .progress-stats {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .progress-container {
+    padding: 1rem;
+  }
+
+  .page-title {
+    font-size: 2rem;
+  }
+
+  .tabs {
+    flex-direction: column;
+    gap: 0;
+
+    .tab-button {
+      border-bottom: 1px solid #e0e0e0;
+      border-left: 3px solid transparent;
+      text-align: left;
+
+      &.active {
+        border-bottom: 1px solid #e0e0e0;
+        border-left-color: #B45253;
+      }
+    }
+  }
+
+  .card {
+    padding: 1.5rem;
+  }
+
+  .card-title {
+    font-size: 1.5rem;
+  }
+
+  .history-table {
+    font-size: 0.9rem;
+
+    thead th,
+    tbody td {
+      padding: 0.75rem 0.5rem;
+    }
+  }
+}

@@ -1,0 +1,168 @@
+.table-wrapper {
+  overflow-x: auto;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.diet-table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+  background-color: white;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.diet-table thead {
+  background-color: #B45253;
+  color: white;
+}
+
+.diet-table th {
+  padding: 1.2rem;
+  text-align: center;
+  font-weight: 600;
+  font-size: 1.1rem;
+  letter-spacing: 0.5px;
+  border-bottom: 3px solid #FCB53B;
+}
+
+.diet-table th.day-column {
+  background-color: #FCB53B;
+  color: #333;
+  width: 120px;
+}
+
+.diet-table tbody tr {
+  transition: all 0.3s ease;
+}
+
+.diet-table tbody tr:nth-child(even) {
+  background-color: #FFE797;
+}
+
+.diet-table tbody tr:nth-child(odd) {
+  background-color: #fff;
+}
+
+.diet-table tbody tr:hover {
+  background-color: #FCB53B;
+  transform: scale(1.01);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.day-cell {
+  padding: 1.5rem 1rem;
+  text-align: center;
+  font-weight: 700;
+  font-size: 1.1rem;
+  color: #B45253;
+  background-color: #FFE797;
+  border-right: 2px solid #FCB53B;
+}
+
+.diet-table tbody tr:hover .day-cell {
+  background-color: #FCB53B;
+  color: white;
+}
+
+.meal-cell {
+  padding: 1rem;
+  text-align: center;
+  vertical-align: middle;
+  transition: all 0.3s ease;
+  
+  &:not(.empty) {
+    cursor: pointer;
+    
+    &:hover {
+      background-color: #FCB53B;
+      transform: scale(1.05);
+    }
+    
+    &:active {
+      transform: scale(0.98);
+    }
+  }
+
+  &.empty {
+    cursor: default;
+    opacity: 0.5;
+  }
+}
+
+.meal-image {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  margin-bottom: 0.5rem;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: white;
+  border: 3px solid #FCB53B;
+}
+
+.meal-image.placeholder {
+  display: grid;
+  place-items: center;
+  background: #FFE797;
+  font-size: 2.5rem;
+}
+
+.meal-name {
+  display: block;
+  font-size: 0.95rem;
+  color: #333;
+  font-weight: 500;
+  margin-top: 0.5rem;
+}
+
+.diet-table tbody tr:hover .meal-name {
+  color: #B45253;
+  font-weight: 600;
+}
+
+.empty-text {
+  color: #999;
+  font-size: 1.2rem;
+}
+
+@media (max-width: 1024px) {
+  .diet-table th,
+  .day-cell {
+    font-size: 1rem;
+    padding: 1rem 0.5rem;
+  }
+
+  .meal-image {
+    width: 60px;
+    height: 60px;
+  }
+
+  .meal-name {
+    font-size: 0.85rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .diet-table th,
+  .day-cell,
+  .meal-cell {
+    padding: 0.75rem 0.5rem;
+  }
+
+  .meal-image {
+    width: 50px;
+    height: 50px;
+    border-width: 2px;
+  }
+
+  .meal-name {
+    font-size: 0.75rem;
+  }
+
+  .day-cell {
+    font-size: 0.9rem;
+  }
+}

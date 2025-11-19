@@ -1,0 +1,254 @@
+<div class="progress-container">
+
+  <h1 class="page-title">Mi Progreso</h1>
+
+  <!-- Tabs -->
+  <div class="tabs">
+    <button 
+      class="tab-button" 
+      [class.active]="activeTab === 'current'"
+      (click)="switchTab('current')">
+      Progreso Actual
+    </button>
+    <button 
+      class="tab-button" 
+      [class.active]="activeTab === 'comparison'"
+      (click)="switchTab('comparison')">
+      Comparación con el Ideal
+      <span class="coming-soon">Próximamente</span>
+    </button>
+  </div>
+
+  <!-- Tab Content: Progreso Actual -->
+  @if (activeTab === 'current') {
+    <div class="tab-content">
+      
+      <!-- Estado de carga -->
+      @if (loadingUser) {
+        <div class="loading-container">
+          <div class="spinner"></div>
+          <p>Cargando tus datos...</p>
+        </div>
+      }
+
+      @if (!loadingUser && user) {
+        <!-- Calculadora de IMC -->
+        <div class="card calculator-card">
+          <h2 class="card-title">
+            Calcular Índice de Masa Corporal
+          </h2>
+          
+          <p class="card-description">
+            Ingresa tu altura y peso para calcular tu IMC actual
+          </p>
+
+          <!-- Mostrar datos previos -->
+          <div class="previous-data-display">
+            <h3 class="section-subtitle"><strong>Última Medición:</strong></h3>
+            <div class="previous-stats">
+              <div class="prev-stat">
+                <span class="label"><strong>Peso:</strong></span>
+                <span class="value highlight">{{ previousWeight }} kg</span>
+              </div>
+              <div class="prev-stat">
+                <span class="label"><strong>Altura:</strong></span>
+                <span class="value highlight">{{ previousHeight }} cm</span>
+              </div>
+              <div class="prev-stat">
+                <span class="label"><strong>IMC:</strong></span>
+                <span class="value highlight" [class]="getBMICategoryClass(previousBMI)">{{ previousBMI }}</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="calculator-form">
+            <div class="form-row">
+              <div class="form-group">
+                <label for="height">Altura (cm)</label>
+                <input 
+                  type="number" 
+                  id="height"
+                  [(ngModel)]="newHeight"
+                  placeholder="Ej: 175"
+                  min="100"
+                  max="250"
+                  class="form-input">
+              </div>
+
+              <div class="form-group">
+                <label for="weight">Peso (kg)</label>
+                <input 
+                  type="number" 
+                  id="weight"
+                  [(ngModel)]="newWeight"
+                  placeholder="Ej: 70"
+                  min="30"
+                  max="300"
+                  step="0.1"
+                  class="form-input">
+              </div>
+            </div>
+
+            @if (error) {
+              <div class="error-message">{{ error }}</div>
+            }
+
+            @if (successMessage) {
+              <div class="success-message">{{ successMessage }}</div>
+            }
+
+            <button 
+              class="calculate-button"
+              [class.disabled]="!canCalculate() || calculating || saving"
+              [disabled]="!canCalculate() || calculating || saving"
+              (click)="calculateProgress()">
+              @if (calculating) {
+                <span class="spinner-small"></span>
+                Calculando desde el backend...
+              } @else if (saving) {
+                <span class="spinner-small"></span>
+                Guardando medición...
+              } @else {
+                Calcular y Guardar Progreso
+              }
+            </button>
+          </div>
+        </div>
+
+        <!-- Resultado de la Comparación -->
+        @if (comparisonResult) {
+          <div class="card comparison-result-card">
+            <h2 class="card-title">
+              <strong>Resultado del Análisis</strong>
+            </h2>
+
+            <div class="comparison-grid">
+              <!-- Nuevo IMC -->
+              <div class="result-box" [class]="getBMICategoryClass(comparisonResult.newBMI)">
+                <div class="result-label"><strong>Nuevo IMC</strong></div>
+                <div class="result-value large">{{ comparisonResult.newBMI }}</div>
+                <div class="result-category">{{ comparisonResult.category }}</div>
+              </div>
+
+              <!-- IMC Anterior -->
+              <div class="result-box secondary">
+                <div class="result-label"><strong>IMC Anterior</strong></div>
+                <div class="result-value">{{ comparisonResult.previousBMI }}</div>
+              </div>
+
+              <!-- Cambio de Peso -->
+              <div class="result-box" [class.improvement]="comparisonResult.weightImprovement" [class.regression]="!comparisonResult.weightImprovement">
+                <div class="result-label"><strong>Cambio de Peso</strong></div>
+                <div class="result-value">
+                  {{ comparisonResult.weightImprovement ? '-' : '+' }}{{ comparisonResult.weightDifference }} kg
+                  @if (comparisonResult.weightImprovement) {
+                    <span class="trend-icon">↓</span>
+                  } @else {
+                    <span class="trend-icon">↑</span>
+                  }
+                </div>
+                <div class="result-text">{{ getWeightDifferenceText() }}</div>
+              </div>
+
+              <!-- Cambio de IMC -->
+              <div class="result-box" [class.improvement]="comparisonResult.isImprovement" [class.regression]="!comparisonResult.isImprovement">
+                <div class="result-label"><strong>Cambio de IMC</strong></div>
+                <div class="result-value">
+                  {{ comparisonResult.isImprovement ? '-' : '+' }}{{ comparisonResult.bmiDifference }}
+                  @if (comparisonResult.isImprovement) {
+                    <span class="trend-icon">↓</span>
+                  } @else {
+                    <span class="trend-icon">↑</span>
+                  }
+                </div>
+                <div class="result-text">{{ getBMIDifferenceText() }}</div>
+              </div>
+            </div>
+
+            <!-- Resumen del Análisis -->
+            <div class="analysis-summary">
+              @if (comparisonResult.isImprovement && comparisonResult.weightImprovement) {
+                <div class="summary-box positive">
+                  <div class="summary-content">
+                    <h3>¡Excelente progreso!</h3>
+                    <p>Has logrado disminuir tanto tu peso como tu IMC. ¡Sigue así!</p>
+                  </div>
+                </div>
+              } @else if (comparisonResult.isImprovement || comparisonResult.weightImprovement) {
+                <div class="summary-box neutral">
+                  <div class="summary-content">
+                    <h3>Buen progreso</h3>
+                    <p>Estás avanzando en la dirección correcta. Mantén el esfuerzo.</p>
+                  </div>
+                </div>
+              } @else {
+                <div class="summary-box attention">
+                  <div class="summary-content">
+                    <h3>Requiere atención</h3>
+                    <p>Tu peso y/o IMC han aumentado. Considera revisar tu plan nutricional.</p>
+                  </div>
+                </div>
+              }
+            </div>
+          </div>
+        }
+
+        <!-- Historial de Progreso -->
+        <div class="card history-card">
+          <h2 class="card-title">
+            Historial de IMC
+          </h2>
+          
+          <div class="history-table-wrapper">
+            <table class="history-table">
+              <thead>
+                <tr>
+                  <th>Fecha</th>
+                  <th>IMC</th>
+                  <th>Cambio</th>
+                </tr>
+              </thead>
+              <tbody>
+                @for (entry of sortedProgress; track entry.registrationDate; let i = $index) {
+                  <tr>
+                    <td>{{ formatDate(entry.registrationDate) }}</td>
+                    <td [class]="getBMICategoryClass(entry.bmi)">{{ entry.bmi.toFixed(2) }}</td>
+                    <td>
+                      @if (i < sortedProgress.length - 1) {
+                        @let difference = sortedProgress[i + 1].bmi - entry.bmi;
+                        @if (difference > 0.01) {
+                          <span class="trend-positive">
+                            -{{ difference.toFixed(2) }} ↓
+                          </span>
+                        } @else if (difference < -0.01) {
+                          <span class="trend-negative">
+                            +{{ Math.abs(difference).toFixed(2) }} ↑
+                          </span>
+                        } @else {
+                          <span class="trend-neutral">0.00</span>
+                        }
+                      } @else {
+                        <span class="trend-neutral">Inicio</span>
+                      }
+                    </td>
+                  </tr>
+                }
+              </tbody>
+            </table>
+          </div>
+        </div>
+      }
+    </div>
+  }
+
+  <!-- Tab Content: Comparación con el Ideal (Placeholder) -->
+  @if (activeTab === 'comparison') {
+    <div class="tab-content">
+      <div class="coming-soon-content">
+        <h2>🚧 Próximamente</h2>
+        <p>Esta sección estará disponible pronto. Aquí podrás comparar tu progreso con tu peso ideal.</p>
+      </div>
+    </div>
+  }
+
+</div>

@@ -1,0 +1,29 @@
+<div class="diets-container">
+  <!-- Mostrar título y botón solo cuando NO hay plan generado -->
+  @if (weekPlan.length === 0) {
+    <h1 class="page-title">Plan de Dietas Semanal</h1>
+
+    <div class="generator">
+      <button 
+        class="generate-btn" 
+        (click)="generateDiet()" 
+        [disabled]="loading"
+        type="button">
+        <span class="plus">+</span>
+        <span>Generar dieta</span>
+      </button>
+      @if (loading) {
+        <div class="status">Generando tu dieta...</div>
+      }
+      @if (error) {
+        <div class="status error">{{ error }}</div>
+      }
+    </div>
+  }
+
+  <!-- Mostrar tabla cuando hay plan generado -->
+  @if (weekPlan.length > 0 && !loading) {
+    <app-diet-table [weekPlan]="weekPlan"></app-diet-table>
+  }
+</div>
+

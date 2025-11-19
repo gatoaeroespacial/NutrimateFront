@@ -1,0 +1,3265 @@
+[
+  {
+    "id": 1,
+    "name": "Chips de kale",
+    "short_description": "Kale horneado crujiente con aceite y especias (snack saludable).",
+    "ingredients": [
+      "Kale 300 g",
+      "AOVE 5 ml",
+      "Sal al gusto",
+      "Especias al gusto (cúrcuma, pimentón, ajo en polvo)"
+    ],
+    "preparation": "Precalentar el horno a 200°C. Cortar el kale en trozos (~4 cm), mezclar con AOVE y especias, disponer sobre papel de hornear sin amontonar y hornear ~10 min vigilando que no se queme.",
+    "image": "",
+    "nutrition": {
+      "per_serving": {
+        "serving_g": 153,
+        "calories_kcal": 88.10,
+        "protein_g": 6.50,
+        "fat_g": 4.10,
+        "saturated_fat_g": 0.56,
+        "total_fat_g": null,
+        "trans_fat_g": null,
+        "cholesterol_mg": null,
+        "sodium_mg": null,
+        "carbs_g": 6.30,
+        "fiber_g": null,
+        "sugars_g": 3.39,
+        "vitamin_d_mcg": null,
+        "calcium_mg": null,
+        "iron_mg": null,
+        "potassium_mg": null
+      },
+      "per_100g": {
+        "serving_g": null,
+        "calories_kcal": 57.60,
+        "protein_g": 4.25,
+        "fat_g": 2.68,
+        "saturated_fat_g": null,
+        "total_fat_g": null,
+        "trans_fat_g": null,
+        "cholesterol_mg": null,
+        "sodium_mg": null,
+        "carbs_g": null,
+        "fiber_g": null,
+        "sugars_g": null,
+        "vitamin_d_mcg": null,
+        "calcium_mg": null,
+        "iron_mg": null,
+        "potassium_mg": null
+      }
+    },
+    "tags": {
+      "conditions": [],
+      "type": "Comida",
+      "intentions": ["Comer más saludable"]
+    }
+  },
+  {
+    "id": 2,
+    "name": "Guacamole con palitos de zanahoria",
+    "short_description": "Guacamole clásico triturado acompañado de bastones de zanahoria.",
+    "ingredients": [
+      "Zanahorias 200 g (2 unidades)",
+      "Aguacates 300 g (2 unidades)",
+      "Tomate 80 g (1 unidad)",
+      "Cebolleta 50 g (1/2)",
+      "Cilantro fresco al gusto",
+      "Zumo de limón 10 ml",
+      "Sal al gusto"
+    ],
+    "preparation": "Pelar y cortar las zanahorias en bastones (≈10×1 cm). Machacar la pulpa del aguacate, añadir tomate en dados, cebolleta y cilantro picados, sazonar y regar con zumo de limón. Servir con las zanahorias.",
+    "image": "",
+    "nutrition": {
+      "per_serving": {
+        "serving_g": 272,
+        "calories_kcal": 244.30,
+        "protein_g": 3.22,
+        "fat_g": 21.26,
+        "saturated_fat_g": 4.66,
+        "total_fat_g": null,
+        "trans_fat_g": null,
+        "cholesterol_mg": null,
+        "sodium_mg": null,
+        "carbs_g": 10.02,
+        "fiber_g": null,
+        "sugars_g": 7.90,
+        "vitamin_d_mcg": null,
+        "calcium_mg": null,
+        "iron_mg": null,
+        "potassium_mg": null
+      },
+      "per_100g": {
+        "serving_g": null,
+        "calories_kcal": 89.82,
+        "protein_g": 1.18,
+        "fat_g": null,
+        "saturated_fat_g": null,
+        "total_fat_g": null,
+        "trans_fat_g": null,
+        "cholesterol_mg": null,
+        "sodium_mg": null,
+        "carbs_g": null,
+        "fiber_g": null,
+        "sugars_g": null,
+        "vitamin_d_mcg": null,
+        "calcium_mg": null,
+        "iron_mg": null,
+        "potassium_mg": null
+      }
+    },
+    "tags": {
+      "conditions": [],
+      "type": "Comida",
+      "intentions": ["Comer más saludable"]
+    }
+  },
+  {
+    "id": 3,
+    "name": "Zanahorias encurtidas 'para mañana'",
+    "short_description": "Zanahorias en vinagre con ajo y hierbas (encurtido preparado el día anterior).",
+    "ingredients": [
+      "Zanahorias 200 g (2 unidades)",
+      "Ajo 4–5 g",
+      "Perejil fresco 10 g",
+      "Hierbabuena o menta 10 g",
+      "AOVE 20 ml",
+      "Vinagre 30 ml",
+      "Sal y pimienta al gusto"
+    ],
+    "preparation": "Cortar las zanahorias en tiras con mandolina. Picar ajo y mezclar con sal y pimienta; añadir hierbas. Mezclar AOVE y vinagre y verter sobre las zanahorias. Dejar reposar 24 h.",
+    "image": "",
+    "nutrition": {
+      "per_serving": {
+        "serving_g": 133,
+        "calories_kcal": 131.51,
+        "protein_g": 1.15,
+        "fat_g": 10.07,
+        "saturated_fat_g": 1.54,
+        "total_fat_g": null,
+        "trans_fat_g": null,
+        "cholesterol_mg": null,
+        "sodium_mg": null,
+        "carbs_g": 9.07,
+        "fiber_g": null,
+        "sugars_g": 6.21,
+        "vitamin_d_mcg": null,
+        "calcium_mg": null,
+        "iron_mg": null,
+        "potassium_mg": null
+      },
+      "per_100g": {
+        "serving_g": null,
+        "calories_kcal": 98.59,
+        "protein_g": 0.86,
+        "fat_g": null,
+        "saturated_fat_g": null,
+        "total_fat_g": null,
+        "trans_fat_g": null,
+        "cholesterol_mg": null,
+        "sodium_mg": null,
+        "carbs_g": null,
+        "fiber_g": null,
+        "sugars_g": null,
+        "vitamin_d_mcg": null,
+        "calcium_mg": null,
+        "iron_mg": null,
+        "potassium_mg": null
+      }
+    },
+    "tags": {
+      "conditions": [],
+      "type": "Comida",
+      "intentions": ["Comer más saludable"]
+    }
+  },
+  {
+    "id": 4,
+    "name": "Hummus de remolacha con crudités",
+    "short_description": "Hummus de garbanzo mezclado con remolacha y tahini, servido con bastones de verduras.",
+    "ingredients": [
+      "Remolacha cocida y pelada 250 g",
+      "Garbanzos cocidos 200 g (1 bote)",
+      "Yogur natural 1 cucharada",
+      "Tahini 1 cucharada",
+      "Ajo 1 diente (5 g)",
+      "AOVE 40 ml",
+      "Comino tostado molido 5 g",
+      "Pimentón, sal, zumo de limón 10 ml",
+      "Bastones de pimiento y apio para acompañar"
+    ],
+    "preparation": "Triturar remolacha, garbanzos enjuagados, yogur, tahini, ajo, AOVE, comino, sal y zumo de limón hasta obtener textura homogénea; si hace falta, añadir 2–3 cucharadas de agua. Espolvorear pimentón y servir con crudités.",
+    "image": "",
+    "nutrition": {
+      "per_serving": {
+        "serving_g": 325,
+        "calories_kcal": 461.97,
+        "protein_g": 14.77,
+        "fat_g": 29.93,
+        "saturated_fat_g": 4.89,
+        "total_fat_g": null,
+        "trans_fat_g": null,
+        "cholesterol_mg": null,
+        "sodium_mg": null,
+        "carbs_g": 33.38,
+        "fiber_g": null,
+        "sugars_g": 10.70,
+        "vitamin_d_mcg": null,
+        "calcium_mg": null,
+        "iron_mg": null,
+        "potassium_mg": null
+      },
+      "per_100g": {
+        "serving_g": null,
+        "calories_kcal": 142.13,
+        "protein_g": 4.54,
+        "fat_g": null,
+        "saturated_fat_g": null,
+        "total_fat_g": null,
+        "trans_fat_g": null,
+        "cholesterol_mg": null,
+        "sodium_mg": null,
+        "carbs_g": null,
+        "fiber_g": null,
+        "sugars_g": null,
+        "vitamin_d_mcg": null,
+        "calcium_mg": null,
+        "iron_mg": null,
+        "potassium_mg": null
+      }
+    },
+    "tags": {
+      "conditions": ["Soya"],
+      "type": "Almuerzo",
+      "intentions": ["Comer más saludable"]
+    }
+  },
+  {
+    "id": 5,
+    "name": "Patatitas — dos salsas",
+    "short_description": "Patatas baby con dos salsas a base de yogur (hierbabuena y curry).",
+    "ingredients": [
+      "Patatas baby 400 g",
+      "Yogur griego 250 g (2 yogures)",
+      "AOVE",
+      "Hierbabuena fresca",
+      "Curry en polvo 1 cucharadita",
+      "Ajo 1/2 diente",
+      "Zumo de limón al gusto, sal y pimienta"
+    ],
+    "preparation": "Cocer las patatas al microondas según fabricante. Mezclar un yogur con hierbabuena picada, medio diente de ajo, AOVE y limón; mezclar el otro yogur con curry, pimienta y AOVE. Servir las patatas con las dos salsas.",
+    "image": "",
+    "nutrition": {
+      "per_serving": {
+        "serving_g": 364,
+        "calories_kcal": 336.08,
+        "protein_g": 10.86,
+        "fat_g": 14.24,
+        "saturated_fat_g": 3.70,
+        "total_fat_g": null,
+        "trans_fat_g": null,
+        "cholesterol_mg": null,
+        "sodium_mg": null,
+        "carbs_g": 41.12,
+        "fiber_g": null,
+        "sugars_g": 8.19,
+        "vitamin_d_mcg": null,
+        "calcium_mg": null,
+        "iron_mg": null,
+        "potassium_mg": null
+      },
+      "per_100g": {
+        "serving_g": null,
+        "calories_kcal": 92.27,
+        "protein_g": 2.98,
+        "fat_g": null,
+        "saturated_fat_g": null,
+        "total_fat_g": null,
+        "trans_fat_g": null,
+        "cholesterol_mg": null,
+        "sodium_mg": null,
+        "carbs_g": null,
+        "fiber_g": null,
+        "sugars_g": null,
+        "vitamin_d_mcg": null,
+        "calcium_mg": null,
+        "iron_mg": null,
+        "potassium_mg": null
+      }
+    },
+    "tags": {
+      "conditions": ["Lácteos"],
+      "type": "Almuerzo",
+      "intentions": ["Comer más saludable"]
+    }
+  },
+  {
+    "id": 6,
+    "name": "Falso sushi de pepino, yogur y queso feta",
+    "short_description": "Tiras de pepino rellenas con crema de yogur y queso feta, servidas frías.",
+    "ingredients": [
+      "Pepino holandés 270 g (1 unidad)",
+      "Yogur griego natural 125 g",
+      "Queso feta 50 g",
+      "Pimiento amarillo 100 g (1/2)",
+      "Cebolla morada 1/2",
+      "Ralladura de limón 3 g",
+      "Ajo 1/2 diente, pimienta, AOVE"
+    ],
+    "preparation": "Cortar el pepino en tiras finas y secar. Preparar una crema con yogur, feta desmigado, ajo picado fino, ralladura de limón y AOVE. Colocar una cucharada de crema sobre cada tira, añadir pimiento y cebolla picados y enrollar. Servir frío.",
+    "image": "",
+    "nutrition": {
+      "per_serving": {
+        "serving_g": 283,
+        "calories_kcal": 185.78,
+        "protein_g": 8.29,
+        "fat_g": 12.22,
+        "saturated_fat_g": 5.51,
+        "total_fat_g": null,
+        "trans_fat_g": null,
+        "cholesterol_mg": null,
+        "sodium_mg": null,
+        "carbs_g": 10.66,
+        "fiber_g": null,
+        "sugars_g": 8.25,
+        "vitamin_d_mcg": null,
+        "calcium_mg": null,
+        "iron_mg": null,
+        "potassium_mg": null
+      },
+      "per_100g": {
+        "serving_g": null,
+        "calories_kcal": 65.68,
+        "protein_g": 2.93,
+        "fat_g": null,
+        "saturated_fat_g": null,
+        "total_fat_g": null,
+        "trans_fat_g": null,
+        "cholesterol_mg": null,
+        "sodium_mg": null,
+        "carbs_g": null,
+        "fiber_g": null,
+        "sugars_g": null,
+        "vitamin_d_mcg": null,
+        "calcium_mg": null,
+        "iron_mg": null,
+        "potassium_mg": null
+      }
+    },
+    "tags": {
+      "conditions": ["Lácteos"],
+      "type": "Comida",
+      "intentions": ["Comer más saludable"]
+    }
+  },
+  {
+    "id": 7,
+    "name": "Gazpacho de sandía y feta",
+    "short_description": "Gazpacho frío que combina tomate y sandía, servido con dados de sandía y feta.",
+    "ingredients": [
+      "Tomates pera 250 g (3 unidades)",
+      "Sandía 250 g (porción)",
+      "Cebolleta 40 g (1/2)",
+      "Pimiento rojo 150 g (1/2)",
+      "Queso feta 50 g",
+      "Albahaca escaldada, AOVE, vinagre, sal, pimienta"
+    ],
+    "preparation": "Batir tomates, sandía sin piel ni pepitas, cebolleta, pimiento y albahaca con 3–4 cucharadas de AOVE, 2 de vinagre y sal hasta textura fina. Servir con trozos de sandía y queso feta.",
+    "image": "",
+    "nutrition": {
+      "per_serving": {
+        "serving_g": 408,
+        "calories_kcal": 310.40,
+        "protein_g": 8.39,
+        "fat_g": 20.92,
+        "saturated_fat_g": 6.05,
+        "total_fat_g": null,
+        "trans_fat_g": null,
+        "cholesterol_mg": null,
+        "sodium_mg": null,
+        "carbs_g": 22.14,
+        "fiber_g": null,
+        "sugars_g": 17.43,
+        "vitamin_d_mcg": null,
+        "calcium_mg": null,
+        "iron_mg": null,
+        "potassium_mg": null
+      },
+      "per_100g": {
+        "serving_g": null,
+        "calories_kcal": 76.13,
+        "protein_g": 2.06,
+        "fat_g": null,
+        "saturated_fat_g": null,
+        "total_fat_g": null,
+        "trans_fat_g": null,
+        "cholesterol_mg": null,
+        "sodium_mg": null,
+        "carbs_g": null,
+        "fiber_g": null,
+        "sugars_g": null,
+        "vitamin_d_mcg": null,
+        "calcium_mg": null,
+        "iron_mg": null,
+        "potassium_mg": null
+      }
+    },
+    "tags": {
+      "conditions": ["Lácteos"],
+      "type": "Almuerzo",
+      "intentions": ["Comer más saludable"]
+    }
+  },
+  {
+    "id": 8,
+    "name": "Carpaccio de remolacha y champiñón",
+    "short_description": "Láminas de remolacha y champiñón con rúcula, avellanas y lascas de queso manchego.",
+    "ingredients": [
+      "Remolacha cocida 250 g",
+      "Champiñones 150 g (≈10 unidades)",
+      "Avellanas 30 g",
+      "Rúcula 100 g",
+      "Queso manchego curado 30 g",
+      "AOVE, vinagre, sal y pimienta"
+    ],
+    "preparation": "Cortar remolacha y champiñones en láminas finas. Disponer la remolacha en la base del plato, colocar champiñones encima, añadir rúcula y lascas de manchego. Preparar aliño con AOVE, vinagre, avellanas picadas y sal; verter sobre el carpaccio.",
+    "image": "",
+    "nutrition": {
+      "per_serving": {
+        "serving_g": 304,
+        "calories_kcal": 361.92,
+        "protein_g": 11.04,
+        "fat_g": 29.16,
+        "saturated_fat_g": 6.31,
+        "total_fat_g": null,
+        "trans_fat_g": null,
+        "cholesterol_mg": null,
+        "sodium_mg": null,
+        "carbs_g": 13.83,
+        "fiber_g": null,
+        "sugars_g": 11.37,
+        "vitamin_d_mcg": null,
+        "calcium_mg": null,
+        "iron_mg": null,
+        "potassium_mg": null
+      },
+      "per_100g": {
+        "serving_g": null,
+        "calories_kcal": 119.03,
+        "protein_g": 3.63,
+        "fat_g": null,
+        "saturated_fat_g": null,
+        "total_fat_g": null,
+        "trans_fat_g": null,
+        "cholesterol_mg": null,
+        "sodium_mg": null,
+        "carbs_g": null,
+        "fiber_g": null,
+        "sugars_g": null,
+        "vitamin_d_mcg": null,
+        "calcium_mg": null,
+        "iron_mg": null,
+        "potassium_mg": null
+      }
+    },
+    "tags": {
+      "conditions": ["Frutos Secos", "Lácteos"],
+      "type": "Almuerzo",
+      "intentions": ["Comer más saludable"]
+    }
+  },
+  {
+    "id": 9,
+    "name": "Dip de guisantes con hierbabuena y totopos caseros",
+    "short_description": "Dip cremoso de guisantes y queso fresco con pistachos, servido con totopos caseros.",
+    "ingredients": [
+      "Guisantes congelados 300 g",
+      "Queso fresco 250 g",
+      "Pistachos 15 g",
+      "Hierbabuena hojas al gusto",
+      "AOVE 10 ml",
+      "Tortillas de trigo integral 50 g (para totopos)",
+      "Pimentón y sal"
+    ],
+    "preparation": "Cocinar guisantes (microondas 4 min con 2 cucharadas de agua), triturar y dejar enfriar. Mezclar queso con ajo picado, pistachos, hierbabuena, AOVE y sal; añadir puré de guisantes. Cortar tortillas en triángulos, pintar con AOVE y hornear 10 min hasta tostar. Servir dip con totopos.",
+    "image": "",
+    "nutrition": {
+      "per_serving": {
+        "serving_g": 296,
+        "calories_kcal": 366.00,
+        "protein_g": 19.65,
+        "fat_g": 22.40,
+        "saturated_fat_g": 9.73,
+        "total_fat_g": null,
+        "trans_fat_g": null,
+        "cholesterol_mg": null,
+        "sodium_mg": null,
+        "carbs_g": 21.45,
+        "fiber_g": null,
+        "sugars_g": 11.35,
+        "vitamin_d_mcg": null,
+        "calcium_mg": null,
+        "iron_mg": null,
+        "potassium_mg": null
+      },
+      "per_100g": {
+        "serving_g": null,
+        "calories_kcal": 123.65,
+        "protein_g": 6.64,
+        "fat_g": null,
+        "saturated_fat_g": null,
+        "total_fat_g": null,
+        "trans_fat_g": null,
+        "cholesterol_mg": null,
+        "sodium_mg": null,
+        "carbs_g": null,
+        "fiber_g": null,
+        "sugars_g": null,
+        "vitamin_d_mcg": null,
+        "calcium_mg": null,
+        "iron_mg": null,
+        "potassium_mg": null
+      }
+    },
+    "tags": {
+      "conditions": ["Frutos Secos","Gluten","Lácteos"],
+      "type": "Almuerzo",
+      "intentions": ["Comer más saludable"]
+    }
+  },
+  {
+    "id": 10,
+    "name": "Escarola con granada",
+    "short_description": "Ensalada fresca de escarola con granada y aliño de comino y ajo.",
+    "ingredients": [
+      "Escarola 300 g",
+      "Granada 275 g (1 unidad)",
+      "Ajo 8 g (1 diente)",
+      "Comino en grano al gusto",
+      "AOVE 10 ml",
+      "Vinagre y sal al gusto"
+    ],
+    "preparation": "Abrir la granada y sacar los granos. Picar ajo y mezclar con AOVE, vinagre y comino. Aliñar la escarola con el preparado y añadir los granos de granada antes de servir.",
+    "image": "",
+    "nutrition": {
+      "per_serving": {
+        "serving_g": 300,
+        "calories_kcal": 181.99,
+        "protein_g": 4.63,
+        "fat_g": 7.27,
+        "saturated_fat_g": 0.93,
+        "total_fat_g": null,
+        "trans_fat_g": null,
+        "cholesterol_mg": null,
+        "sodium_mg": null,
+        "carbs_g": 24.51,
+        "fiber_g": null,
+        "sugars_g": 20.51,
+        "vitamin_d_mcg": null,
+        "calcium_mg": null,
+        "iron_mg": null,
+        "potassium_mg": null
+      },
+      "per_100g": {
+        "serving_g": null,
+        "calories_kcal": 60.66,
+        "protein_g": 1.54,
+        "fat_g": null,
+        "saturated_fat_g": null,
+        "total_fat_g": null,
+        "trans_fat_g": null,
+        "cholesterol_mg": null,
+        "sodium_mg": null,
+        "carbs_g": null,
+        "fiber_g": null,
+        "sugars_g": null,
+        "vitamin_d_mcg": null,
+        "calcium_mg": null,
+        "iron_mg": null,
+        "potassium_mg": null
+      }
+    },
+    "tags": {
+      "conditions": [],
+      "type": "Almuerzo",
+      "intentions": ["Comer más saludable"]
+    }
+  },
+  {
+    "id": 11,
+    "name": "Salmón exprés al microondas",
+    "short_description": "Salmón cocinado al microondas con ensalada de pepino y arroz basmati precocido (rápido y completo).",
+    "ingredients": [
+      "1 lomo de salmón (2 porciones, ~125 g cada una)",
+      "1 vasito de arroz basmati precocido (50 g)",
+      "1/2 cebolleta",
+      "1 pepino",
+      "1 cucharada de soja",
+      "1 cucharada de vinagre",
+      "Semillas de sésamo (opcional)",
+      "Jengibre rallado, eneldo seco, AOVE, sal"
+    ],
+    "preparation": "Cocina el arroz según fabricante. Corta pepino en láminas, espolvorea con sal y reserva. Sazona el salmón, ponlo en plato untado con AOVE, cúbrelo y cocina 5 min en microondas a máxima potencia (vigila). Mezcla soja, vinagre, sésamo y jengibre; aliña la ensalada de pepino y sirve con el salmón y el arroz.",
+    "image": "",
+    "nutrition": {
+      "per_serving": {
+        "serving_g": 448,
+        "calories_kcal": 561.81,
+        "protein_g": 44.90,
+        "fat_g": 31.69,
+        "saturated_fat_g": 5.36,
+        "total_fat_g": null,
+        "trans_fat_g": null,
+        "cholesterol_mg": null,
+        "sodium_mg": null,
+        "carbs_g": 24.25,
+        "fiber_g": null,
+        "sugars_g": 3.73,
+        "vitamin_d_mcg": null,
+        "calcium_mg": null,
+        "iron_mg": null,
+        "potassium_mg": null
+      },
+      "per_100g": {
+        "serving_g": null,
+        "calories_kcal": 125.35,
+        "protein_g": 10.02,
+        "fat_g": null,
+        "saturated_fat_g": null,
+        "total_fat_g": null,
+        "trans_fat_g": null,
+        "cholesterol_mg": null,
+        "sodium_mg": null,
+        "carbs_g": null,
+        "fiber_g": null,
+        "sugars_g": null,
+        "vitamin_d_mcg": null,
+        "calcium_mg": null,
+        "iron_mg": null,
+        "potassium_mg": null
+      }
+    },
+    "tags": {
+      "conditions": ["Pescado","Soya"],
+      "type": "Almuerzo",
+      "intentions": ["Comer más saludable"]
+    }
+  },
+  {
+    "id": 12,
+    "name": "Espaguetis del estudiante",
+    "short_description": "Pasta integral con tomate y sardinas en conserva — económico y nutritivo.",
+    "ingredients": [
+      "160 g espaguetis integrales",
+      "1 lata de tomate natural triturado",
+      "1 lata de sardinas en conserva (≈88 g)",
+      "Aceitunas negras (25 g)",
+      "2 dientes de ajo, AOVE, orégano, sal"
+    ],
+    "preparation": "Cuece la pasta según indicación. En un bol calienta AOVE y ajo (microondas 1 min), añade tomate triturado y cocina 10 min. Mezcla la pasta con la salsa, incorpora las sardinas escurridas y las aceitunas; espolvorea orégano y sirve.",
+    "image": "",
+    "nutrition": {
+      "per_serving": {
+        "serving_g": 309,
+        "calories_kcal": 515.62,
+        "protein_g": 23.19,
+        "fat_g": 19.50,
+        "saturated_fat_g": 3.62,
+        "total_fat_g": null,
+        "trans_fat_g": null,
+        "cholesterol_mg": null,
+        "sodium_mg": null,
+        "carbs_g": 61.84,
+        "fiber_g": null,
+        "sugars_g": 4.59,
+        "vitamin_d_mcg": null,
+        "calcium_mg": null,
+        "iron_mg": null,
+        "potassium_mg": null
+      },
+      "per_100g": {
+        "serving_g": null,
+        "calories_kcal": 167.16,
+        "protein_g": 7.52,
+        "fat_g": null,
+        "saturated_fat_g": null,
+        "total_fat_g": null,
+        "trans_fat_g": null,
+        "cholesterol_mg": null,
+        "sodium_mg": null,
+        "carbs_g": null,
+        "fiber_g": null,
+        "sugars_g": null,
+        "vitamin_d_mcg": null,
+        "calcium_mg": null,
+        "iron_mg": null,
+        "potassium_mg": null
+      }
+    },
+    "tags": {
+      "conditions": ["Pescado","Trigo","Gluten"],
+      "type": "Almuerzo",
+      "intentions": ["Comer más saludable"]
+    }
+  },
+  {
+    "id": 13,
+    "name": "Tortilla de patata y calabacín (microondas)",
+    "short_description": "Tortilla rápida con patata, cebolla y calabacín, cocinada de forma ultrarrápida.",
+    "ingredients": [
+      "2 patatas medianas",
+      "1/2 cebolla",
+      "1 calabacín pequeño",
+      "4 huevos",
+      "AOVE (≈22 ml), sal"
+    ],
+    "preparation": "Corta la cebolla y cocina al microondas con AOVE 5 min; añade calabacín y cocina 4 min. Corta las patatas en láminas finas y cocina 6 min en microondas. Bate huevos con sal, mezcla con verduras y cuaja la tortilla en sartén antiadherente con una cucharada de AOVE.",
+    "image": "",
+    "nutrition": {
+      "per_serving": {
+        "serving_g": 257,
+        "calories_kcal": 229.34,
+        "protein_g": 4.38,
+        "fat_g": 11.58,
+        "saturated_fat_g": 1.81,
+        "total_fat_g": null,
+        "trans_fat_g": null,
+        "cholesterol_mg": null,
+        "sodium_mg": null,
+        "carbs_g": 26.90,
+        "fiber_g": null,
+        "sugars_g": 3.47,
+        "vitamin_d_mcg": null,
+        "calcium_mg": null,
+        "iron_mg": null,
+        "potassium_mg": null
+      },
+      "per_100g": {
+        "serving_g": null,
+        "calories_kcal": 89.31,
+        "protein_g": 1.71,
+        "fat_g": null,
+        "saturated_fat_g": null,
+        "total_fat_g": null,
+        "trans_fat_g": null,
+        "cholesterol_mg": null,
+        "sodium_mg": null,
+        "carbs_g": null,
+        "fiber_g": null,
+        "sugars_g": null,
+        "vitamin_d_mcg": null,
+        "calcium_mg": null,
+        "iron_mg": null,
+        "potassium_mg": null
+      }
+    },
+    "tags": {
+      "conditions": ["Huevo"],
+      "type": "Almuerzo",
+      "intentions": ["Comer más saludable"]
+    }
+  },
+  {
+    "id": 14,
+    "name": "Pitas con huevo, espinacas y queso",
+    "short_description": "Pita integral rellena de huevo revuelto, espinacas y rulo de cabra (versátil y saciante).",
+    "ingredients": [
+      "2 pitas integrales",
+      "3 huevos",
+      "180 g espinacas crudas",
+      "Tomates secos (15 g)",
+      "1 mini rulo de queso de cabra",
+      "AOVE, sal y pimienta"
+    ],
+    "preparation": "Hidrata los tomates secos. Bate los huevos y cuaja en sartén con AOVE; añade espinacas salteadas y trozos de tomate. Calienta las pitas y rellénalas con la mezcla y medallones de queso de cabra tostados si se desea.",
+    "image": "",
+    "nutrition": {
+      "per_serving": {
+        "serving_g": 178,
+        "calories_kcal": 302.68,
+        "protein_g": 17.33,
+        "fat_g": 23.48,
+        "saturated_fat_g": 12.90,
+        "total_fat_g": null,
+        "trans_fat_g": null,
+        "cholesterol_mg": null,
+        "sodium_mg": null,
+        "carbs_g": 5.51,
+        "fiber_g": null,
+        "sugars_g": 3.99,
+        "vitamin_d_mcg": null,
+        "calcium_mg": null,
+        "iron_mg": null,
+        "potassium_mg": null
+      },
+      "per_100g": {
+        "serving_g": null,
+        "calories_kcal": 170.51,
+        "protein_g": 9.76,
+        "fat_g": null,
+        "saturated_fat_g": null,
+        "total_fat_g": null,
+        "trans_fat_g": null,
+        "cholesterol_mg": null,
+        "sodium_mg": null,
+        "carbs_g": null,
+        "fiber_g": null,
+        "sugars_g": null,
+        "vitamin_d_mcg": null,
+        "calcium_mg": null,
+        "iron_mg": null,
+        "potassium_mg": null
+      }
+    },
+    "tags": {
+      "conditions": ["Huevo","Trigo","Gluten","Lácteos"],
+      "type": "Almuerzo",
+      "intentions": ["Comer más saludable"]
+    }
+  },
+  {
+    "id": 15,
+    "name": "Alcachofas con gambas",
+    "short_description": "Alcachofas salteadas acompañadas de gambas (plato ligero con proteína de marisco).",
+    "ingredients": [
+      "Alcachofas (cantidad según ración)",
+      "Gambas/langostinos (cantidad según ración)",
+      "AOVE, ajo, perejil, sal",
+      "Limón al gusto"
+    ],
+    "preparation": "Limpia las alcachofas y cuécelas o saltéalas según preferencia. Saltea las gambas con ajo en AOVE hasta que cambien de color. Mezcla y termina con perejil y unas gotas de limón; sirve caliente.",
+    "image": "",
+    "nutrition": {
+      "per_serving": {
+        "serving_g": 301,
+        "calories_kcal": 242.59,
+        "protein_g": 31.50,
+        "fat_g": 7.11,
+        "saturated_fat_g": 1.12,
+        "total_fat_g": null,
+        "trans_fat_g": null,
+        "cholesterol_mg": null,
+        "sodium_mg": null,
+        "carbs_g": 13.15,
+        "fiber_g": null,
+        "sugars_g": 3.90,
+        "vitamin_d_mcg": null,
+        "calcium_mg": null,
+        "iron_mg": null,
+        "potassium_mg": null
+      },
+      "per_100g": {
+        "serving_g": null,
+        "calories_kcal": 80.63,
+        "protein_g": 10.48,
+        "fat_g": null,
+        "saturated_fat_g": null,
+        "total_fat_g": null,
+        "trans_fat_g": null,
+        "cholesterol_mg": null,
+        "sodium_mg": null,
+        "carbs_g": null,
+        "fiber_g": null,
+        "sugars_g": null,
+        "vitamin_d_mcg": null,
+        "calcium_mg": null,
+        "iron_mg": null,
+        "potassium_mg": null
+      }
+    },
+    "tags": {
+      "conditions": ["Mariscos"],
+      "type": "Almuerzo",
+      "intentions": ["Comer más saludable"]
+    }
+  },
+  {
+    "id": 16,
+    "name": "Garbanzos con pisto y ras el hanout",
+    "short_description": "Garbanzos guisados con pisto y un toque de ras el hanout (plato de legumbres aromático).",
+    "ingredients": [
+      "1 bote de pisto en conserva (≈400 g)",
+      "1 bote de garbanzos cocidos (≈400 g escurridos)",
+      "1 cucharada ras el hanout",
+      "Hojas de cilantro o hierbabuena",
+      "AOVE, sal"
+    ],
+    "preparation": "Escurre y enjuaga los garbanzos; ponlos en cazuela cubiertos de agua. Añade el pisto y la cucharada de ras el hanout; cuece unos minutos hasta mezclar sabores. Sirve caliente y espolvorea cilantro.",
+    "image": "",
+    "nutrition": {
+      "per_serving": {
+        "serving_g": 412,
+        "calories_kcal": 297.95,
+        "protein_g": 18.68,
+        "fat_g": 6.19,
+        "saturated_fat_g": 0.92,
+        "total_fat_g": null,
+        "trans_fat_g": null,
+        "cholesterol_mg": null,
+        "sodium_mg": null,
+        "carbs_g": 41.88,
+        "fiber_g": null,
+        "sugars_g": 6.38,
+        "vitamin_d_mcg": null,
+        "calcium_mg": null,
+        "iron_mg": null,
+        "potassium_mg": null
+      },
+      "per_100g": {
+        "serving_g": null,
+        "calories_kcal": 72.26,
+        "protein_g": 4.53,
+        "fat_g": null,
+        "saturated_fat_g": null,
+        "total_fat_g": null,
+        "trans_fat_g": null,
+        "cholesterol_mg": null,
+        "sodium_mg": null,
+        "carbs_g": null,
+        "fiber_g": null,
+        "sugars_g": null,
+        "vitamin_d_mcg": null,
+        "calcium_mg": null,
+        "iron_mg": null,
+        "potassium_mg": null
+      }
+    },
+    "tags": {
+      "conditions": [],
+      "type": "Almuerzo",
+      "intentions": ["Comer más saludable"]
+    }
+  },
+  {
+    "id": 17,
+    "name": "Escalivada con alma de germinados y bacalao",
+    "short_description": "Escalivada (pimientos, berenjena y cebolla) con bacalao desalado, huevo rallado y germinados.",
+    "ingredients": [
+      "1 bote de escalivada en conserva (≈300 g)",
+      "Bacalao desalado y desmigado (≈250 g)",
+      "1 cebolla morada",
+      "2 huevos",
+      "Germinados (≈15 g), vinagre, AOVE, sal"
+    ],
+    "preparation": "Cuece los huevos 10 min y rállalos. Escurre las verduras de la escalivada y colócalas en plato hondo; añade migas de bacalao, cebolleta picada y huevo rallado; remata con germinados y aliña con AOVE y vinagre.",
+    "image": "",
+    "nutrition": {
+      "per_serving": {
+        "serving_g": 320,
+        "calories_kcal": 395.86,
+        "protein_g": 61.67,
+        "fat_g": 12.54,
+        "saturated_fat_g": 2.04,
+        "total_fat_g": null,
+        "trans_fat_g": null,
+        "cholesterol_mg": null,
+        "sodium_mg": null,
+        "carbs_g": 9.08,
+        "fiber_g": null,
+        "sugars_g": 7.33,
+        "vitamin_d_mcg": null,
+        "calcium_mg": null,
+        "iron_mg": null,
+        "potassium_mg": null
+      },
+      "per_100g": {
+        "serving_g": null,
+        "calories_kcal": 123.72,
+        "protein_g": 19.27,
+        "fat_g": null,
+        "saturated_fat_g": null,
+        "total_fat_g": null,
+        "trans_fat_g": null,
+        "cholesterol_mg": null,
+        "sodium_mg": null,
+        "carbs_g": null,
+        "fiber_g": null,
+        "sugars_g": null,
+        "vitamin_d_mcg": null,
+        "calcium_mg": null,
+        "iron_mg": null,
+        "potassium_mg": null
+      }
+    },
+    "tags": {
+      "conditions": ["Pescado","Huevo"],
+      "type": "Almuerzo",
+      "intentions": ["Comer más saludable"]
+    }
+  },
+  {
+    "id": 18,
+    "name": "Copazo de ensaladilla",
+    "short_description": "Clásica ensaladilla con patata, huevo, zanahoria y atún; servida con mayonesa casera para ligar.",
+    "ingredients": [
+      "2 patatas medianas",
+      "2 huevos",
+      "1 zanahoria",
+      "1 lata de atún al natural (≈185 g)",
+      "AOVE, zumo de limón, sal"
+    ],
+    "preparation": "Cuece las patatas (microondas o hervidas) y la zanahoria; deja enfriar y corta en dados. Cuece huevos, pélalos y pica. Mezcla patata, zanahoria y atún escurrido; bate aceite y limón para ligar o usa mayonesa ligera; incorpora el huevo y mezcla hasta obtener textura cremosa.",
+    "image": "",
+    "nutrition": {
+      "per_serving": {
+        "serving_g": 247,
+        "calories_kcal": 247.28,
+        "protein_g": 10.26,
+        "fat_g": 10.36,
+        "saturated_fat_g": 1.60,
+        "total_fat_g": null,
+        "trans_fat_g": null,
+        "cholesterol_mg": null,
+        "sodium_mg": null,
+        "carbs_g": 28.25,
+        "fiber_g": null,
+        "sugars_g": 4.25,
+        "vitamin_d_mcg": null,
+        "calcium_mg": null,
+        "iron_mg": null,
+        "potassium_mg": null
+      },
+      "per_100g": {
+        "serving_g": null,
+        "calories_kcal": 100.07,
+        "protein_g": 4.15,
+        "fat_g": null,
+        "saturated_fat_g": null,
+        "total_fat_g": null,
+        "trans_fat_g": null,
+        "cholesterol_mg": null,
+        "sodium_mg": null,
+        "carbs_g": null,
+        "fiber_g": null,
+        "sugars_g": null,
+        "vitamin_d_mcg": null,
+        "calcium_mg": null,
+        "iron_mg": null,
+        "potassium_mg": null
+      }
+    },
+    "tags": {
+      "conditions": ["Pescado","Huevo"],
+      "type": "Almuerzo",
+      "intentions": ["Comer más saludable"]
+    }
+  },
+  {
+    "id": 19,
+    "name": "Olleta de arroz integral",
+    "short_description": "Cazuela de arroz integral con alubias, verduras y azafrán — plato completo y reconfortante.",
+    "ingredients": [
+      "1/2 vaso de arroz integral precocido",
+      "60 g alubias blancas cocidas",
+      "Acelgas, judías verdes, nabo, patata",
+      "Comino, azafrán, AOVE, sal, agua"
+    ],
+    "preparation": "Corta la patata y cuece en olla con agua, sal, comino y azafrán. Cuece el arroz según el fabricante y añade la mitad a la olla. Incorpora acelgas, nabos y judías cuando hierva; añade unas cucharadas de alubias ya cocidas. Apaga y añade AOVE antes de servir.",
+    "image": "",
+    "nutrition": {
+      "per_serving": {
+        "serving_g": 332,
+        "calories_kcal": 424.80,
+        "protein_g": 10.50,
+        "fat_g": 22.00,
+        "saturated_fat_g": 3.36,
+        "total_fat_g": null,
+        "trans_fat_g": null,
+        "cholesterol_mg": null,
+        "sodium_mg": null,
+        "carbs_g": 46.20,
+        "fiber_g": null,
+        "sugars_g": 4.01,
+        "vitamin_d_mcg": null,
+        "calcium_mg": null,
+        "iron_mg": null,
+        "potassium_mg": null
+      },
+      "per_100g": {
+        "serving_g": null,
+        "calories_kcal": 127.86,
+        "protein_g": 3.16,
+        "fat_g": null,
+        "saturated_fat_g": null,
+        "total_fat_g": null,
+        "trans_fat_g": null,
+        "cholesterol_mg": null,
+        "sodium_mg": null,
+        "carbs_g": null,
+        "fiber_g": null,
+        "sugars_g": null,
+        "vitamin_d_mcg": null,
+        "calcium_mg": null,
+        "iron_mg": null,
+        "potassium_mg": null
+      }
+    },
+    "tags": {
+      "conditions": [],
+      "type": "Almuerzo",
+      "intentions": ["Comer más saludable"]
+    }
+  },
+  {
+    "id": 20,
+    "name": "Ramen casero",
+    "short_description": "Ramen vegetal con fideos de arroz, huevo y brotes — versión ligera y rápida.",
+    "ingredients": [
+      "Fideos de arroz integrales (50 g)",
+      "Caldo vegetal (1 L)",
+      "2 huevos",
+      "Zanahoria rallada (80 g)",
+      "Brotes de soja (40 g), cebolleta, alga nori, semillas de sésamo",
+      "Sal"
+    ],
+    "preparation": "Cuece los huevos 6 min y enfría. Cocina los fideos en caldo caliente y añade zanahoria rallada y brotes; incorpora la lámina de nori y corta el huevo por la mitad para servir. Espolvorea semillas de sésamo y cebolleta.",
+    "image": "",
+    "nutrition": {
+      "per_serving": {
+        "serving_g": 655,
+        "calories_kcal": 311.15,
+        "protein_g": 18.42,
+        "fat_g": 12.87,
+        "saturated_fat_g": 3.11,
+        "total_fat_g": null,
+        "trans_fat_g": null,
+        "cholesterol_mg": null,
+        "sodium_mg": null,
+        "carbs_g": 30.41,
+        "fiber_g": null,
+        "sugars_g": 5.45,
+        "vitamin_d_mcg": null,
+        "calcium_mg": null,
+        "iron_mg": null,
+        "potassium_mg": null
+      },
+      "per_100g": {
+        "serving_g": null,
+        "calories_kcal": 47.53,
+        "protein_g": 2.81,
+        "fat_g": null,
+        "saturated_fat_g": null,
+        "total_fat_g": null,
+        "trans_fat_g": null,
+        "cholesterol_mg": null,
+        "sodium_mg": null,
+        "carbs_g": null,
+        "fiber_g": null,
+        "sugars_g": null,
+        "vitamin_d_mcg": null,
+        "calcium_mg": null,
+        "iron_mg": null,
+        "potassium_mg": null
+      }
+    },
+    "tags": {
+      "conditions": ["Huevo","Soya","Tiroides"],
+      "type": "Almuerzo",
+      "intentions": ["Comer más saludable"]
+    }
+  },
+  {
+    "id": 21,
+    "name": "Tortilla Española",
+    "short_description": "Tortilla al horno con patata, calabacín, pimientos y queso bajo en grasa; versátil para desayuno o comida.",
+    "ingredients": [
+      "5 papas pequeñas, peladas y cortadas",
+      "Spray de aceite vegetal",
+      "1/2 cebolla mediana picada",
+      "1 calabacín pequeño en rodajas",
+      "1 1/2 taza de pimientos cortados",
+      "5 champiñones medianos en rodajas",
+      "3 huevos enteros batidos",
+      "5 claras de huevo batidas",
+      "Pimienta y sal de ajo con hierbas",
+      "3 oz queso mozzarella bajo en grasa rallado",
+      "1 cucharada de queso parmesano bajo en grasa"
+    ],
+    "preparation": "Precalentar horno a 190°C. Cocer papas hasta ablandar. Sofreír cebolla y verduras hasta ablandar. Mezclar huevos y claras con quesos y condimentos; añadir verduras y papas. Verter en fuente engrasada, espolvorear parmesano y hornear 20–30 min hasta que cuaje y dore. Dejar reposar 10 min y cortar en 5 porciones.",
+    "image": "",
+    "nutrition": {
+      "per_serving": {
+        "serving_g": null,
+        "calories_kcal": 210,
+        "protein_g": 15,
+        "fat_g": null,
+        "saturated_fat_g": 3,
+        "total_fat_g": 6,
+        "trans_fat_g": 0,
+        "cholesterol_mg": 125,
+        "sodium_mg": 240,
+        "carbs_g": 24,
+        "fiber_g": 3,
+        "sugars_g": 4,
+        "vitamin_d_mcg": 1,
+        "calcium_mg": 180,
+        "iron_mg": 1,
+        "potassium_mg": 625
+      },
+      "per_100g": {
+        "serving_g": null,
+        "calories_kcal": null,
+        "protein_g": null,
+        "fat_g": null,
+        "saturated_fat_g": null,
+        "total_fat_g": null,
+        "trans_fat_g": null,
+        "cholesterol_mg": null,
+        "sodium_mg": null,
+        "carbs_g": null,
+        "fiber_g": null,
+        "sugars_g": null,
+        "vitamin_d_mcg": null,
+        "calcium_mg": null,
+        "iron_mg": null,
+        "potassium_mg": null
+      }
+    },
+    "tags": {
+      "conditions": ["Huevo","Lácteos"],
+      "type": "Desayuno",
+      "intentions": ["Comer más saludable"]
+    }
+  },
+  {
+    "id": 22,
+    "name": "Fiesta Caribeña",
+    "short_description": "Plato tipo nachos con pollo, frijoles, verduras y queso bajo en grasa; preparación rápida en microondas.",
+    "ingredients": [
+      "1 cucharada aceite de oliva",
+      "1 tira de pollo en trozos (~2 oz)",
+      "Condimentos al gusto (curry, pimienta de Jamaica, scotch bonnet opcional)",
+      "8 chips de tortilla de maíz",
+      "1/4 taza de frijoles negros o pintos enjuagados",
+      "4 tomates tipo uva picados",
+      "1/2 pimiento naranja en cubos",
+      "1/3 cebollín picado",
+      "1 oz queso cheddar jack bajo en grasa rallado"
+    ],
+    "preparation": "Saltear pollo con aceite y condimentos hasta cocer (~5 min). Disponer chips en plato, repartir pollo, frijoles y verduras; espolvorear queso y calentar 1 min en microondas hasta derretir queso. Servir inmediatamente.",
+    "image": "",
+    "nutrition": {
+      "per_serving": {
+        "calories_kcal": 440,
+        "total_fat_g": 26,
+        "saturated_fat_g": 6,
+        "trans_fat_g": 0,
+        "cholesterol_mg": 45,
+        "sodium_mg": 350,
+        "carbs_g": 31,
+        "fiber_g": 6,
+        "sugars_g": 3,
+        "protein_g": 26,
+        "vitamin_d_mcg": 0,
+        "calcium_mg": 275,
+        "iron_mg": 2,
+        "potassium_mg": 580,
+        "serving_g": null,
+        "fat_g": null
+      },
+      "per_100g": {
+        "serving_g": null,
+        "calories_kcal": null,
+        "protein_g": null,
+        "fat_g": null,
+        "saturated_fat_g": null,
+        "total_fat_g": null,
+        "trans_fat_g": null,
+        "cholesterol_mg": null,
+        "sodium_mg": null,
+        "carbs_g": null,
+        "fiber_g": null,
+        "sugars_g": null,
+        "vitamin_d_mcg": null,
+        "calcium_mg": null,
+        "iron_mg": null,
+        "potassium_mg": null
+      }
+    },
+    "tags": {
+      "conditions": ["Lácteos"],
+      "type": "Almuerzo",
+      "intentions": ["Comer más saludable"]
+    }
+  },
+  {
+    "id": 23,
+    "name": "Estofado de Pavo",
+    "short_description": "Guiso de pechuga de pavo con verduras, papas y arvejas; horneado y tierno.",
+    "ingredients": [
+      "1 lb pechuga de pavo en cubos",
+      "2 cucharadas harina integral",
+      "1/4 cucharadita sal, pimienta, 1/4 cucharadita comino",
+      "1 1/2 cucharada aceite de oliva",
+      "2 dientes de ajo picados",
+      "2 cebollas medianas en rodajas",
+      "2 tallos de apio en rodajas",
+      "1 pimiento mediano en rodajas",
+      "1 tomate mediano picado",
+      "5 tazas caldo bajo en sodio",
+      "5 papas pequeñas en cubitos",
+      "12 zanahorias pequeñas en trozos",
+      "1 1/4 taza de arvejas"
+    ],
+    "preparation": "Precalentar horno a 190°C. Enharinar pavo con harina integral y condimentos; dorar en sartén con aceite. En la misma sartén sofreír ajo y verduras 5 min. Añadir tomate y caldo; hervir y verter sobre el pavo en cacerola. Tapar y hornear 1 h; añadir papas, zanahorias y arvejas y hornear 20–25 min más hasta tiernas.",
+    "image": "",
+    "nutrition": {
+      "per_serving": {
+        "calories_kcal": 450,
+        "total_fat_g": 9,
+        "saturated_fat_g": 2,
+        "trans_fat_g": 0,
+        "cholesterol_mg": 65,
+        "sodium_mg": 390,
+        "carbs_g": 56,
+        "fiber_g": 11,
+        "sugars_g": 16,
+        "protein_g": 40,
+        "vitamin_d_mcg": 0,
+        "calcium_mg": 130,
+        "iron_mg": 4,
+        "potassium_mg": 1750,
+        "serving_g": null,
+        "fat_g": null
+      },
+      "per_100g": {
+        "serving_g": null,
+        "calories_kcal": null,
+        "protein_g": null,
+        "fat_g": null,
+        "saturated_fat_g": null,
+        "total_fat_g": null,
+        "trans_fat_g": null,
+        "cholesterol_mg": null,
+        "sodium_mg": null,
+        "carbs_g": null,
+        "fiber_g": null,
+        "sugars_g": null,
+        "vitamin_d_mcg": null,
+        "calcium_mg": null,
+        "iron_mg": null,
+        "potassium_mg": null
+      }
+    },
+    "tags": {
+      "conditions": ["Trigo","Gluten"],
+      "type": "Almuerzo",
+      "intentions": ["Comer más saludable"]
+    }
+  },
+  {
+    "id": 24,
+    "name": "Pargo Rojo Caribeño",
+    "short_description": "Filete de pargo rojo cocinado con verduras, aceitunas y queso feta; sugerencia: servir con arroz integral.",
+    "ingredients": [
+      "2 cucharadas aceite de oliva",
+      "1 cebolla mediana picada",
+      "1/2 taza pimiento rojo picado",
+      "1/2 taza zanahoria en tiras",
+      "1 diente de ajo picado",
+      "1/2 taza vino blanco seco",
+      "3/4 lb filete de pargo rojo",
+      "1 tomate grande picado",
+      "2 cucharadas aceitunas sin semillas picadas",
+      "2 cucharadas queso feta desmenuzado"
+    ],
+    "preparation": "Sofreír cebolla, pimiento y zanahoria 10 min en aceite. Mover verduras a un lado, colocar filetes en el centro, tapar y cocinar 5 min. Añadir tomate y aceitunas, poner queso encima y cocinar 3 min más hasta que el pescado esté firme. Servir con jugos y verduras.",
+    "image": "",
+    "nutrition": {
+      "per_serving": {
+        "calories_kcal": 210,
+        "total_fat_g": 9,
+        "saturated_fat_g": 2,
+        "trans_fat_g": 0,
+        "cholesterol_mg": 30,
+        "sodium_mg": 140,
+        "carbs_g": 9,
+        "fiber_g": 2,
+        "sugars_g": 5,
+        "protein_g": 20,
+        "vitamin_d_mcg": 0,
+        "calcium_mg": 75,
+        "iron_mg": 1,
+        "potassium_mg": 610,
+        "serving_g": null,
+        "fat_g": null
+      },
+      "per_100g": {
+        "serving_g": null,
+        "calories_kcal": null,
+        "protein_g": null,
+        "fat_g": null,
+        "saturated_fat_g": null,
+        "total_fat_g": null,
+        "trans_fat_g": null,
+        "cholesterol_mg": null,
+        "sodium_mg": null,
+        "carbs_g": null,
+        "fiber_g": null,
+        "sugars_g": null,
+        "vitamin_d_mcg": null,
+        "calcium_mg": null,
+        "iron_mg": null,
+        "potassium_mg": null
+      }
+    },
+    "tags": {
+      "conditions": ["Pescado","Lácteos"],
+      "type": "Almuerzo",
+      "intentions": ["Comer más saludable"]
+    }
+  },
+  {
+    "id": 25,
+    "name": "Pizza de Dos Quesos",
+    "short_description": "Pizza casera con base de masa refrigerada integral, ricota y mozzarella bajas en grasa, y verduras.",
+    "ingredients": [
+      "2 cucharadas harina de trigo integral",
+      "1 lata de masa de pizza refrigerada",
+      "Spray de aceite vegetal",
+      "2 cucharadas aceite de oliva",
+      "1/2 taza queso ricota bajo en grasa",
+      "1/2 cucharadita albahaca seca",
+      "1 cebolla pequeña picada",
+      "2 dientes ajo picados",
+      "1/4 cucharadita sal",
+      "4 oz queso mozzarella bajo en grasa",
+      "2 tazas champiñones picados",
+      "1 pimiento rojo en tiras"
+    ],
+    "preparation": "Precalentar horno a 220°C. Espolvorear harina, extender masa y colocar en bandeja engrasada. Mezclar ricota con albahaca, cebolla y ajo; untar sobre la masa. Añadir mozzarella, champiñones y pimiento. Hornear 13–15 min hasta que el queso se derrita y la masa dore. Cortar en 8 porciones (2 por ración).",
+    "image": "",
+    "nutrition": {
+      "per_serving": {
+        "calories_kcal": 440,
+        "total_fat_g": 16,
+        "saturated_fat_g": 5,
+        "trans_fat_g": 0,
+        "cholesterol_mg": 25,
+        "sodium_mg": 800,
+        "carbs_g": 57,
+        "fiber_g": 4,
+        "sugars_g": 12,
+        "protein_g": 20,
+        "vitamin_d_mcg": 0,
+        "calcium_mg": 320,
+        "iron_mg": 4,
+        "potassium_mg": 480,
+        "serving_g": null,
+        "fat_g": null
+      },
+      "per_100g": {
+        "serving_g": null,
+        "calories_kcal": null,
+        "protein_g": null,
+        "fat_g": null,
+        "saturated_fat_g": null,
+        "total_fat_g": null,
+        "trans_fat_g": null,
+        "cholesterol_mg": null,
+        "sodium_mg": null,
+        "carbs_g": null,
+        "fiber_g": null,
+        "sugars_g": null,
+        "vitamin_d_mcg": null,
+        "calcium_mg": null,
+        "iron_mg": null,
+        "potassium_mg": null
+      }
+    },
+    "tags": {
+      "conditions": ["Trigo","Gluten","Lácteos"],
+      "type": "Almuerzo",
+      "intentions": ["Comer más saludable"]
+    }
+  },
+  {
+    "id": 26,
+    "name": "Frijoles y Arroz a la Cubana",
+    "short_description": "Plato clásico de frijoles negros con verduras y condimentos, servido sobre arroz cocido.",
+    "ingredients": [
+      "1 cucharadita aceite de oliva",
+      "1 cucharada ajo picado",
+      "1 taza cebolla picada",
+      "1 taza pimiento verde en cubitos",
+      "3 tazas frijoles negros cocidos",
+      "2 tazas caldo de pollo bajo en grasa",
+      "1 cucharada vinagre",
+      "1/2 cucharadita orégano seco",
+      "Pimienta al gusto",
+      "Arroz cocido para servir"
+    ],
+    "preparation": "Saltear ajo, cebolla y pimiento en aceite 3 min. Añadir frijoles, caldo, vinagre y condimentos; llevar a ebullición y luego cocinar a fuego lento 5 min. Servir sobre arroz cocido.",
+    "image": "",
+    "nutrition": {
+      "per_serving": {
+        "calories_kcal": 400,
+        "total_fat_g": 3.5,
+        "saturated_fat_g": 1,
+        "trans_fat_g": 0,
+        "cholesterol_mg": 0,
+        "sodium_mg": 75,
+        "carbs_g": 74,
+        "fiber_g": 15,
+        "sugars_g": 6,
+        "protein_g": 19,
+        "vitamin_d_mcg": 0,
+        "calcium_mg": 65,
+        "iron_mg": 4,
+        "potassium_mg": 825,
+        "serving_g": null,
+        "fat_g": null
+      },
+      "per_100g": {
+        "serving_g": null,
+        "calories_kcal": null,
+        "protein_g": null,
+        "fat_g": null,
+        "saturated_fat_g": null,
+        "total_fat_g": null,
+        "trans_fat_g": null,
+        "cholesterol_mg": null,
+        "sodium_mg": null,
+        "carbs_g": null,
+        "fiber_g": null,
+        "sugars_g": null,
+        "vitamin_d_mcg": null,
+        "calcium_mg": null,
+        "iron_mg": null,
+        "potassium_mg": null
+      }
+    },
+    "tags": {
+      "conditions": ["FODMAP"],
+      "type": "Almuerzo",
+      "intentions": ["Comer más saludable"]
+    }
+  },
+  {
+    "id": 27,
+    "name": "Arroz con Pollo a la Española",
+    "short_description": "Guiso de arroz integral con pollo y verduras, con azafrán o sazón para color y sabor.",
+    "ingredients": [
+      "2 cucharadas aceite de oliva",
+      "2 cebollas medianas picadas",
+      "6 dientes ajo picados",
+      "2 tallos de apio en cubitos",
+      "2 pimientos en tiras",
+      "1 taza champiñones picados",
+      "2 tazas arroz integral sin cocer",
+      "3 lb pechugas de pollo deshuesadas y sin piel en trozos",
+      "1 1/2 cucharadita sal (opcional)",
+      "2 1/2 tazas caldo de pollo bajo en grasa",
+      "Azafrán o sazón",
+      "3 tomates medianos picados",
+      "1 taza arvejas congeladas",
+      "1 taza maíz congelado",
+      "1 taza ejotes"
+    ],
+    "preparation": "Sofreír cebolla, ajo, apio, pimientos y champiñones 3 min en aceite. Añadir arroz y sofreír 2–3 min; incorporar pollo, sal, caldo, azafrán y tomates; hervir, bajar fuego, tapar y cocer hasta que el arroz esté tierno (~20 min). Añadir arvejas, maíz y ejotes y cocinar 8–10 min más. Servir.",
+    "image": "",
+    "nutrition": {
+      "per_serving": {
+        "calories_kcal": 470,
+        "total_fat_g": 10,
+        "saturated_fat_g": 2,
+        "trans_fat_g": 0,
+        "cholesterol_mg": 95,
+        "sodium_mg": 430,
+        "carbs_g": 52,
+        "fiber_g": 5,
+        "sugars_g": 7,
+        "protein_g": 43,
+        "vitamin_d_mcg": 0,
+        "calcium_mg": 65,
+        "iron_mg": 3,
+        "potassium_mg": 865,
+        "serving_g": null,
+        "fat_g": null
+      },
+      "per_100g": {
+        "serving_g": null,
+        "calories_kcal": null,
+        "protein_g": null,
+        "fat_g": null,
+        "saturated_fat_g": null,
+        "total_fat_g": null,
+        "trans_fat_g": null,
+        "cholesterol_mg": null,
+        "sodium_mg": null,
+        "carbs_g": null,
+        "fiber_g": null,
+        "sugars_g": null,
+        "vitamin_d_mcg": null,
+        "calcium_mg": null,
+        "iron_mg": null,
+        "potassium_mg": null
+      }
+    },
+    "tags": {
+      "conditions": [],
+      "type": "Almuerzo",
+      "intentions": ["Comer más saludable"]
+    }
+  },
+  {
+    "id": 28,
+    "name": "Pozole",
+    "short_description": "Sopa/tradicional pozole con carne de res (opción: pollo), tomates y maíz pozolero, guiso reconfortante.",
+    "ingredients": [
+      "2 lb carne de res magra en cubos (o pechuga de pollo)",
+      "1 cucharada aceite de oliva",
+      "1 cebolla grande picada",
+      "1 diente ajo picado",
+      "1/4 cucharadita sal, 1/8 cucharadita pimienta",
+      "1/4 taza cilantro picado",
+      "1 lata tomates guisados",
+      "2 oz pasta de tomate",
+      "1 lata maíz descascarillado (hominy)"
+    ],
+    "preparation": "Dorar la carne en aceite; añadir cebolla, ajo, sal, pimienta y cilantro; cubrir con agua y cocer a fuego lento hasta tierna. Añadir tomates y pasta de tomate, cocinar 20 min; incorporar hominy y cocinar 15 min más hasta obtener consistencia deseada.",
+    "image": "",
+    "nutrition": {
+      "per_serving": {
+        "calories_kcal": 260,
+        "total_fat_g": 7,
+        "saturated_fat_g": 2,
+        "trans_fat_g": 0,
+        "cholesterol_mg": 60,
+        "sodium_mg": 630,
+        "carbs_g": 23,
+        "fiber_g": 4,
+        "sugars_g": 6,
+        "protein_g": 24,
+        "vitamin_d_mcg": 0,
+        "calcium_mg": 50,
+        "iron_mg": 4,
+        "potassium_mg": 525,
+        "serving_g": null,
+        "fat_g": null
+      },
+      "per_100g": {
+        "serving_g": null,
+        "calories_kcal": null,
+        "protein_g": null,
+        "fat_g": null,
+        "saturated_fat_g": null,
+        "total_fat_g": null,
+        "trans_fat_g": null,
+        "cholesterol_mg": null,
+        "sodium_mg": null,
+        "carbs_g": null,
+        "fiber_g": null,
+        "sugars_g": null,
+        "vitamin_d_mcg": null,
+        "calcium_mg": null,
+        "iron_mg": null,
+        "potassium_mg": null
+      }
+    },
+    "tags": {
+      "conditions": [],
+      "type": "Almuerzo",
+      "intentions": ["Comer más saludable"]
+    }
+  },
+  {
+    "id": 29,
+    "name": "Salsa de Mango Fácil",
+    "short_description": "Salsa fresca de mango con pimiento y cebollín; ideal como dip o acompañamiento.",
+    "ingredients": [
+      "1 mango mediano pelado y picado",
+      "1/4 taza pimiento verde picado",
+      "1 cebollín picado",
+      "Jugo de 1 limón verde (1–2 cucharadas)"
+    ],
+    "preparation": "Pelar y picar mango; picar pimiento y cebollín. Mezclar todos los ingredientes y refrigerar antes de servir. Servir con chips horneados o galletitas integrales.",
+    "image": "",
+    "nutrition": {
+      "per_serving": {
+        "calories_kcal": 40,
+        "total_fat_g": 0,
+        "saturated_fat_g": 0,
+        "trans_fat_g": 0,
+        "cholesterol_mg": 0,
+        "sodium_mg": 0,
+        "carbs_g": 10,
+        "fiber_g": 1,
+        "sugars_g": 8,
+        "protein_g": 1,
+        "vitamin_d_mcg": 0,
+        "calcium_mg": 10,
+        "iron_mg": 0,
+        "potassium_mg": 130,
+        "serving_g": null,
+        "fat_g": null
+      },
+      "per_100g": {
+        "serving_g": null,
+        "calories_kcal": null,
+        "protein_g": null,
+        "fat_g": null,
+        "saturated_fat_g": null,
+        "total_fat_g": null,
+        "trans_fat_g": null,
+        "cholesterol_mg": null,
+        "sodium_mg": null,
+        "carbs_g": null,
+        "fiber_g": null,
+        "sugars_g": null,
+        "vitamin_d_mcg": null,
+        "calcium_mg": null,
+        "iron_mg": null,
+        "potassium_mg": null
+      }
+    },
+    "tags": {
+      "conditions": [],
+      "type": "Comida",
+      "intentions": ["Comer más saludable"]
+    }
+  },
+  {
+    "id": 30,
+    "name": "Tacos de Aguacate",
+    "short_description": "Tacos rellenos de pimientos y cebolla salteados, aguacate y salsa fresca; opción ligera y vegetal.",
+    "ingredients": [
+      "1 cebolla mediana en tiras",
+      "2 pimientos verdes grandes en tiras",
+      "2 pimientos rojos grandes en tiras",
+      "1 taza cilantro fresco picado",
+      "1 aguacate maduro cortado en 12 rodajas",
+      "1 1/2 taza salsa de tomate fresca",
+      "12 tortillas de harina de 10 pulgadas",
+      "Spray de aceite vegetal"
+    ],
+    "preparation": "Preparar salsa fresca mezclando tomates, cebolla, ajo, cilantro, jalapeño, limón y comino. Saltear ligeramente cebolla y pimientos. Calentar tortillas, rellenar con pimientos, cebolla, aguacate y salsa; doblar y espolvorear cilantro.",
+    "image": "",
+    "nutrition": {
+      "per_serving": {
+        "calories_kcal": 260,
+        "total_fat_g": 7,
+        "saturated_fat_g": 2,
+        "trans_fat_g": 0,
+        "cholesterol_mg": 0,
+        "sodium_mg": 450,
+        "carbs_g": 43,
+        "fiber_g": 5,
+        "sugars_g": 5,
+        "protein_g": 7,
+        "vitamin_d_mcg": 0,
+        "calcium_mg": 105,
+        "iron_mg": 3,
+        "potassium_mg": 370,
+        "serving_g": null,
+        "fat_g": null
+      },
+      "per_100g": {
+        "serving_g": null,
+        "calories_kcal": null,
+        "protein_g": null,
+        "fat_g": null,
+        "saturated_fat_g": null,
+        "total_fat_g": null,
+        "trans_fat_g": null,
+        "cholesterol_mg": null,
+        "sodium_mg": null,
+        "carbs_g": null,
+        "fiber_g": null,
+        "sugars_g": null,
+        "vitamin_d_mcg": null,
+        "calcium_mg": null,
+        "iron_mg": null,
+        "potassium_mg": null
+      }
+    },
+    "tags": {
+      "conditions": ["Trigo","Gluten"],
+      "type": "Almuerzo",
+      "intentions": ["Comer más saludable"]
+    }
+  },
+  {
+    "id": 31,
+    "name": "Fantasía de Frutas Tropicales",
+    "short_description": "Ensalada de frutas tropicales mezclada con yogur sin azúcar y sin grasa; ideal como postre o desayuno ligero.",
+    "ingredients": [
+      "8 oz yogur de naranja sin azúcar y sin grasa",
+      "5 fresas medianas en mitades",
+      "3 oz melón verde en rebanadas",
+      "3 oz melón cantalupo en rebanadas",
+      "1 mango pelado y en cubos",
+      "1 papaya pelada y en cubos",
+      "3 oz sandía en rebanadas",
+      "2 naranjas en rodajas",
+      "1/2 taza jugo de naranja sin endulzar"
+    ],
+    "preparation": "Verter yogur en recipiente con las frutas, mezclar cuidadosamente y añadir el jugo de naranja. Servir porciones de 1/2 taza.",
+    "image": "",
+    "nutrition": {
+      "per_serving": {
+        "calories_kcal": 60,
+        "total_fat_g": 0,
+        "saturated_fat_g": 0,
+        "trans_fat_g": 0,
+        "cholesterol_mg": 0,
+        "sodium_mg": 15,
+        "carbs_g": 13,
+        "fiber_g": 2,
+        "sugars_g": 11,
+        "protein_g": 2,
+        "vitamin_d_mcg": 0,
+        "calcium_mg": 55,
+        "iron_mg": 0,
+        "potassium_mg": 235,
+        "serving_g": null,
+        "fat_g": null
+      },
+      "per_100g": {
+        "serving_g": null,
+        "calories_kcal": null,
+        "protein_g": null,
+        "fat_g": null,
+        "saturated_fat_g": null,
+        "total_fat_g": null,
+        "trans_fat_g": null,
+        "cholesterol_mg": null,
+        "sodium_mg": null,
+        "carbs_g": null,
+        "fiber_g": null,
+        "sugars_g": null,
+        "vitamin_d_mcg": null,
+        "calcium_mg": null,
+        "iron_mg": null,
+        "potassium_mg": null
+      }
+    },
+    "tags": {
+      "conditions": ["Lácteos"],
+      "type": "Desayuno",
+      "intentions": ["Comer más saludable"]
+    }
+  },
+  {
+    "id": 32,
+    "name": "High-Protein Milk",
+    "short_description": "Leche entera fortificada con leche en polvo: fuente fácil de calorías y proteína para añadir a recetas o beber sola.",
+    "ingredients": [
+      "1 quart (≈946 ml) whole milk",
+      "1 cup powdered milk"
+    ],
+    "preparation": "Mezclar el polvo de leche con la leche entera hasta disolver; usar sola o en recetas (puddings, cereales, batidos, sopas, etc.).",
+    "image": "",
+    "nutrition": {
+      "per_serving": {
+        "serving_g": 240,
+        "calories_kcal": 211,
+        "protein_g": 14,
+        "total_fat_g": null,
+        "saturated_fat_g": null,
+        "sodium_mg": null,
+        "fat_g": null,
+        "cholesterol_mg": null,
+        "carbs_g": null,
+        "fiber_g": null,
+        "sugars_g": null,
+        "vitamin_d_mcg": null,
+        "calcium_mg": null,
+        "iron_mg": null,
+        "potassium_mg": null
+      },
+      "per_100g": {
+        "serving_g": null,
+        "calories_kcal": null,
+        "protein_g": null,
+        "fat_g": null,
+        "saturated_fat_g": null,
+        "total_fat_g": null,
+        "trans_fat_g": null,
+        "cholesterol_mg": null,
+        "sodium_mg": null,
+        "carbs_g": null,
+        "fiber_g": null,
+        "sugars_g": null,
+        "vitamin_d_mcg": null,
+        "calcium_mg": null,
+        "iron_mg": null,
+        "potassium_mg": null
+      }
+    },
+    "tags": {
+      "conditions": ["Lácteos"],
+      "type": "Desayuno",
+      "intentions": ["Ganar masa muscular"]
+    }
+  },
+  {
+    "id": 33,
+    "name": "Apple Pie à la Mode",
+    "short_description": "Relleno de tarta de manzana con leche y helado (puede hacerse sin lactosa), alto en calorías.",
+    "ingredients": [
+      "1 cup apple pie filling",
+      "1/2 cup whole milk (or soy/rice milk)",
+      "1 cup vanilla ice cream or non-dairy ice cream",
+      "1/2 teaspoon cinnamon"
+    ],
+    "preparation": "Mezclar el relleno de manzana con la leche y el helado; espolvorear canela y servir frío.",
+    "image": "",
+    "nutrition": {
+      "per_serving": {
+        "serving_g": 280,
+        "calories_kcal": 550,
+        "protein_g": 10,
+        "total_fat_g": null,
+        "saturated_fat_g": null,
+        "sodium_mg": null,
+        "fat_g": null,
+        "cholesterol_mg": null,
+        "carbs_g": null,
+        "fiber_g": null,
+        "sugars_g": null,
+        "vitamin_d_mcg": null,
+        "calcium_mg": null,
+        "iron_mg": null,
+        "potassium_mg": null
+      },
+      "per_100g": {
+        "serving_g": null,
+        "calories_kcal": null,
+        "protein_g": null,
+        "fat_g": null,
+        "saturated_fat_g": null,
+        "total_fat_g": null,
+        "trans_fat_g": null,
+        "cholesterol_mg": null,
+        "sodium_mg": null,
+        "carbs_g": null,
+        "fiber_g": null,
+        "sugars_g": null,
+        "vitamin_d_mcg": null,
+        "calcium_mg": null,
+        "iron_mg": null,
+        "potassium_mg": null
+      }
+    },
+    "tags": {
+      "conditions": ["Lácteos"],
+      "type": "Comida",
+      "intentions": ["Ganar peso"]
+    }
+  },
+  {
+    "id": 34,
+    "name": "Banana Apple Shake",
+    "short_description": "Batido con plátano, yogur y leche; energético y fácil de digerir.",
+    "ingredients": [
+      "1 banana",
+      "1/2 cup plain yogurt",
+      "1/2 cup unsweetened applesauce",
+      "1/2 cup whole milk (or soy/rice/nutrition drink)",
+      "1 tablespoon honey"
+    ],
+    "preparation": "Licuar todos los ingredientes hasta obtener textura homogénea. Enfriar si se desea.",
+    "image": "",
+    "nutrition": {
+      "per_serving": {
+        "serving_g": 300,
+        "calories_kcal": 400,
+        "protein_g": 9,
+        "total_fat_g": null,
+        "saturated_fat_g": null,
+        "sodium_mg": null,
+        "fat_g": null,
+        "cholesterol_mg": null,
+        "carbs_g": null,
+        "fiber_g": null,
+        "sugars_g": null,
+        "vitamin_d_mcg": null,
+        "calcium_mg": null,
+        "iron_mg": null,
+        "potassium_mg": null
+      },
+      "per_100g": {
+        "serving_g": null,
+        "calories_kcal": null,
+        "protein_g": null,
+        "fat_g": null,
+        "saturated_fat_g": null,
+        "total_fat_g": null,
+        "trans_fat_g": null,
+        "cholesterol_mg": null,
+        "sodium_mg": null,
+        "carbs_g": null,
+        "fiber_g": null,
+        "sugars_g": null,
+        "vitamin_d_mcg": null,
+        "calcium_mg": null,
+        "iron_mg": null,
+        "potassium_mg": null
+      }
+    },
+    "tags": {
+      "conditions": ["Lácteos"],
+      "type": "Desayuno",
+      "intentions": ["Ganar peso"]
+    }
+  },
+  {
+    "id": 35,
+    "name": "Chocolate, Banana and Peanut Butter Smoothie",
+    "short_description": "Smoothie con yogur/leche, mantequilla de maní y chocolate: denso en calorías y proteína (opción sin lactosa disponible).",
+    "ingredients": [
+      "1 cup plain yogurt or whole milk (or soy/rice)",
+      "1 tablespoon creamy peanut butter",
+      "2 tablespoons chocolate syrup",
+      "1 frozen banana (or 1 banana + 3 ice cubes)"
+    ],
+    "preparation": "Licuar todos los ingredientes hasta homogeneizar. Servir frío.",
+    "image": "",
+    "nutrition": {
+      "per_serving": {
+        "serving_g": 350,
+        "calories_kcal": 550,
+        "protein_g": 14,
+        "total_fat_g": null,
+        "saturated_fat_g": null,
+        "sodium_mg": null,
+        "fat_g": null,
+        "cholesterol_mg": null,
+        "carbs_g": null,
+        "fiber_g": null,
+        "sugars_g": null,
+        "vitamin_d_mcg": null,
+        "calcium_mg": null,
+        "iron_mg": null,
+        "potassium_mg": null
+      },
+      "per_100g": {
+        "serving_g": null,
+        "calories_kcal": null,
+        "protein_g": null,
+        "fat_g": null,
+        "saturated_fat_g": null,
+        "total_fat_g": null,
+        "trans_fat_g": null,
+        "cholesterol_mg": null,
+        "sodium_mg": null,
+        "carbs_g": null,
+        "fiber_g": null,
+        "sugars_g": null,
+        "vitamin_d_mcg": null,
+        "calcium_mg": null,
+        "iron_mg": null,
+        "potassium_mg": null
+      }
+    },
+    "tags": {
+      "conditions": ["Maní","Lácteos"],
+      "type": "Desayuno",
+      "intentions": ["Ganar peso"]
+    }
+  },
+  {
+    "id": 36,
+    "name": "Fortified Macaroni and Cheese",
+    "short_description": "Macarrones con queso enriquecidos (añadir crema y leche en polvo para aumentar calorías y proteína).",
+    "ingredients": [
+      "1 package (7.25 oz) macaroni and cheese dinner",
+      "Butter or margarine",
+      "1/4 cup heavy whipping cream",
+      "2 tablespoons skim milk powder",
+      "1/2 cup shredded cheddar cheese"
+    ],
+    "preparation": "Cocer la pasta según paquete. Añadir mantequilla, la mezcla del sobre, en lugar de la leche añadir la crema y el polvo de leche; mezclar y añadir el cheddar hasta fundir.",
+    "image": "",
+    "nutrition": {
+      "per_serving": {
+        "serving_g": 220,
+        "calories_kcal": 563,
+        "protein_g": 16,
+        "total_fat_g": null,
+        "saturated_fat_g": null,
+        "sodium_mg": null,
+        "fat_g": null,
+        "cholesterol_mg": null,
+        "carbs_g": null,
+        "fiber_g": null,
+        "sugars_g": null,
+        "vitamin_d_mcg": null,
+        "calcium_mg": null,
+        "iron_mg": null,
+        "potassium_mg": null
+      },
+      "per_100g": {
+        "serving_g": null,
+        "calories_kcal": null,
+        "protein_g": null,
+        "fat_g": null,
+        "saturated_fat_g": null,
+        "total_fat_g": null,
+        "trans_fat_g": null,
+        "cholesterol_mg": null,
+        "sodium_mg": null,
+        "carbs_g": null,
+        "fiber_g": null,
+        "sugars_g": null,
+        "vitamin_d_mcg": null,
+        "calcium_mg": null,
+        "iron_mg": null,
+        "potassium_mg": null
+      }
+    },
+    "tags": {
+      "conditions": ["Trigo","Gluten","Lácteos"],
+      "type": "Almuerzo",
+      "intentions": ["Ganar peso"]
+    }
+  },
+  {
+    "id": 37,
+    "name": "Hearty Mashed Potatoes",
+    "short_description": "Puré instantáneo enriquecido con crema, mantequilla y sour cream; alto en calorías por porción pequeña.",
+    "ingredients": [
+      "2/3 cup water",
+      "2/3 cup heavy cream",
+      "2 tablespoons butter or margarine",
+      "2/3 cup potato flakes",
+      "3 tablespoons sour cream",
+      "Salt and pepper"
+    ],
+    "preparation": "Calentar agua, crema y mantequilla; incorporar los copos de patata, mezclar y añadir sour cream; sazonar.",
+    "image": "",
+    "nutrition": {
+      "per_serving": {
+        "serving_g": 120,
+        "calories_kcal": 495,
+        "protein_g": 4,
+        "total_fat_g": null,
+        "saturated_fat_g": null,
+        "sodium_mg": null,
+        "fat_g": null,
+        "cholesterol_mg": null,
+        "carbs_g": null,
+        "fiber_g": null,
+        "sugars_g": null,
+        "vitamin_d_mcg": null,
+        "calcium_mg": null,
+        "iron_mg": null,
+        "potassium_mg": null
+      },
+      "per_100g": {
+        "serving_g": null,
+        "calories_kcal": null,
+        "protein_g": null,
+        "fat_g": null,
+        "saturated_fat_g": null,
+        "total_fat_g": null,
+        "trans_fat_g": null,
+        "cholesterol_mg": null,
+        "sodium_mg": null,
+        "carbs_g": null,
+        "fiber_g": null,
+        "sugars_g": null,
+        "vitamin_d_mcg": null,
+        "calcium_mg": null,
+        "iron_mg": null,
+        "potassium_mg": null
+      }
+    },
+    "tags": {
+      "conditions": ["Lácteos"],
+      "type": "Almuerzo",
+      "intentions": ["Ganar peso"]
+    }
+  },
+  {
+    "id": 38,
+    "name": "Super Sweet Potato Mash",
+    "short_description": "Puré de batata con néctar de albaricoque y tofu (alto en calorías y aporte proteico por el tofu).",
+    "ingredients": [
+      "1 small sweet potato, peeled and cut",
+      "1 1/2 cups apricot nectar",
+      "4 oz soft or silken tofu",
+      "2 tablespoons honey"
+    ],
+    "preparation": "Cocer la batata hasta ablandar; triturar con néctar, tofu y miel hasta textura suave. Servir caliente.",
+    "image": "",
+    "nutrition": {
+      "per_serving": {
+        "serving_g": 250,
+        "calories_kcal": 500,
+        "protein_g": 9,
+        "total_fat_g": null,
+        "saturated_fat_g": null,
+        "sodium_mg": null,
+        "fat_g": null,
+        "cholesterol_mg": null,
+        "carbs_g": null,
+        "fiber_g": null,
+        "sugars_g": null,
+        "vitamin_d_mcg": null,
+        "calcium_mg": null,
+        "iron_mg": null,
+        "potassium_mg": null
+      },
+      "per_100g": {
+        "serving_g": null,
+        "calories_kcal": null,
+        "protein_g": null,
+        "fat_g": null,
+        "saturated_fat_g": null,
+        "total_fat_g": null,
+        "trans_fat_g": null,
+        "cholesterol_mg": null,
+        "sodium_mg": null,
+        "carbs_g": null,
+        "fiber_g": null,
+        "sugars_g": null,
+        "vitamin_d_mcg": null,
+        "calcium_mg": null,
+        "iron_mg": null,
+        "potassium_mg": null
+      }
+    },
+    "tags": {
+      "conditions": ["Soya"],
+      "type": "Almuerzo",
+      "intentions": ["Ganar peso"]
+    }
+  },
+  {
+    "id": 39,
+    "name": "Peanut Butter Spread",
+    "short_description": "Crema de mantequilla de maní enriquecida con leche en polvo y miel; para untar o formar bolitas energéticas.",
+    "ingredients": [
+      "1 tablespoon non-fat dry milk",
+      "1 tablespoon water",
+      "1 teaspoon vanilla extract",
+      "1 tablespoon honey",
+      "5 tablespoons peanut butter (smooth)"
+    ],
+    "preparation": "Mezclar leche en polvo con agua y vainilla; añadir miel y mantequilla de maní; combinar hasta textura homogénea. Servir sobre galletas o formar bolas y refrigerar.",
+    "image": "",
+    "nutrition": {
+      "per_serving": {
+        "serving_g": 45,
+        "calories_kcal": 279,
+        "protein_g": 11,
+        "total_fat_g": null,
+        "saturated_fat_g": null,
+        "sodium_mg": null,
+        "fat_g": null,
+        "cholesterol_mg": null,
+        "carbs_g": null,
+        "fiber_g": null,
+        "sugars_g": null,
+        "vitamin_d_mcg": null,
+        "calcium_mg": null,
+        "iron_mg": null,
+        "potassium_mg": null
+      },
+      "per_100g": {
+        "serving_g": null,
+        "calories_kcal": null,
+        "protein_g": null,
+        "fat_g": null,
+        "saturated_fat_g": null,
+        "total_fat_g": null,
+        "trans_fat_g": null,
+        "cholesterol_mg": null,
+        "sodium_mg": null,
+        "carbs_g": null,
+        "fiber_g": null,
+        "sugars_g": null,
+        "vitamin_d_mcg": null,
+        "calcium_mg": null,
+        "iron_mg": null,
+        "potassium_mg": null
+      }
+    },
+    "tags": {
+      "conditions": ["Maní","Lácteos"],
+      "type": "Comida",
+      "intentions": ["Ganar peso"]
+    }
+  },
+  {
+    "id": 40,
+    "name": "Trail Mix",
+    "short_description": "Mezcla de frutos secos, coco, pasas y chocolate: snack energético y calórico.",
+    "ingredients": [
+      "3/4 cup cashews",
+      "1 cup walnuts or pecans",
+      "1/2 cup raisins",
+      "1/2 cup dried cranberries",
+      "3/4 cup shredded coconut",
+      "3/4 cup chocolate chips or M&M’s"
+    ],
+    "preparation": "Mezclar todos los ingredientes y almacenar en recipiente hermético.",
+    "image": "",
+    "nutrition": {
+      "per_serving": {
+        "serving_g": 60,
+        "calories_kcal": 350,
+        "protein_g": 7,
+        "total_fat_g": null,
+        "saturated_fat_g": null,
+        "sodium_mg": null,
+        "fat_g": null,
+        "cholesterol_mg": null,
+        "carbs_g": null,
+        "fiber_g": null,
+        "sugars_g": null,
+        "vitamin_d_mcg": null,
+        "calcium_mg": null,
+        "iron_mg": null,
+        "potassium_mg": null
+      },
+      "per_100g": {
+        "serving_g": null,
+        "calories_kcal": null,
+        "protein_g": null,
+        "fat_g": null,
+        "saturated_fat_g": null,
+        "total_fat_g": null,
+        "trans_fat_g": null,
+        "cholesterol_mg": null,
+        "sodium_mg": null,
+        "carbs_g": null,
+        "fiber_g": null,
+        "sugars_g": null,
+        "vitamin_d_mcg": null,
+        "calcium_mg": null,
+        "iron_mg": null,
+        "potassium_mg": null
+      }
+    },
+    "tags": {
+      "conditions": ["Frutos Secos"],
+      "type": "Comida",
+      "intentions": ["Ganar peso"]
+    }
+  },
+  {
+    "id": 41,
+    "name": "Turkey Minestrone Soup",
+    "short_description": "Sopa minestrone con pavo picado, verduras, pasta pequeña y legumbres; baja en calorías por ración pero rica en proteína (varias porciones).",
+    "ingredients": [
+      "1 pound ground turkey breast or lean ground beef",
+      "1 onion, chopped",
+      "2 carrots, chopped",
+      "2 celery stalks, chopped",
+      "8 cups reduced-sodium chicken broth",
+      "1 can (14.5 oz) diced tomatoes",
+      "1/2 cup small pasta (orzo/pastini)",
+      "1 package (10 oz) frozen chopped spinach",
+      "1 can (15 oz) chickpeas or white beans, rinsed and drained",
+      "1 teaspoon dried basil, 1 teaspoon dried oregano",
+      "Pepper and salt to taste",
+      "Grated parmesan (optional)"
+    ],
+    "preparation": "Sofreír pavo y cebolla hasta cocer; añadir zanahoria y apio, cocinar 10 min. Añadir caldo, tomates y especias; hervir, reducir y cocer 20 min. Incorporar pasta, espinaca y legumbres; cocer 10 min más. Servir con parmesano.",
+    "image": "",
+    "nutrition": {
+      "per_serving": {
+        "serving_g": 250,
+        "calories_kcal": 120,
+        "protein_g": 13,
+        "total_fat_g": 1,
+        "saturated_fat_g": null,
+        "sodium_mg": null,
+        "fat_g": null,
+        "cholesterol_mg": null,
+        "carbs_g": null,
+        "fiber_g": null,
+        "sugars_g": null,
+        "vitamin_d_mcg": null,
+        "calcium_mg": null,
+        "iron_mg": null,
+        "potassium_mg": null
+      },
+      "per_100g": {
+        "serving_g": null,
+        "calories_kcal": null,
+        "protein_g": null,
+        "fat_g": null,
+        "saturated_fat_g": null,
+        "total_fat_g": null,
+        "trans_fat_g": null,
+        "cholesterol_mg": null,
+        "sodium_mg": null,
+        "carbs_g": null,
+        "fiber_g": null,
+        "sugars_g": null,
+        "vitamin_d_mcg": null,
+        "calcium_mg": null,
+        "iron_mg": null,
+        "potassium_mg": null
+      }
+    },
+    "tags": {
+      "conditions": ["Gluten","Legumbres"],
+      "type": "Almuerzo",
+      "intentions": ["Ganar masa muscular"]
+    }
+  },
+  {
+    "id": 42,
+    "name": "Sopa de alubias blancas y pollo",
+    "short_description": "Sopa reconfortante con pollo desmenuzado y alubias blancas; alta en proteína y adecuada para una comida ligera.",
+    "ingredients": [
+      "3 tazas de pollo blanco cocido y desmenuzado (pechuga)",
+      "1 cucharada de aceite de canola",
+      "3 zanahorias en rodajas",
+      "2 tallos de apio en rodajas",
+      "1 cebolla picada",
+      "2 tazas de agua",
+      "6 tazas de caldo de pollo bajo en sodio",
+      "1 lata (15 oz) de alubias blancas (great northern), enjuagadas y escurridas",
+      "Sal y pimienta al gusto"
+    ],
+    "preparation": "Sofreír en olla el aceite con zanahoria, apio y cebolla 8–10 min hasta ablandar; añadir agua y caldo, llevar a ebullición, bajar el fuego y cocer tapado 15–20 min; incorporar las alubias y el pollo, cocer 5 min más, ajustar sal y pimienta y servir caliente.",
+    "image": "",
+    "nutrition": {
+      "per_serving": {
+        "serving_g": 350,
+        "calories_kcal": 235,
+        "protein_g": 28,
+        "fat_g": 5,
+        "saturated_fat_g": null,
+        "carbs_g": null,
+        "fiber_g": null,
+        "sugars_g": null,
+        "sodium_mg": null,
+        "total_fat_g": null,
+        "cholesterol_mg": null,
+        "vitamin_d_mcg": null,
+        "calcium_mg": null,
+        "iron_mg": null,
+        "potassium_mg": null
+      },
+      "per_100g": {
+        "serving_g": null,
+        "calories_kcal": null,
+        "protein_g": null,
+        "fat_g": null,
+        "saturated_fat_g": null,
+        "total_fat_g": null,
+        "trans_fat_g": null,
+        "cholesterol_mg": null,
+        "sodium_mg": null,
+        "carbs_g": null,
+        "fiber_g": null,
+        "sugars_g": null,
+        "vitamin_d_mcg": null,
+        "calcium_mg": null,
+        "iron_mg": null,
+        "potassium_mg": null
+      }
+    },
+    "tags": {
+      "conditions": [],
+      "type": "Comida",
+      "intentions": ["Comer más saludable", "Ganar masa muscular"]
+    }
+  },
+  {
+    "id": 43,
+    "name": "Lasaña de verduras asadas",
+    "short_description": "Lasaña de berenjena y calabacín asados con ricotta y mozzarella; plato completo y alto en proteína.",
+    "ingredients": [
+      "2 berenjenas (≈1.4 kg) en rodajas de 1/2\"",
+      "6 calabacines (≈1.4 kg) en rodajas de 1/2\"",
+      "Aceite en spray",
+      "1 lb de láminas de lasaña integral",
+      "15 oz de ricotta o requesón bajo en grasa",
+      "2 huevos",
+      "1/2 taza de queso parmesano rallado",
+      "1/2 cucharadita de nuez moscada",
+      "1/2 cucharadita de ajo en polvo",
+      "4 tazas de salsa de tomate baja en sodio",
+      "3 tazas de mozzarella baja en grasa rallada"
+    ],
+    "preparation": "Asar berenjena y calabacín 40 min a 230°C volteando a mitad; bajar el horno a 190°C; cocer láminas de lasaña; mezclar ricotta con huevos, parmesano, nuez moscada y ajo; montar 4 capas de pasta y 3 de relleno alternando salsa, ricotta, mozzarella y verduras; cubrir con salsa y mozzarella, hornear 30 min tapado, destapar y gratinar 15 min, reposar 15 min y servir.",
+    "image": "",
+    "nutrition": {
+      "per_serving": {
+        "serving_g": 250,
+        "calories_kcal": 360,
+        "protein_g": 23,
+        "fat_g": 11,
+        "saturated_fat_g": 5,
+        "carbs_g": 45,
+        "fiber_g": 11,
+        "sugars_g": null,
+        "sodium_mg": 310,
+        "total_fat_g": null,
+        "cholesterol_mg": null,
+        "vitamin_d_mcg": null,
+        "calcium_mg": null,
+        "iron_mg": null,
+        "potassium_mg": null
+      },
+      "per_100g": {
+        "serving_g": null,
+        "calories_kcal": null,
+        "protein_g": null,
+        "fat_g": null,
+        "saturated_fat_g": null,
+        "total_fat_g": null,
+        "trans_fat_g": null,
+        "cholesterol_mg": null,
+        "sodium_mg": null,
+        "carbs_g": null,
+        "fiber_g": null,
+        "sugars_g": null,
+        "vitamin_d_mcg": null,
+        "calcium_mg": null,
+        "iron_mg": null,
+        "potassium_mg": null
+      }
+    },
+    "tags": {
+      "conditions": ["Trigo", "Gluten", "Lácteos"],
+      "type": "Comida",
+      "intentions": ["Ganar peso", "Ganar masa muscular"]
+    }
+  },
+  {
+    "id": 44,
+    "name": "Burritos de pollo y quinoa",
+    "short_description": "Burritos integrales con pollo, frijoles negros, quinoa, queso y yogur; muy saciantes y calóricos.",
+    "ingredients": [
+      "4 tortillas de trigo integrales (tamaño burrito), calentadas",
+      "1 taza de pollo de rotisserie desmenuzado, caliente",
+      "1 taza de frijoles negros cocidos y enjuagados, calientes",
+      "1 taza de quinoa cocida",
+      "1 taza de queso rallado",
+      "1/2 taza de yogur griego natural",
+      "1 aguacate en láminas (opcional)",
+      "1 taza de salsa",
+      "1 taza de cilantro fresco (opcional)"
+    ],
+    "preparation": "Distribuir en cada tortilla pollo, frijoles, quinoa, queso, yogur, aguacate y salsa; doblar extremos y enrollar firme; servir al momento o envolver y refrigerar.",
+    "image": "",
+    "nutrition": {
+      "per_serving": {
+        "serving_g": 300,
+        "calories_kcal": 657,
+        "protein_g": 38,
+        "fat_g": 24,
+        "saturated_fat_g": 9,
+        "carbs_g": null,
+        "fiber_g": null,
+        "sugars_g": null,
+        "sodium_mg": null,
+        "total_fat_g": null,
+        "cholesterol_mg": null,
+        "vitamin_d_mcg": null,
+        "calcium_mg": null,
+        "iron_mg": null,
+        "potassium_mg": null
+      },
+      "per_100g": {
+        "serving_g": null,
+        "calories_kcal": null,
+        "protein_g": null,
+        "fat_g": null,
+        "saturated_fat_g": null,
+        "total_fat_g": null,
+        "trans_fat_g": null,
+        "cholesterol_mg": null,
+        "sodium_mg": null,
+        "carbs_g": null,
+        "fiber_g": null,
+        "sugars_g": null,
+        "vitamin_d_mcg": null,
+        "calcium_mg": null,
+        "iron_mg": null,
+        "potassium_mg": null
+      }
+    },
+    "tags": {
+      "conditions": ["Trigo", "Gluten", "Lácteos"],
+      "type": "Almuerzo",
+      "intentions": ["Ganar peso", "Ganar masa muscular"]
+    }
+  },
+  {
+    "id": 45,
+    "name": "Wraps de garbanzo y aguacate",
+    "short_description": "Relleno cremoso de garbanzo y aguacate con vegetales, servido en tortillas o hojas de lechuga.",
+    "ingredients": [
+      "1 aguacate maduro",
+      "1 lata (15.5 oz) de garbanzos reducidos en sodio, escurridos",
+      "1 cucharada de jugo de limón",
+      "2 cucharadas de cilantro picado (opcional)",
+      "2 cucharadas de cebolla morada finamente picada",
+      "1 cucharadita de comino",
+      "1 tallo de apio finamente picado",
+      "Sal y pimienta al gusto",
+      "4 tortillas medianas integrales o 4 hojas de lechuga",
+      "1 tomate mediano en rodajas",
+      "2 cucharadas de queso feta desmenuzado"
+    ],
+    "preparation": "Aplastar garbanzos en bol hasta obtener textura deseada; mezclar con aguacate, limón, cilantro, cebolla, apio, comino, sal y pimienta; repartir sobre tortillas o lechuga, coronar con tomate y feta, enrollar y servir.",
+    "image": "",
+    "nutrition": {
+      "per_serving": {
+        "serving_g": 200,
+        "calories_kcal": 200,
+        "protein_g": 8,
+        "fat_g": 10,
+        "saturated_fat_g": 2,
+        "carbs_g": null,
+        "fiber_g": null,
+        "sugars_g": null,
+        "sodium_mg": null,
+        "total_fat_g": null,
+        "cholesterol_mg": null,
+        "vitamin_d_mcg": null,
+        "calcium_mg": null,
+        "iron_mg": null,
+        "potassium_mg": null
+      },
+      "per_100g": {
+        "serving_g": null,
+        "calories_kcal": null,
+        "protein_g": null,
+        "fat_g": null,
+        "saturated_fat_g": null,
+        "total_fat_g": null,
+        "trans_fat_g": null,
+        "cholesterol_mg": null,
+        "sodium_mg": null,
+        "carbs_g": null,
+        "fiber_g": null,
+        "sugars_g": null,
+        "vitamin_d_mcg": null,
+        "calcium_mg": null,
+        "iron_mg": null,
+        "potassium_mg": null
+      }
+    },
+    "tags": {
+      "conditions": ["Trigo", "Gluten", "Lácteos"],
+      "type": "Almuerzo",
+      "intentions": ["Comer más saludable"]
+    }
+  },
+  {
+    "id": 46,
+    "name": "Wrap de pavo y manzana",
+    "short_description": "Wrap integral con pavo, espinaca y láminas finas de manzana; fresco, crujiente y proteico.",
+    "ingredients": [
+      "1 cucharada de mayonesa",
+      "2 cucharaditas de mostaza miel",
+      "2 wraps integrales (20 cm)",
+      "2 tazas de espinaca baby",
+      "4 lonchas finas de pechuga de pavo (≈4 oz)",
+      "1/4 de manzana Granny Smith en láminas muy finas",
+      "2 láminas finas de aguacate (opcional)"
+    ],
+    "preparation": "Mezclar mayonesa y mostaza; untar los wraps; colocar espinaca, pavo, manzana y aguacate; doblar extremos y enrollar ajustado; consumir de inmediato o refrigerar.",
+    "image": "",
+    "nutrition": {
+      "per_serving": {
+        "serving_g": 180,
+        "calories_kcal": 260,
+        "protein_g": 22,
+        "fat_g": 6,
+        "saturated_fat_g": 1,
+        "carbs_g": null,
+        "fiber_g": null,
+        "sugars_g": null,
+        "sodium_mg": null,
+        "total_fat_g": null,
+        "cholesterol_mg": null,
+        "vitamin_d_mcg": null,
+        "calcium_mg": null,
+        "iron_mg": null,
+        "potassium_mg": null
+      },
+      "per_100g": {
+        "serving_g": null,
+        "calories_kcal": null,
+        "protein_g": null,
+        "fat_g": null,
+        "saturated_fat_g": null,
+        "total_fat_g": null,
+        "trans_fat_g": null,
+        "cholesterol_mg": null,
+        "sodium_mg": null,
+        "carbs_g": null,
+        "fiber_g": null,
+        "sugars_g": null,
+        "vitamin_d_mcg": null,
+        "calcium_mg": null,
+        "iron_mg": null,
+        "potassium_mg": null
+      }
+    },
+    "tags": {
+      "conditions": ["Trigo", "Gluten"],
+      "type": "Almuerzo",
+      "intentions": ["Comer más saludable", "Ganar masa muscular"]
+    }
+  },
+  {
+    "id": 47,
+    "name": "Frittata de verduras y frijoles negros",
+    "short_description": "Frittata de sartén con pimientos, cebolla, frijoles negros y queso; ideal para desayuno proteico.",
+    "ingredients": [
+      "1 cucharada de aceite de canola u oliva",
+      "1/2 taza de pimiento rojo en dados",
+      "1/4 taza de cebolla amarilla en dados",
+      "1/2 taza de frijoles negros enjuagados",
+      "6 huevos grandes",
+      "Sal y pimienta al gusto",
+      "1/4 taza de cheddar bajo en grasa rallado",
+      "1/4 aguacate en láminas",
+      "1/2 taza de salsa o pico de gallo",
+      "2 cucharadas de cilantro picado (opcional)"
+    ],
+    "preparation": "Saltear pimiento, cebolla y frijoles 5 min; verter huevos batidos, sazonar y cuajar a fuego medio 2–3 min; fuera del fuego añadir queso y fundir; deslizar al plato, coronar con aguacate, salsa y cilantro.",
+    "image": "",
+    "nutrition": {
+      "per_serving": {
+        "serving_g": 150,
+        "calories_kcal": 200,
+        "protein_g": 13,
+        "fat_g": 13,
+        "saturated_fat_g": 3,
+        "carbs_g": 9,
+        "fiber_g": null,
+        "sugars_g": null,
+        "sodium_mg": null,
+        "total_fat_g": null,
+        "cholesterol_mg": null,
+        "vitamin_d_mcg": null,
+        "calcium_mg": null,
+        "iron_mg": null,
+        "potassium_mg": null
+      },
+      "per_100g": {
+        "serving_g": null,
+        "calories_kcal": null,
+        "protein_g": null,
+        "fat_g": null,
+        "saturated_fat_g": null,
+        "total_fat_g": null,
+        "trans_fat_g": null,
+        "cholesterol_mg": null,
+        "sodium_mg": null,
+        "carbs_g": null,
+        "fiber_g": null,
+        "sugars_g": null,
+        "vitamin_d_mcg": null,
+        "calcium_mg": null,
+        "iron_mg": null,
+        "potassium_mg": null
+      }
+    },
+    "tags": {
+      "conditions": ["Huevo", "Lácteos"],
+      "type": "Desayuno",
+      "intentions": ["Comer más saludable", "Ganar masa muscular"]
+    }
+  },
+  {
+    "id": 48,
+    "name": "Pollo al horno con papas y brócoli",
+    "short_description": "Pechugas de pollo al horno con papas doradas y brócoli asado al limón; plato balanceado y proteico.",
+    "ingredients": [
+      "2 pechugas de pollo (500–600 g) en mitades",
+      "600 g papas en cubos de 2 cm",
+      "350 g brócoli en floretes",
+      "2 cucharadas AOVE",
+      "2 dientes de ajo picados",
+      "1 cucharadita pimentón dulce",
+      "1/2 cucharadita orégano seco",
+      "Ralladura y jugo de 1/2 limón",
+      "Sal y pimienta al gusto"
+    ],
+    "preparation": "Precalentar el horno a 210°C; mezclar papas con 1 cucharada de AOVE, sal y pimentón y hornear 15 min en bandeja amplia; sazonar el pollo con ajo, orégano, sal, pimienta y 1/2 cucharada de AOVE, incorporarlo a la bandeja con las papas y asar 12–15 min; mezclar brócoli con 1/2 cucharada de AOVE y sal, añadir a la bandeja y asar 8–10 min más; terminar con ralladura y jugo de limón y reposar 5 min antes de servir.",
+    "image": "",
+    "nutrition": {
+      "per_serving": {
+        "serving_g": 450,
+        "calories_kcal": 560,
+        "protein_g": 45,
+        "fat_g": 18,
+        "saturated_fat_g": 4,
+        "carbs_g": 55,
+        "fiber_g": 9,
+        "sugars_g": 6,
+        "sodium_mg": 620,
+        "total_fat_g": null,
+        "cholesterol_mg": null,
+        "vitamin_d_mcg": null,
+        "calcium_mg": null,
+        "iron_mg": null,
+        "potassium_mg": null
+      },
+      "per_100g": {
+        "serving_g": null,
+        "calories_kcal": null,
+        "protein_g": null,
+        "fat_g": null,
+        "saturated_fat_g": null,
+        "total_fat_g": null,
+        "trans_fat_g": null,
+        "cholesterol_mg": null,
+        "sodium_mg": null,
+        "carbs_g": null,
+        "fiber_g": null,
+        "sugars_g": null,
+        "vitamin_d_mcg": null,
+        "calcium_mg": null,
+        "iron_mg": null,
+        "potassium_mg": null
+      }
+    },
+    "tags": {
+      "conditions": [],
+      "type": "Comida",
+      "intentions": ["Comer más saludable", "Ganar masa muscular"]
+    }
+  },
+  {
+    "id": 49,
+    "name": "Bowl de arroz integral con salmón y verduras",
+    "short_description": "Salmón a la plancha sobre arroz integral con verduras al vapor y aderezo de soja-limón.",
+    "ingredients": [
+      "2 filetes de salmón (150–180 g c/u)",
+      "1 taza de arroz integral crudo (185 g)",
+      "1 zanahoria en bastones",
+      "150 g ejotes o judías verdes",
+      "1/2 taza edamame cocido (opcional)",
+      "1 cucharada AOVE",
+      "2 cucharadas salsa de soja baja en sodio",
+      "Jugo de 1/2 limón",
+      "1 cucharadita miel",
+      "Semillas de sésamo y cebolleta al gusto",
+      "Sal y pimienta"
+    ],
+    "preparation": "Cocer el arroz integral en 2 1/4 tazas de agua a fuego suave 30–35 min; cocer al vapor zanahoria y ejotes 4–6 min; dorar el salmón en sartén con AOVE 3–4 min por lado, salpimentar; mezclar soja, limón y miel; servir el arroz en boles con verduras, salmón en lascas, edamame, aderezo, sésamo y cebolleta.",
+    "image": "",
+    "nutrition": {
+      "per_serving": {
+        "serving_g": 420,
+        "calories_kcal": 600,
+        "protein_g": 38,
+        "fat_g": 22,
+        "saturated_fat_g": 4,
+        "carbs_g": 60,
+        "fiber_g": 7,
+        "sugars_g": 7,
+        "sodium_mg": 540,
+        "total_fat_g": null,
+        "cholesterol_mg": null,
+        "vitamin_d_mcg": null,
+        "calcium_mg": null,
+        "iron_mg": null,
+        "potassium_mg": null
+      },
+      "per_100g": {
+        "serving_g": null,
+        "calories_kcal": null,
+        "protein_g": null,
+        "fat_g": null,
+        "saturated_fat_g": null,
+        "total_fat_g": null,
+        "trans_fat_g": null,
+        "cholesterol_mg": null,
+        "sodium_mg": null,
+        "carbs_g": null,
+        "fiber_g": null,
+        "sugars_g": null,
+        "vitamin_d_mcg": null,
+        "calcium_mg": null,
+        "iron_mg": null,
+        "potassium_mg": null
+      }
+    },
+    "tags": {
+      "conditions": ["Pescado","Soya"],
+      "type": "Comida",
+      "intentions": ["Comer más saludable", "Ganar masa muscular"]
+    }
+  },
+  {
+    "id": 50,
+    "name": "Pasta integral con pavo y espinacas",
+    "short_description": "Tornillos integrales con pavo molido, salsa de tomate casera y espinacas; alto en proteína y fibra.",
+    "ingredients": [
+      "300 g pasta integral (fusilli o penne)",
+      "400 g pavo molido magro",
+      "1 cucharada AOVE",
+      "1 cebolla picada",
+      "2 dientes de ajo picados",
+      "600 g tomate triturado",
+      "1 cucharadita orégano seco",
+      "1/2 cucharadita hojuelas de chile (opcional)",
+      "150 g espinacas frescas",
+      "30 g queso parmesano rallado",
+      "Sal y pimienta"
+    ],
+    "preparation": "Cocer la pasta en agua con sal hasta al dente; sofreír cebolla y ajo en AOVE 5 min, agregar pavo y dorar 6–8 min; añadir tomate, orégano y chile y cocer 10 min; incorporar espinacas hasta que se hundan; mezclar con la pasta y parte del parmesano, ajustar sal y pimienta y servir con el resto del queso.",
+    "image": "",
+    "nutrition": {
+      "per_serving": {
+        "serving_g": 380,
+        "calories_kcal": 620,
+        "protein_g": 40,
+        "fat_g": 14,
+        "saturated_fat_g": 4,
+        "carbs_g": 85,
+        "fiber_g": 12,
+        "sugars_g": 11,
+        "sodium_mg": 520,
+        "total_fat_g": null,
+        "cholesterol_mg": null,
+        "vitamin_d_mcg": null,
+        "calcium_mg": null,
+        "iron_mg": null,
+        "potassium_mg": null
+      },
+      "per_100g": {
+        "serving_g": null,
+        "calories_kcal": null,
+        "protein_g": null,
+        "fat_g": null,
+        "saturated_fat_g": null,
+        "total_fat_g": null,
+        "trans_fat_g": null,
+        "cholesterol_mg": null,
+        "sodium_mg": null,
+        "carbs_g": null,
+        "fiber_g": null,
+        "sugars_g": null,
+        "vitamin_d_mcg": null,
+        "calcium_mg": null,
+        "iron_mg": null,
+        "potassium_mg": null
+      }
+    },
+    "tags": {
+      "conditions": ["Trigo","Gluten","Lácteos"],
+      "type": "Comida",
+      "intentions": ["Comer más saludable", "Ganar masa muscular"]
+    }
+  },
+  {
+    "id": 51,
+    "name": "Estofado de ternera con lentejas y verduras",
+    "short_description": "Ternera a fuego lento con lentejas, zanahoria, apio y tomate; plato de cuchara completo.",
+    "ingredients": [
+      "500 g carne de ternera para guiso en cubos",
+      "1 cucharada AOVE",
+      "1 cebolla picada",
+      "2 zanahorias en cubos",
+      "2 tallos de apio en cubos",
+      "2 dientes de ajo picados",
+      "1 taza lentejas pardinas (200 g) enjuagadas",
+      "1 lata (400 g) tomate triturado",
+      "1 hoja de laurel",
+      "800 ml caldo bajo en sodio",
+      "Sal y pimienta"
+    ],
+    "preparation": "Dorar la ternera con AOVE en olla 6–8 min y retirar; sofreír cebolla, zanahoria, apio y ajo 5–6 min; reincorporar la carne, añadir lentejas, tomate, laurel y caldo; llevar a ebullición, bajar el fuego y cocer tapado 45–60 min hasta que la carne y las lentejas estén tiernas; ajustar sal y pimienta y reposar 10 min antes de servir.",
+    "image": "",
+    "nutrition": {
+      "per_serving": {
+        "serving_g": 420,
+        "calories_kcal": 580,
+        "protein_g": 42,
+        "fat_g": 18,
+        "saturated_fat_g": 6,
+        "carbs_g": 60,
+        "fiber_g": 16,
+        "sugars_g": 10,
+        "sodium_mg": 680,
+        "total_fat_g": null,
+        "cholesterol_mg": null,
+        "vitamin_d_mcg": null,
+        "calcium_mg": null,
+        "iron_mg": null,
+        "potassium_mg": null
+      },
+      "per_100g": {
+        "serving_g": null,
+        "calories_kcal": null,
+        "protein_g": null,
+        "fat_g": null,
+        "saturated_fat_g": null,
+        "total_fat_g": null,
+        "trans_fat_g": null,
+        "cholesterol_mg": null,
+        "sodium_mg": null,
+        "carbs_g": null,
+        "fiber_g": null,
+        "sugars_g": null,
+        "vitamin_d_mcg": null,
+        "calcium_mg": null,
+        "iron_mg": null,
+        "potassium_mg": null
+      }
+    },
+    "tags": {
+      "conditions": [],
+      "type": "Comida",
+      "intentions": ["Comer más saludable", "Ganar masa muscular"]
+    }
+  },
+  {
+    "id": 52,
+    "name": "Tacos de pescado al horno con col y maíz",
+    "short_description": "Filetes de pescado especiados al horno con col crujiente, maíz y salsa ligera en tortillas.",
+    "ingredients": [
+      "500 g filete de pescado blanco (merluza o tilapia)",
+      "2 cucharadas jugo de limón",
+      "1 cucharadita comino",
+      "1/2 cucharadita pimentón",
+      "1 cucharada AOVE",
+      "2 tazas col morada en tiritas",
+      "1 taza granos de maíz cocidos",
+      "1/2 taza yogur griego natural",
+      "1 cucharada mayonesa ligera",
+      "8 tortillas de maíz o trigo pequeñas",
+      "Cilantro y salsa al gusto",
+      "Sal y pimienta"
+    ],
+    "preparation": "Precalentar a 220°C; mezclar limón, comino, pimentón, AOVE, sal y pimienta y untar el pescado; hornear 8–10 min; mezclar col y maíz; combinar yogur y mayonesa para la salsa; calentar tortillas; desmenuzar el pescado y armar tacos con col, pescado, salsa, cilantro y salsa picante si se desea.",
+    "image": "",
+    "nutrition": {
+      "per_serving": {
+        "serving_g": 350,
+        "calories_kcal": 520,
+        "protein_g": 32,
+        "fat_g": 14,
+        "saturated_fat_g": 3,
+        "carbs_g": 65,
+        "fiber_g": 9,
+        "sugars_g": 8,
+        "sodium_mg": 640,
+        "total_fat_g": null,
+        "cholesterol_mg": null,
+        "vitamin_d_mcg": null,
+        "calcium_mg": null,
+        "iron_mg": null,
+        "potassium_mg": null
+      },
+      "per_100g": {
+        "serving_g": null,
+        "calories_kcal": null,
+        "protein_g": null,
+        "fat_g": null,
+        "saturated_fat_g": null,
+        "total_fat_g": null,
+        "trans_fat_g": null,
+        "cholesterol_mg": null,
+        "sodium_mg": null,
+        "carbs_g": null,
+        "fiber_g": null,
+        "sugars_g": null,
+        "vitamin_d_mcg": null,
+        "calcium_mg": null,
+        "iron_mg": null,
+        "potassium_mg": null
+      }
+    },
+    "tags": {
+      "conditions": ["Pescado","Gluten","Lácteos"],
+      "type": "Comida",
+      "intentions": ["Comer más saludable"]
+    }
+  },
+  {
+    "id": 53,
+    "name": "Paella integral de pollo y garbanzos",
+    "short_description": "Arroz integral estilo paella con contramuslo de pollo, garbanzos, pimientos y azafrán.",
+    "ingredients": [
+      "300 g arroz integral",
+      "2 contramuslos de pollo sin piel en trozos (500 g)",
+      "1 cebolla y 1 pimiento rojo en dados",
+      "2 dientes de ajo picados",
+      "1 tomate rallado (150 g)",
+      "1 taza garbanzos cocidos (160 g)",
+      "800–900 ml caldo de pollo bajo en sodio",
+      "1/2 cucharadita hebras de azafrán o 1 cdita cúrcuma",
+      "1 cucharadita pimentón dulce",
+      "2 cucharadas AOVE",
+      "Sal y pimienta",
+      "Perejil y limón para servir"
+    ],
+    "preparation": "Dorar el pollo con AOVE en paellera 6–8 min y reservar; sofreír cebolla, pimiento y ajo 5 min; añadir tomate, pimentón y azafrán 1 min; incorporar arroz y nacarar 1–2 min; verter caldo caliente (proporción 1:2.7 aprox.), agregar pollo y cocer 35–40 min sin remover, añadiendo garbanzos a mitad de cocción; reposar 5–10 min tapado y servir con perejil y limón.",
+    "image": "",
+    "nutrition": {
+      "per_serving": {
+        "serving_g": 420,
+        "calories_kcal": 650,
+        "protein_g": 38,
+        "fat_g": 16,
+        "saturated_fat_g": 4,
+        "carbs_g": 90,
+        "fiber_g": 12,
+        "sugars_g": 8,
+        "sodium_mg": 700,
+        "total_fat_g": null,
+        "cholesterol_mg": null,
+        "vitamin_d_mcg": null,
+        "calcium_mg": null,
+        "iron_mg": null,
+        "potassium_mg": null
+      },
+      "per_100g": {
+        "serving_g": null,
+        "calories_kcal": null,
+        "protein_g": null,
+        "fat_g": null,
+        "saturated_fat_g": null,
+        "total_fat_g": null,
+        "trans_fat_g": null,
+        "cholesterol_mg": null,
+        "sodium_mg": null,
+        "carbs_g": null,
+        "fiber_g": null,
+        "sugars_g": null,
+        "vitamin_d_mcg": null,
+        "calcium_mg": null,
+        "iron_mg": null,
+        "potassium_mg": null
+      }
+    },
+    "tags": {
+      "conditions": [],
+      "type": "Comida",
+      "intentions": ["Comer más saludable", "Ganar masa muscular"]
+    }
+  },
+  {
+    "id": 54,
+    "name": "Curry de pollo con verduras y arroz basmati",
+    "short_description": "Curry suave de pollo con calabacín y pimiento en leche de coco light, acompañado de arroz basmati.",
+    "ingredients": [
+      "400 g pechuga de pollo en cubos",
+      "1 cucharada AOVE",
+      "1 cebolla en pluma",
+      "1 calabacín en medias lunas",
+      "1 pimiento amarillo en tiras",
+      "2 dientes de ajo y 1 cdita jengibre rallado",
+      "2 cucharadas pasta de curry amarillo (o 2 cditas curry en polvo)",
+      "400 ml leche de coco light",
+      "1 taza caldo de pollo bajo en sodio",
+      "250 g arroz basmati crudo",
+      "Cilantro y limón para terminar",
+      "Sal"
+    ],
+    "preparation": "Lavar el arroz hasta que el agua salga clara y cocer 10–12 min; saltear cebolla en AOVE 5 min, añadir ajo, jengibre y curry 1 min; incorporar pollo y dorar 4–5 min; verter leche de coco y caldo y cocer suave 10–12 min; añadir calabacín y pimiento 5–6 min; ajustar sal y servir sobre arroz con cilantro y unas gotas de limón.",
+    "image": "",
+    "nutrition": {
+      "per_serving": {
+        "serving_g": 470,
+        "calories_kcal": 700,
+        "protein_g": 44,
+        "fat_g": 24,
+        "saturated_fat_g": 9,
+        "carbs_g": 80,
+        "fiber_g": 8,
+        "sugars_g": 9,
+        "sodium_mg": 680,
+        "total_fat_g": null,
+        "cholesterol_mg": null,
+        "vitamin_d_mcg": null,
+        "calcium_mg": null,
+        "iron_mg": null,
+        "potassium_mg": null
+      },
+      "per_100g": {
+        "serving_g": null,
+        "calories_kcal": null,
+        "protein_g": null,
+        "fat_g": null,
+        "saturated_fat_g": null,
+        "total_fat_g": null,
+        "trans_fat_g": null,
+        "cholesterol_mg": null,
+        "sodium_mg": null,
+        "carbs_g": null,
+        "fiber_g": null,
+        "sugars_g": null,
+        "vitamin_d_mcg": null,
+        "calcium_mg": null,
+        "iron_mg": null,
+        "potassium_mg": null
+      }
+    },
+    "tags": {
+      "conditions": [],
+      "type": "Comida",
+      "intentions": ["Comer más saludable", "Ganar masa muscular"]
+    }
+  },
+  {
+    "id": 55,
+    "name": "Quinoa con verduras asadas y huevo poché",
+    "short_description": "Quinoa esponjosa con calabaza y coliflor asadas, espinacas salteadas y huevo poché.",
+    "ingredients": [
+      "1 taza quinoa cruda (170 g), lavada",
+      "2 tazas agua o caldo vegetal",
+      "250 g calabaza en cubos",
+      "250 g coliflor en floretes",
+      "2 tazas espinaca fresca",
+      "2 cucharadas AOVE",
+      "2 huevos grandes",
+      "2 cucharadas vinagre (para pochar)",
+      "Pimentón ahumado, sal y pimienta",
+      "Semillas de calabaza (opcional)"
+    ],
+    "preparation": "Asar calabaza y coliflor con 1.5 cucharadas AOVE, pimentón, sal y pimienta a 220°C por 18–22 min; cocer la quinoa en agua/caldo 15 min, reposar 5 min y esponjar; saltear espinacas 1–2 min con 1/2 cucharada AOVE; pochar huevos en agua apenas hirviendo con vinagre 3 min; servir quinoa con verduras, espinacas, huevo poché y semillas.",
+    "image": "",
+    "nutrition": {
+      "per_serving": {
+        "serving_g": 380,
+        "calories_kcal": 560,
+        "protein_g": 24,
+        "fat_g": 18,
+        "saturated_fat_g": 4,
+        "carbs_g": 70,
+        "fiber_g": 10,
+        "sugars_g": 7,
+        "sodium_mg": 420,
+        "total_fat_g": null,
+        "cholesterol_mg": null,
+        "vitamin_d_mcg": null,
+        "calcium_mg": null,
+        "iron_mg": null,
+        "potassium_mg": null
+      },
+      "per_100g": {
+        "serving_g": null,
+        "calories_kcal": null,
+        "protein_g": null,
+        "fat_g": null,
+        "saturated_fat_g": null,
+        "total_fat_g": null,
+        "trans_fat_g": null,
+        "cholesterol_mg": null,
+        "sodium_mg": null,
+        "carbs_g": null,
+        "fiber_g": null,
+        "sugars_g": null,
+        "vitamin_d_mcg": null,
+        "calcium_mg": null,
+        "iron_mg": null,
+        "potassium_mg": null
+      }
+    },
+    "tags": {
+      "conditions": ["Huevo"],
+      "type": "Comida",
+      "intentions": ["Comer más saludable"]
+    }
+  }
+]
