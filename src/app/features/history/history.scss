@@ -1,0 +1,121 @@
+.history-container {
+    padding: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.page-title {
+    text-align: center;
+    color: #B45253;
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+    font-weight: 700;
+}
+
+.history-accordion {
+    mat-expansion-panel {
+        margin-bottom: 16px;
+        border-radius: 8px !important;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05) !important;
+
+        &.mat-expanded {
+            margin-bottom: 24px;
+        }
+    }
+
+    mat-expansion-panel-header {
+        height: 64px;
+        background-color: #fff;
+
+        &:hover {
+            background-color: #f9f9f9;
+        }
+    }
+
+    mat-panel-title {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        font-size: 1.1rem;
+        font-weight: 500;
+        color: #432818;
+
+        mat-icon {
+            color: #FCB53B;
+        }
+    }
+
+    mat-panel-description {
+        font-size: 0.9rem;
+        color: #666;
+    }
+}
+
+.diet-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+    padding: 20px 0;
+}
+
+.day-card {
+    background-color: #f8f9fa;
+    border-radius: 12px;
+    padding: 16px;
+    border: 1px solid #eee;
+    transition: transform 0.2s ease;
+
+    &:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    }
+
+    .day-title {
+        color: #B45253;
+        margin: 0 0 12px 0;
+        font-size: 1.1rem;
+        font-weight: 600;
+        border-bottom: 2px solid rgba(180, 82, 83, 0.1);
+        padding-bottom: 8px;
+    }
+}
+
+.recipes-list {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.recipe-item {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+
+    .meal-type {
+        font-size: 0.75rem;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+        color: #888;
+        font-weight: 600;
+    }
+
+    .recipe-name {
+        font-size: 0.95rem;
+        color: #333;
+        font-weight: 500;
+    }
+}
+
+@media (max-width: 768px) {
+    .history-container {
+        padding: 1rem;
+    }
+
+    .page-title {
+        font-size: 2rem;
+    }
+
+    .diet-content {
+        grid-template-columns: 1fr;
+    }
+}

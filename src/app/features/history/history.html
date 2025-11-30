@@ -1,1 +1,41 @@
-<p>history works!</p>
+<div class="history-container">
+    <h1 class="page-title">Historial de Dietas</h1>
+
+    <mat-accordion class="history-accordion" multi>
+        @for (diet of history; track diet.startDate) {
+        <mat-expansion-panel>
+            <mat-expansion-panel-header>
+                <mat-panel-title>
+                    <mat-icon>calendar_today</mat-icon>
+                    <span class="date-range">
+                        {{ formatDate(diet.startDate) }} - {{ formatDate(diet.endDate) }}
+                    </span>
+                </mat-panel-title>
+                <mat-panel-description>
+                    Plan de 7 días
+                </mat-panel-description>
+            </mat-expansion-panel-header>
+
+            <div class="diet-content">
+                @for (menu of diet.menus; track menu.day) {
+                <div class="day-card">
+                    <h3 class="day-title">Día {{ menu.day }}</h3>
+                    <div class="recipes-list">
+                        @for (recipe of menu.recipes; track recipe.name; let i = $index) {
+                        <div class="recipe-item">
+                            <span class="meal-type">
+                                @if (i === 0) { Desayuno }
+                                @else if (i === 1) { Almuerzo }
+                                @else { Cena }
+                            </span>
+                            <span class="recipe-name">{{ recipe.name }}</span>
+                        </div>
+                        }
+                    </div>
+                </div>
+                }
+            </div>
+        </mat-expansion-panel>
+        }
+    </mat-accordion>
+</div>
