@@ -1,0 +1,80 @@
+<div class="modal-overlay" (click)="cancel.emit()">
+    <div class="modal-container" (click)="$event.stopPropagation()">
+        <div class="modal-header">
+            <h2 class="modal-title">{{ recipe ? 'Editar Receta' : 'Nueva Receta' }}</h2>
+            <button class="close-btn" (click)="cancel.emit()">×</button>
+        </div>
+
+        <div class="modal-body">
+            <form (ngSubmit)="onSubmit()" #form="ngForm">
+                <!-- Información Básica -->
+                <div class="form-section">
+                    <h3>Información Básica</h3>
+                    <div class="form-group">
+                        <label>Nombre</label>
+                        <input type="text" [(ngModel)]="formData.name" name="name" required class="form-input">
+                    </div>
+
+                    <div class="form-group">
+                        <label>Descripción Corta</label>
+                        <textarea [(ngModel)]="formData.short_description" name="description" rows="2"
+                            class="form-input"></textarea>
+                    </div>
+
+                    <div class="form-group">
+                        <label>URL de Imagen</label>
+                        <input type="text" [(ngModel)]="formData.image" name="image" class="form-input">
+                    </div>
+                </div>
+
+                <!-- Detalles -->
+                <div class="form-section">
+                    <h3>Preparación</h3>
+                    <div class="form-group">
+                        <label>Ingredientes (uno por línea)</label>
+                        <textarea [(ngModel)]="ingredientsText" name="ingredients" rows="5"
+                            class="form-input"></textarea>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Instrucciones</label>
+                        <textarea [(ngModel)]="formData.preparation" name="preparation" rows="5"
+                            class="form-input"></textarea>
+                    </div>
+                </div>
+
+                <!-- Nutrición -->
+                <div class="form-section">
+                    <h3>Información Nutricional (por porción)</h3>
+                    <div class="nutrition-grid">
+                        <div class="form-group">
+                            <label>Calorías (kcal)</label>
+                            <input type="number" [(ngModel)]="formData.nutrition!.per_serving!.calories_kcal"
+                                name="calories" class="form-input">
+                        </div>
+                        <div class="form-group">
+                            <label>Proteínas (g)</label>
+                            <input type="number" [(ngModel)]="formData.nutrition!.per_serving!.protein_g" name="protein"
+                                class="form-input">
+                        </div>
+                        <div class="form-group">
+                            <label>Carbohidratos (g)</label>
+                            <input type="number" [(ngModel)]="formData.nutrition!.per_serving!.carbs_g" name="carbs"
+                                class="form-input">
+                        </div>
+                        <div class="form-group">
+                            <label>Grasas (g)</label>
+                            <input type="number" [(ngModel)]="formData.nutrition!.per_serving!.fat_g" name="fat"
+                                class="form-input">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="modal-footer">
+                    <button type="button" class="btn-cancel" (click)="cancel.emit()">Cancelar</button>
+                    <button type="submit" class="btn-save" [disabled]="!form.valid">Guardar Receta</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

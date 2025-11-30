@@ -1,0 +1,53 @@
+<div class="admin-diets-container">
+    <div class="header">
+        <h1 class="page-title">Gestión de Recetas</h1>
+        <button class="create-btn" (click)="openCreateModal()">
+            <span class="icon">+</span> Nueva Receta
+        </button>
+    </div>
+
+    <div class="filters">
+        <div class="search-box">
+            <input type="text" placeholder="Buscar recetas..." [(ngModel)]="searchTerm" (input)="filterRecipes()"
+                class="search-input">
+            <span class="search-icon">🔍</span>
+        </div>
+    </div>
+
+    @if (loading) {
+    <div class="loading">Cargando recetas...</div>
+    } @else {
+    <div class="recipes-grid">
+        @for (recipe of filteredRecipes; track recipe.id) {
+        <div class="recipe-card">
+            <div class="recipe-image">
+                <img [src]="recipe.image || 'assets/placeholder-food.jpg'" [alt]="recipe.name">
+                <div class="recipe-actions">
+                    <button class="action-btn edit" (click)="openEditModal(recipe)" title="Editar">✎</button>
+                    <button class="action-btn delete" (click)="deleteRecipe(recipe.id)" title="Eliminar">🗑</button>
+                </div>
+            </div>
+            <div class="recipe-content">
+                <h3 class="recipe-title">{{ recipe.name }}</h3>
+                <p class="recipe-desc">{{ recipe.short_description }}</p>
+                <div class="recipe-meta">
+                    <span class="meta-item">🔥 {{ recipe.nutrition?.per_serving?.calories_kcal || 0 }} kcal</span>
+                    <span class="meta-item">⏱ {{ recipe.preparation ? '30 min' : 'N/A' }}</span>
+                </div>
+            </div>
+        </div>
+        }
+    </div>
+    }
+
+    @if (filteredRecipes.length === 0 && !loading) {
+    <div class="empty-state">
+        <p>No se encontraron recetas.</p>
+    </div>
+    }
+</div>
+
+@if (showModal) {
+<app-recipe-form [recipe]="selectedRecipe" (save)="handleSave($event)" (cancel)="closeModal()">
+</app-recipe-form>
+}

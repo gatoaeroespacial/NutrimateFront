@@ -6,15 +6,32 @@ import { RecipeDetail } from './features/diets/recipe-detail/recipe-detail';
 import { Progress } from './features/progress/progress';
 import { History } from './features/history/history';
 import { Profile } from './features/profile/profile';
+import { MainLayout } from './features/layout/main-layout/main-layout';
+
 
 export const routes: Routes = [
-  { path: '', redirectTo: '/diets', pathMatch: 'full' },
   { path: 'login', component: Login },
   { path: 'register', component: Register },
-  { path: 'diets', component: Diets },
-  { path: 'diets/recipe/:id', component: RecipeDetail },
-  { path: 'progress', component: Progress },
-  { path: 'history', component: History },
-  { path: 'profile', component: Profile },
+  {
+    path: 'admin',
+    loadComponent: () => import('./features/admin/layout/admin-layout').then(m => m.AdminLayout),
+    children: [
+      { path: '', redirectTo: 'dietas', pathMatch: 'full' },
+      { path: 'dietas', loadComponent: () => import('./features/admin/diets/admin-diets').then(m => m.AdminDiets) },
+      { path: 'profile', component: Profile }
+    ]
+  },
+  {
+    path: '',
+    loadComponent: () => import('./features/layout/main-layout/main-layout').then(m => m.MainLayout),
+    children: [
+      { path: '', redirectTo: 'dietas', pathMatch: 'full' },
+      { path: 'dietas', component: Diets },
+      { path: 'diets/recipe/:id', component: RecipeDetail },
+      { path: 'progress', component: Progress },
+      { path: 'history', component: History },
+      { path: 'profile', component: Profile }
+    ]
+  },
   { path: '**', redirectTo: '/diets' }
 ];

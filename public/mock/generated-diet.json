@@ -1,42 +1,127 @@
 [
   {
     "id": 1,
-    "name": "Chips de kale",
-    "short_description": "Kale horneado crujiente con aceite y especias (snack saludable)."
+    "name": "Avena con Frutas y Nueces",
+    "short_description": "Un desayuno energético y saludable rico en fibra.",
+    "image": "https://images.unsplash.com/photo-1517673132405-a56a62b18caf?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
+    "ingredients": [
+      "1/2 taza de avena",
+      "1 taza de leche de almendras",
+      "1 plátano en rodajas",
+      "1 cucharada de miel",
+      "Nueces picadas"
+    ],
+    "preparation": "Cocina la avena con la leche. Sirve y decora con las frutas y nueces.",
+    "nutrition": {
+      "per_serving": {
+        "calories_kcal": 350,
+        "protein_g": 10,
+        "carbs_g": 60,
+        "fat_g": 8
+      }
+    },
+    "tags": {
+      "type": "breakfast"
+    }
   },
   {
     "id": 2,
-    "name": "Guacamole con palitos de zanahoria",
-    "short_description": "Guacamole clásico triturado acompañado de bastones de zanahoria."
-  },
-  {
-    "id": 4,
-    "name": "Hummus de remolacha con crudités",
-    "short_description": "Hummus de garbanzo mezclado con remolacha y tahini, servido con bastones de verduras."
-  },
-  {
-    "id": 7,
-    "name": "Gazpacho de sandía y feta",
-    "short_description": "Gazpacho frío que combina tomate y sandía, servido con dados de sandía y feta."
-  },
-  {
-    "id": 8,
-    "name": "Carpaccio de remolacha y champiñón",
-    "short_description": "Láminas de remolacha y champiñón con rúcula, avellanas y lascas de queso manchego."
-  },
-  {
-    "id": 9,
-    "name": "Dip de guisantes con hierbabuena",
-    "short_description": "Dip cremoso de guisantes y queso fresco con pistachos, servido con totopos caseros."
+    "name": "Ensalada César con Pollo",
+    "short_description": "Clásica ensalada con un toque de proteína magra.",
+    "image": "https://images.unsplash.com/photo-1550304943-4f24f54ddde9?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
+    "ingredients": [
+      "Pechuga de pollo a la plancha",
+      "Lechuga romana",
+      "Crutones integrales",
+      "Queso parmesano",
+      "Aderezo césar ligero"
+    ],
+    "preparation": "Mezcla todos los ingredientes en un bol grande y sirve frío.",
+    "nutrition": {
+      "per_serving": {
+        "calories_kcal": 450,
+        "protein_g": 35,
+        "carbs_g": 20,
+        "fat_g": 25
+      }
+    },
+    "tags": {
+      "type": "lunch"
+    }
   },
   {
     "id": 3,
-    "name": "Zanahorias encurtidas",
-    "short_description": "Zanahorias en vinagre con ajo y hierbas (encurtido preparado el día anterior)."
+    "name": "Salmón al Horno con Espárragos",
+    "short_description": "Cena ligera rica en Omega-3.",
+    "image": "https://images.unsplash.com/photo-1467003909585-2f8a7270028d?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
+    "ingredients": [
+      "Filete de salmón",
+      "Espárragos frescos",
+      "Limón",
+      "Aceite de oliva",
+      "Hierbas finas"
+    ],
+    "preparation": "Hornea el salmón y los espárragos a 200°C por 15-20 minutos.",
+    "nutrition": {
+      "per_serving": {
+        "calories_kcal": 400,
+        "protein_g": 30,
+        "carbs_g": 5,
+        "fat_g": 28
+      }
+    },
+    "tags": {
+      "type": "dinner"
+    }
   },
   {
-    "id": 6,
-    "name": "Rollitos de pepino rellenos",
-    "short_description": "Pepino cortado en láminas finas relleno de yogur griego, feta y vegetales."
+    "id": 4,
+    "name": "Tostadas de Aguacate y Huevo",
+    "short_description": "Desayuno rápido cargado de grasas saludables.",
+    "image": "https://images.unsplash.com/photo-1525351484163-7529414395d8?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
+    "ingredients": [
+      "2 rebanadas de pan integral",
+      "1 aguacate maduro",
+      "2 huevos pochados",
+      "Sal y pimienta",
+      "Chile en polvo (opcional)"
+    ],
+    "preparation": "Tuesta el pan, unta el aguacate y coloca el huevo encima.",
+    "nutrition": {
+      "per_serving": {
+        "calories_kcal": 380,
+        "protein_g": 18,
+        "carbs_g": 30,
+        "fat_g": 22
+      }
+    },
+    "tags": {
+      "type": "breakfast"
+    }
+  },
+  {
+    "id": 5,
+    "name": "Bowl de Quinoa y Vegetales",
+    "short_description": "Opción vegana llena de nutrientes.",
+    "image": "https://images.unsplash.com/photo-1512621776951-a57141f2eefd?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
+    "ingredients": [
+      "1 taza de quinoa cocida",
+      "Pimientos asados",
+      "Espinacas frescas",
+      "Garbanzos",
+      "Vinagreta de limón"
+    ],
+    "preparation": "Combina la quinoa con los vegetales y adereza al gusto.",
+    "nutrition": {
+      "per_serving": {
+        "calories_kcal": 320,
+        "protein_g": 12,
+        "carbs_g": 55,
+        "fat_g": 8
+      }
+    },
+    "tags": {
+      "type": "lunch"
+    }
   }
 ]
