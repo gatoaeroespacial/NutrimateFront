@@ -10,6 +10,7 @@
     opacity: 0;
     transform: translateY(20px);
   }
+
   to {
     opacity: 1;
     transform: translateY(0);
@@ -245,6 +246,7 @@
     opacity: 0;
     transform: translateY(-20px);
   }
+
   to {
     opacity: 1;
     transform: translateY(0);
@@ -276,8 +278,13 @@
 }
 
 @keyframes spin {
-  0% { transform: rotate(0deg); }
-  100% { transform: rotate(360deg); }
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
 }
 
 // Progress Grid
@@ -327,10 +334,21 @@
         color: #f44336;
       }
 
-      &.underweight { color: #2196f3; }
-      &.normal { color: #4caf50; }
-      &.overweight { color: #ff9800; }
-      &.obese { color: #f44336; }
+      &.underweight {
+        color: #2196f3;
+      }
+
+      &.normal {
+        color: #4caf50;
+      }
+
+      &.overweight {
+        color: #ff9800;
+      }
+
+      &.obese {
+        color: #f44336;
+      }
 
       .trend-icon {
         margin-left: 0.5rem;
@@ -466,10 +484,25 @@
           padding: 1rem;
           font-size: 1rem;
 
-          &.underweight { color: #2196f3; font-weight: 600; }
-          &.normal { color: #4caf50; font-weight: 600; }
-          &.overweight { color: #ff9800; font-weight: 600; }
-          &.obese { color: #f44336; font-weight: 600; }
+          &.underweight {
+            color: #2196f3;
+            font-weight: 600;
+          }
+
+          &.normal {
+            color: #4caf50;
+            font-weight: 600;
+          }
+
+          &.overweight {
+            color: #ff9800;
+            font-weight: 600;
+          }
+
+          &.obese {
+            color: #f44336;
+            font-weight: 600;
+          }
 
           .trend-positive {
             color: #4caf50;
@@ -561,6 +594,142 @@
     thead th,
     tbody td {
       padding: 0.75rem 0.5rem;
+    }
+  }
+}
+
+// Comparison Styles
+.comparison-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.result-box {
+  background: #f8f9fa;
+  padding: 1.5rem;
+  border-radius: 12px;
+  text-align: center;
+  transition: transform 0.3s ease;
+  border: 1px solid #e0e0e0;
+  position: relative;
+  overflow: hidden;
+
+  &:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.08);
+  }
+
+  &.secondary {
+    background: #fff;
+    border-color: #eee;
+  }
+
+  &.improvement {
+    background: linear-gradient(135deg, #e8f5e9 0%, #c8e6c9 100%);
+    border: none;
+
+    .result-value {
+      color: #2e7d32;
+    }
+  }
+
+  &.regression {
+    background: linear-gradient(135deg, #ffebee 0%, #ffcdd2 100%);
+    border: none;
+
+    .result-value {
+      color: #c62828;
+    }
+  }
+
+  // BMI Categories
+  &.underweight {
+    border-left: 4px solid #2196f3;
+    background: #e3f2fd;
+  }
+
+  &.normal {
+    border-left: 4px solid #4caf50;
+    background: #e8f5e9;
+  }
+
+  &.overweight {
+    border-left: 4px solid #ff9800;
+    background: #fff3e0;
+  }
+
+  &.obese {
+    border-left: 4px solid #f44336;
+    background: #ffebee;
+  }
+
+  .result-label {
+    font-size: 0.9rem;
+    color: #666;
+    margin-bottom: 0.5rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    font-weight: 600;
+  }
+
+  .result-value {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: #333;
+    margin-bottom: 0.5rem;
+
+    &.large {
+      font-size: 2.5rem;
+      color: #B45253;
+    }
+  }
+
+  .result-text {
+    font-size: 0.9rem;
+    color: #555;
+    font-weight: 500;
+  }
+
+  .trend-icon {
+    font-size: 1.2rem;
+    margin-left: 0.3rem;
+  }
+}
+
+.analysis-summary {
+  .summary-box {
+    padding: 2rem;
+    border-radius: 12px;
+    text-align: center;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+
+    &.positive {
+      background: linear-gradient(135deg, #dcedc8 0%, #aed581 100%);
+      color: #33691e;
+    }
+
+    &.neutral {
+      background: linear-gradient(135deg, #fff9c4 0%, #fff176 100%);
+      color: #f57f17;
+    }
+
+    &.attention {
+      background: linear-gradient(135deg, #ffccbc 0%, #ffab91 100%);
+      color: #d84315;
+    }
+
+    h3 {
+      font-size: 1.8rem;
+      margin-bottom: 0.5rem;
+      font-weight: 700;
+    }
+
+    p {
+      font-size: 1.1rem;
+      margin: 0;
+      opacity: 0.9;
     }
   }
 }
