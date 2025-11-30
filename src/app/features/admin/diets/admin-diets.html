@@ -19,12 +19,13 @@
     } @else {
     <div class="recipes-grid">
         @for (recipe of filteredRecipes; track recipe.id) {
-        <div class="recipe-card">
+        <div class="recipe-card" (click)="openViewModal(recipe)">
             <div class="recipe-image">
                 <img [src]="recipe.image || 'assets/placeholder-food.jpg'" [alt]="recipe.name">
                 <div class="recipe-actions">
-                    <button class="action-btn edit" (click)="openEditModal(recipe)" title="Editar">✎</button>
-                    <button class="action-btn delete" (click)="deleteRecipe(recipe.id)" title="Eliminar">🗑</button>
+                    <button class="action-btn edit" (click)="openEditModal(recipe, $event)" title="Editar">✎</button>
+                    <button class="action-btn delete" (click)="deleteRecipe(recipe.id, $event)"
+                        title="Eliminar">🗑</button>
                 </div>
             </div>
             <div class="recipe-content">
@@ -50,4 +51,9 @@
 @if (showModal) {
 <app-recipe-form [recipe]="selectedRecipe" (save)="handleSave($event)" (cancel)="closeModal()">
 </app-recipe-form>
+}
+
+@if (viewingRecipe) {
+<app-recipe-detail-modal [recipe]="viewingRecipe" (close)="closeViewModal()">
+</app-recipe-detail-modal>
 }

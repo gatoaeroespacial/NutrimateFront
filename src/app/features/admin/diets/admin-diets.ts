@@ -4,10 +4,11 @@ import { FormsModule } from '@angular/forms';
 import { Recipe } from '../../../shared/models/recipe';
 import { DietGeneratorService } from '../../diets/services/diet-generator.service';
 import { RecipeForm } from './recipe-form/recipe-form';
+import { RecipeDetailModal } from './recipe-detail-modal/recipe-detail-modal';
 
 @Component({
     selector: 'app-admin-diets',
-    imports: [CommonModule, FormsModule, RecipeForm],
+    imports: [CommonModule, FormsModule, RecipeForm, RecipeDetailModal],
     templateUrl: './admin-diets.html',
     styleUrl: './admin-diets.scss',
     standalone: true
@@ -21,6 +22,9 @@ export class AdminDiets implements OnInit {
     // Modal state
     showModal = false;
     selectedRecipe: Recipe | null = null;
+
+    // Detail Modal state
+    viewingRecipe: Recipe | null = null;
 
     constructor(
         private dietService: DietGeneratorService,
@@ -66,7 +70,10 @@ export class AdminDiets implements OnInit {
         this.showModal = true;
     }
 
-    openEditModal(recipe: Recipe) {
+    openEditModal(recipe: Recipe, event?: Event) {
+        if (event) {
+            event.stopPropagation();
+        }
         this.selectedRecipe = { ...recipe }; // Clone to avoid direct mutation
         this.showModal = true;
     }
@@ -74,6 +81,14 @@ export class AdminDiets implements OnInit {
     closeModal() {
         this.showModal = false;
         this.selectedRecipe = null;
+    }
+
+    openViewModal(recipe: Recipe) {
+        this.viewingRecipe = recipe;
+    }
+
+    closeViewModal() {
+        this.viewingRecipe = null;
     }
 
     handleSave(recipe: Recipe) {
@@ -96,7 +111,10 @@ export class AdminDiets implements OnInit {
         this.closeModal();
     }
 
-    deleteRecipe(id: number) {
+    deleteRecipe(id: number, event?: Event) {
+        if (event) {
+            event.stopPropagation();
+        }
         if (confirm('¿Estás seguro de que deseas eliminar esta receta?')) {
             this.recipes = this.recipes.filter(r => r.id !== id);
             this.filterRecipes();

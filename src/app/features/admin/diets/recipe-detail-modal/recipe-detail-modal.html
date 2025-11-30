@@ -1,0 +1,63 @@
+<div class="modal-overlay" (click)="close.emit()">
+    <div class="modal-container" (click)="$event.stopPropagation()">
+        <button class="close-btn-top" (click)="close.emit()">×</button>
+
+        <div class="modal-content">
+            <div class="recipe-header">
+                <div class="image-container">
+                    <img [src]="recipe.image || 'assets/placeholder-food.jpg'" [alt]="recipe.name">
+                </div>
+                <div class="header-info">
+                    <h2 class="recipe-title">{{ recipe.name }}</h2>
+                    <p class="recipe-desc">{{ recipe.short_description }}</p>
+
+                    <div class="tags">
+                        @if (recipe.tags?.type) {
+                        <span class="tag type">{{ recipe.tags?.type }}</span>
+                        }
+                    </div>
+                </div>
+            </div>
+
+            <div class="recipe-body">
+                <div class="column ingredients">
+                    <h3>Ingredientes</h3>
+                    <ul>
+                        @for (ingredient of ingredientsList; track $index) {
+                        <li>{{ ingredient }}</li>
+                        }
+                    </ul>
+                </div>
+
+                <div class="column preparation">
+                    <h3>Preparación</h3>
+                    <div class="preparation-text">
+                        {{ recipe.preparation }}
+                    </div>
+                </div>
+            </div>
+
+            <div class="nutrition-section">
+                <h3>Información Nutricional <span class="subtitle">(por porción)</span></h3>
+                <div class="nutrition-grid">
+                    <div class="nutrient">
+                        <span class="value">{{ recipe.nutrition?.per_serving?.calories_kcal || 0 }}</span>
+                        <span class="label">Kcal</span>
+                    </div>
+                    <div class="nutrient">
+                        <span class="value">{{ recipe.nutrition?.per_serving?.protein_g || 0 }}g</span>
+                        <span class="label">Proteína</span>
+                    </div>
+                    <div class="nutrient">
+                        <span class="value">{{ recipe.nutrition?.per_serving?.carbs_g || 0 }}g</span>
+                        <span class="label">Carbos</span>
+                    </div>
+                    <div class="nutrient">
+                        <span class="value">{{ recipe.nutrition?.per_serving?.fat_g || 0 }}g</span>
+                        <span class="label">Grasas</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

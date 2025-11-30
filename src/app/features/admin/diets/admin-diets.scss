@@ -83,6 +83,7 @@
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
     transition: transform 0.2s;
     border: 1px solid #eee;
+    cursor: pointer;
 
     &:hover {
         transform: translateY(-5px);
