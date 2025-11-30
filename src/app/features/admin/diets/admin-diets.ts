@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ChangeDetectorRef } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { Recipe } from '../../../shared/models/recipe';
@@ -22,7 +22,10 @@ export class AdminDiets implements OnInit {
     showModal = false;
     selectedRecipe: Recipe | null = null;
 
-    constructor(private dietService: DietGeneratorService) { }
+    constructor(
+        private dietService: DietGeneratorService,
+        private cdr: ChangeDetectorRef
+    ) { }
 
     ngOnInit() {
         this.loadRecipes();
@@ -31,14 +34,16 @@ export class AdminDiets implements OnInit {
     loadRecipes() {
         this.loading = true;
         this.dietService.getAllRecipes().subscribe({
-            next: (recipes) => {
+            next: (recipes: Recipe[]) => {
                 this.recipes = recipes;
                 this.filterRecipes();
                 this.loading = false;
+                this.cdr.detectChanges();
             },
             error: (err) => {
                 console.error('Error loading recipes', err);
                 this.loading = false;
+                this.cdr.detectChanges();
             }
         });
     }
