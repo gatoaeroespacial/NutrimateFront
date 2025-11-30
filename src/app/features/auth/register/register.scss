@@ -9,7 +9,7 @@
 
 .register-card {
     width: 100%;
-    max-width: 450px;
+    max-width: 600px; // Increased width for better layout
     padding: 20px;
 
     mat-card-header {
@@ -30,6 +30,19 @@
 
     .full-width {
         width: 100%;
+    }
+
+    .row {
+        display: flex;
+        gap: 16px;
+
+        .half-width {
+            flex: 1;
+        }
+
+        .third-width {
+            flex: 1;
+        }
     }
 
     .actions {
