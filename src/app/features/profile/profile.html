@@ -66,6 +66,60 @@
                     </button>
                 </div>
             </form>
+
+            <mat-accordion class="password-accordion">
+                <mat-expansion-panel>
+                    <mat-expansion-panel-header>
+                        <mat-panel-title>
+                            Cambiar Contraseña
+                        </mat-panel-title>
+                    </mat-expansion-panel-header>
+
+                    <form [formGroup]="passwordForm" (ngSubmit)="changePassword()" class="password-form">
+                        <mat-form-field appearance="outline" class="full-width">
+                            <mat-label>Contraseña Actual</mat-label>
+                            <input matInput formControlName="currentPassword" type="password">
+                            @if (passwordForm.get('currentPassword')?.hasError('required')) {
+                            <mat-error>Requerido</mat-error>
+                            }
+                        </mat-form-field>
+
+                        <mat-form-field appearance="outline" class="full-width">
+                            <mat-label>Nueva Contraseña</mat-label>
+                            <input matInput formControlName="newPassword" type="password">
+                            @if (passwordForm.get('newPassword')?.hasError('required')) {
+                            <mat-error>Requerido</mat-error>
+                            }
+                            @if (passwordForm.get('newPassword')?.hasError('minlength')) {
+                            <mat-error>Mínimo 6 caracteres</mat-error>
+                            }
+                        </mat-form-field>
+
+                        <mat-form-field appearance="outline" class="full-width">
+                            <mat-label>Confirmar Nueva Contraseña</mat-label>
+                            <input matInput formControlName="confirmNewPassword" type="password">
+                            @if (passwordForm.get('confirmNewPassword')?.hasError('required')) {
+                            <mat-error>Requerido</mat-error>
+                            }
+                            @if (passwordForm.hasError('mismatch')) {
+                            <mat-error>Las contraseñas no coinciden</mat-error>
+                            }
+                        </mat-form-field>
+
+                        @if (passwordSuccessMessage) {
+                        <div class="success-message">
+                            {{ passwordSuccessMessage }}
+                        </div>
+                        }
+
+                        <div class="actions">
+                            <button mat-flat-button color="accent" type="submit" [disabled]="passwordForm.invalid">
+                                Actualizar Contraseña
+                            </button>
+                        </div>
+                    </form>
+                </mat-expansion-panel>
+            </mat-accordion>
         </mat-card-content>
     </mat-card>
 </div>

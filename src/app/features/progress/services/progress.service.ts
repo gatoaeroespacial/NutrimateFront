@@ -31,7 +31,7 @@ export interface ComparisonResult {
 export class ProgressService {
   private currentUser: User | null = null;
 
-  constructor(private http: HttpClient) {}
+  constructor(private http: HttpClient) { }
 
   /**
    * Obtiene los datos del usuario desde el mock o localStorage
@@ -74,7 +74,7 @@ export class ProgressService {
   calculateBMIFromBackend(data: BMICalculationRequest): Observable<BMICalculationResponse> {
     const heightInMeters = data.altura / 100;
     const bmi = data.peso / (heightInMeters * heightInMeters);
-    
+
     let category = '';
     if (bmi < 18.5) {
       category = 'Bajo peso';
@@ -108,7 +108,7 @@ export class ProgressService {
 
     const previousWeight = this.currentUser.peso;
     const previousHeight = this.currentUser.altura;
-    
+
     // Obtener el último registro de progreso
     const progressHistory = this.currentUser.progreso;
     const lastProgress = progressHistory[progressHistory.length - 1];
@@ -118,11 +118,11 @@ export class ProgressService {
     return this.calculateBMIFromBackend({ peso: newWeight, altura: newHeight }).pipe(
       map(response => {
         const newBMI = response.bmi;
-        
+
         // Calcular diferencias
         const bmiDifference = parseFloat(Math.abs(newBMI - previousBMI).toFixed(2));
         const isImprovement = newBMI < previousBMI;
-        
+
         const weightDifference = parseFloat(Math.abs(newWeight - previousWeight).toFixed(2));
         const weightImprovement = newWeight < previousWeight;
 
@@ -153,7 +153,7 @@ export class ProgressService {
     // Actualizar peso y altura del usuario
     this.currentUser.peso = weight;
     this.currentUser.altura = height;
-    
+
     // Agregar nueva entrada al historial de progreso
     this.currentUser.progreso.push(newProgressEntry);
 
@@ -200,6 +200,27 @@ export class ProgressService {
     const lostSoFar = initialWeight - currentWeight;
     const percentage = (lostSoFar / totalToLose) * 100;
     return Math.min(100, Math.max(0, parseFloat(percentage.toFixed(1))));
+  }
+
+  /**
+   * Actualiza los datos del perfil del usuario
+   */
+  updateUserProfile(userData: Partial<User>): Observable<boolean> {
+    if (!this.currentUser) {
+      return of(false);
+    }
+
+    // Actualizar datos en memoria
+    this.currentUser = { ...this.currentUser, ...userData };
+
+    // Persistir en localStorage
+    localStorage.setItem('user-progress', JSON.stringify(this.currentUser));
+
+    console.log('✅ Perfil actualizado:', this.currentUser);
+
+    return timer(500).pipe(
+      map(() => true)
+    );
   }
 
   /**
