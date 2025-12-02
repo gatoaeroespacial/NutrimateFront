@@ -7,6 +7,7 @@ import { Progress } from './features/progress/progress';
 import { History } from './features/history/history';
 import { Profile } from './features/profile/profile';
 import { MainLayout } from './features/layout/main-layout/main-layout';
+import { adminGuard } from './core/guards/admin.guard';
 
 
 export const routes: Routes = [
@@ -15,6 +16,7 @@ export const routes: Routes = [
   {
     path: 'admin',
     loadComponent: () => import('./features/admin/layout/admin-layout').then(m => m.AdminLayout),
+    canActivate: [adminGuard],
     children: [
       { path: '', redirectTo: 'dietas', pathMatch: 'full' },
       { path: 'dietas', loadComponent: () => import('./features/admin/diets/admin-diets').then(m => m.AdminDiets) },

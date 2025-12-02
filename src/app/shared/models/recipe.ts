@@ -3,6 +3,7 @@ export interface Recipe {
   name: string;
   short_description: string;
   image?: string;
+  imageFile?: File;
   ingredients?: string[];
   preparation?: string;
   nutrition?: {
