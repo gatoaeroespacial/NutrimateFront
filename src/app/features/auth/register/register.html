@@ -60,6 +60,28 @@
                     </mat-form-field>
                 </div>
 
+                <div class="row">
+                    <mat-form-field appearance="outline" class="half-width">
+                        <mat-label>Peso Ideal / Meta (kg)</mat-label>
+                        <input matInput formControlName="idealWeight" type="number" min="1">
+                        @if (registerForm.get('idealWeight')?.hasError('required')) {
+                        <mat-error>Requerido</mat-error>
+                        }
+                    </mat-form-field>
+
+                    <mat-form-field appearance="outline" class="half-width">
+                        <mat-label>Condiciones de Salud</mat-label>
+                        <mat-select formControlName="healthTags" multiple>
+                            @for (condition of healthConditions; track condition) {
+                            <mat-option [value]="condition">{{condition}}</mat-option>
+                            }
+                        </mat-select>
+                        @if (registerForm.get('healthTags')?.hasError('required')) {
+                        <mat-error>Requerido</mat-error>
+                        }
+                    </mat-form-field>
+                </div>
+
                 <mat-form-field appearance="outline" class="full-width">
                     <mat-label>Contraseña</mat-label>
                     <input matInput formControlName="password" type="password">
