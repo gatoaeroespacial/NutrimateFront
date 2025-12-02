@@ -24,9 +24,19 @@
           }
         </mat-form-field>
 
+        @if (errorMessage) {
+          <div class="error-message">
+            {{ errorMessage }}
+          </div>
+        }
+
         <div class="actions">
-          <button mat-flat-button color="primary" type="submit" [disabled]="loginForm.invalid">
-            Ingresar
+          <button mat-flat-button color="primary" type="submit" [disabled]="loginForm.invalid || loading">
+            @if (loading) {
+              Iniciando sesión...
+            } @else {
+              Ingresar
+            }
           </button>
         </div>
       </form>
