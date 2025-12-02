@@ -12,13 +12,14 @@ export interface Tag {
 export interface RecipeCreateRequest {
     name: string;
     description: string;
-    short_description: string;
     ingredients: string[];
     preparation_steps: string;
     nutritional_info: any;
     meal: 'B' | 'L' | 'D'; // Breakfast, Lunch, Dinner
     goal: 'N' | 'W' | 'L'; // Normal, Weight gain, Weight loss
-    tag: number[]; // Array of tag IDs
+    tags?: number[]; // Array of tag IDs
+    image_url?: string;
+    image?: File;
 }
 
 @Injectable({
@@ -39,7 +40,7 @@ export class AdminService {
     /**
      * Create a new recipe
      */
-    createRecipe(recipe: RecipeCreateRequest): Observable<Recipe> {
+    createRecipe(recipe: RecipeCreateRequest | FormData): Observable<Recipe> {
         return this.apiService.post<Recipe>('/diets/recipes/', recipe);
     }
 

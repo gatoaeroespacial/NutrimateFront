@@ -60,7 +60,7 @@ export class Profile implements OnInit {
           age: user.edad,
           height: user.altura,
           weight: user.peso,
-          lastName: 'Perez' // Mocking for now
+          lastName: user.apellido // Mocking for now
         });
       }
     });

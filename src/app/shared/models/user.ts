@@ -6,6 +6,7 @@ export interface ProgressEntry {
 export interface User {
   id: number;
   nombre: string;
+  apellido: string;
   email: string;
   edad: number;
   peso: number;

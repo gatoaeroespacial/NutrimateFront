@@ -54,7 +54,8 @@ export class ProgressService {
         }
         return {
           id: user.id,
-          nombre: `${user.first_name} ${user.last_name || ''}`.trim(),
+          nombre: `${user.first_name}`.trim(),
+          apellido: `${user.last_name}`.trim(),
           email: user.email,
           edad: user.age,
           peso: user.weight,
@@ -105,6 +106,15 @@ export class ProgressService {
     return this.apiService.patch<ProgressCreateResponse>('/users/progress/patch/', data);
   }
 
+  getProgressHistory(): Observable<ProgressEntry[]> {
+    return this.apiService.get<any[]>('/users/progress/history/').pipe(
+      map(history => history.map(entry => ({
+        bmi: entry.bmi,
+        registrationDate: entry.recorded_at
+      })))
+    );
+  }
+
   processProgressCalculation(newWeight: number, newHeight: number): Observable<ComparisonResult> {
     return this.getUserData().pipe(
       switchMap(user => {
@@ -121,8 +131,8 @@ export class ProgressService {
           map(progressResponse => {
             const weightDiff = Math.abs(newWeight - previousWeight);
             const bmiDiff = Math.abs(progressResponse.bmi - previousBMI);
-            const weightImprovement = user.idealActual ? 
-              (user.idealActual < previousWeight ? newWeight < previousWeight : newWeight > previousWeight) : 
+            const weightImprovement = user.idealActual ?
+              (user.idealActual < previousWeight ? newWeight < previousWeight : newWeight > previousWeight) :
               false;
             const bmiImprovement = progressResponse.bmi < previousBMI;
 

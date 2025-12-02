@@ -48,6 +48,20 @@ export class RecipeForm implements OnChanges {
         };
     }
 
+    onFileSelected(event: any) {
+        const file: File = event.target.files[0];
+        if (file) {
+            this.formData.imageFile = file;
+
+            // Create preview
+            const reader = new FileReader();
+            reader.onload = (e: any) => {
+                this.formData.image = e.target.result;
+            };
+            reader.readAsDataURL(file);
+        }
+    }
+
     onSubmit() {
         // Process ingredients
         this.formData.ingredients = this.ingredientsText.split('\n').filter(line => line.trim() !== '');

@@ -49,7 +49,7 @@
           </div>
           <div class="prev-stat">
             <span class="label"><strong>IMC:</strong></span>
-            <span class="value highlight" [class]="getBMICategoryClass(previousBMI)">{{ previousBMI }}</span>
+            <span class="value highlight" [class]="getBMICategoryClass(previousBMI)">{{ previousBMI.toFixed(2) }}</span>
           </div>
         </div>
       </div>
@@ -103,14 +103,14 @@
         <!-- Nuevo IMC -->
         <div class="result-box" [class]="getBMICategoryClass(comparisonResult.newBMI)">
           <div class="result-label"><strong>Nuevo IMC</strong></div>
-          <div class="result-value large">{{ comparisonResult.newBMI }}</div>
+          <div class="result-value large">{{ comparisonResult.newBMI.toFixed(2) }}</div>
           <div class="result-category">{{ comparisonResult.category }}</div>
         </div>
 
         <!-- IMC Anterior -->
         <div class="result-box secondary">
           <div class="result-label"><strong>IMC Anterior</strong></div>
-          <div class="result-value">{{ comparisonResult.previousBMI }}</div>
+          <div class="result-value">{{ comparisonResult.previousBMI.toFixed(2) }}</div>
         </div>
 
         <!-- Cambio de Peso -->

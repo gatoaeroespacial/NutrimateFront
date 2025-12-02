@@ -51,9 +51,9 @@ export class Login {
 
           // Navigate based on user role
           if (this.authService.isAdmin()) {
-            this.router.navigate(['/admin']);
+            this.router.navigate(['/admin/dietas']);
           } else {
-            this.router.navigate(['/diets']);
+            this.router.navigate(['/dietas']);
           }
         },
         error: (error) => {

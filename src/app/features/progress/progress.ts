@@ -77,11 +77,22 @@ export class Progress implements OnInit {
         this.newWeight = user.peso;
         this.newHeight = user.altura;
 
-        // Calcular estadísticas iniciales
-        this.calculateInitialStats();
-
-        this.loadingUser = false;
-        this.cdr.detectChanges();
+        // Cargar historial completo desde el backend
+        this.progressService.getProgressHistory().subscribe({
+          next: (history) => {
+            this.user!.progreso = history;
+            this.calculateInitialStats();
+            this.loadingUser = false;
+            this.cdr.detectChanges();
+          },
+          error: (err) => {
+            console.error('Error loading history:', err);
+            // Si falla, usar solo el progreso actual
+            this.calculateInitialStats();
+            this.loadingUser = false;
+            this.cdr.detectChanges();
+          }
+        });
       },
       error: (err) => {
         this.error = 'No se pudieron cargar los datos del usuario';
