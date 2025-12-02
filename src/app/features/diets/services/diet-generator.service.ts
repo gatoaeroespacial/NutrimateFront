@@ -1,6 +1,7 @@
+// src/app/features/diets/services/diet-generator.service.ts
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { Observable } from 'rxjs';
+import { Observable, catchError, of } from 'rxjs';
 import { Recipe } from '../../../shared/models/recipe';
 import { DietService } from './diet.service';
 
@@ -11,17 +12,22 @@ export class DietGeneratorService {
     private dietService: DietService
   ) { }
 
-  /**
-   * Generate a diet by getting all recipes from backend
-   */
   generateDiet(): Observable<Recipe[]> {
-    return this.dietService.getAllRecipes();
+    return this.dietService.getAllRecipes().pipe(
+      catchError(error => {
+        console.error('❌ Error generando dieta:', error);
+        // Retornar array vacío en caso de error
+        return of([]);
+      })
+    );
   }
 
-  /**
-   * Get all recipes from backend
-   */
   getAllRecipes(): Observable<Recipe[]> {
-    return this.dietService.getAllRecipes();
+    return this.dietService.getAllRecipes().pipe(
+      catchError(error => {
+        console.error('❌ Error obteniendo recetas:', error);
+        return of([]);
+      })
+    );
   }
 }
