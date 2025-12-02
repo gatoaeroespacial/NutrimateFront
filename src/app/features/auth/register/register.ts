@@ -31,6 +31,7 @@ export class Register {
   loading = false;
   errorMessage = '';
   successMessage = '';
+  healthConditions: string[] = ['Diabetes', 'Hipertensión', 'Alergia al gluten', 'Intolerancia a la lactosa', 'Vegetariano', 'Vegano'];
 
   constructor(
     private fb: FormBuilder,
