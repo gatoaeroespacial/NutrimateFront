@@ -2,7 +2,7 @@ import { Component, OnInit, ChangeDetectorRef } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { Recipe } from '../../../shared/models/recipe';
-import { DietGeneratorService } from '../../diets/services/diet-generator.service';
+import { AdminService } from '../services/admin.service';
 import { RecipeForm } from './recipe-form/recipe-form';
 import { RecipeDetailModal } from './recipe-detail-modal/recipe-detail-modal';
 
@@ -18,6 +18,7 @@ export class AdminDiets implements OnInit {
     filteredRecipes: Recipe[] = [];
     searchTerm: string = '';
     loading = false;
+    errorMessage = '';
 
     // Modal state
     showModal = false;
@@ -27,7 +28,7 @@ export class AdminDiets implements OnInit {
     viewingRecipe: Recipe | null = null;
 
     constructor(
-        private dietService: DietGeneratorService,
+        private adminService: AdminService,
         private cdr: ChangeDetectorRef
     ) { }
 
@@ -37,7 +38,9 @@ export class AdminDiets implements OnInit {
 
     loadRecipes() {
         this.loading = true;
-        this.dietService.getAllRecipes().subscribe({
+        this.errorMessage = '';
+
+        this.adminService.getAllRecipes().subscribe({
             next: (recipes: Recipe[]) => {
                 this.recipes = recipes;
                 this.filterRecipes();
@@ -46,6 +49,7 @@ export class AdminDiets implements OnInit {
             },
             error: (err) => {
                 console.error('Error loading recipes', err);
+                this.errorMessage = 'Error al cargar las recetas. Intenta nuevamente.';
                 this.loading = false;
                 this.cdr.detectChanges();
             }
@@ -93,22 +97,49 @@ export class AdminDiets implements OnInit {
 
     handleSave(recipe: Recipe) {
         if (this.selectedRecipe && this.selectedRecipe.id) {
-            // Edit mode
-            // In a real app, call service to update. For now, update local list
+            // Edit mode - Backend doesn't support update yet
+            // For now, just update local list
             const index = this.recipes.findIndex(r => r.id === recipe.id);
             if (index !== -1) {
                 this.recipes[index] = recipe;
             }
+            this.filterRecipes();
+            this.closeModal();
         } else {
-            // Create mode
-            // Generate a temporary ID
-            const newId = Math.max(...this.recipes.map(r => r.id), 0) + 1;
-            recipe.id = newId;
-            this.recipes.push(recipe);
-        }
+            // Create mode - Call backend
+            this.loading = true;
+            this.errorMessage = '';
 
-        this.filterRecipes();
-        this.closeModal();
+            // Convert Recipe to RecipeCreateRequest format
+            const recipeData: any = {
+                name: recipe.name,
+                description: recipe.preparation || '',
+                short_description: recipe.short_description,
+                ingredients: recipe.ingredients || [],
+                preparation_steps: recipe.preparation || '',
+                nutritional_info: recipe.nutrition || {},
+                meal: 'L', // Default to Lunch
+                goal: 'N', // Default to Normal
+                tag: [] // Tags would need to be mapped from recipe.tags
+            };
+
+            this.adminService.createRecipe(recipeData).subscribe({
+                next: (createdRecipe) => {
+                    console.log('Recipe created:', createdRecipe);
+                    this.recipes.push(createdRecipe);
+                    this.filterRecipes();
+                    this.loading = false;
+                    this.closeModal();
+                    this.cdr.detectChanges();
+                },
+                error: (err) => {
+                    console.error('Error creating recipe:', err);
+                    this.errorMessage = 'Error al crear la receta. Intenta nuevamente.';
+                    this.loading = false;
+                    this.cdr.detectChanges();
+                }
+            });
+        }
     }
 
     deleteRecipe(id: number, event?: Event) {
@@ -116,8 +147,24 @@ export class AdminDiets implements OnInit {
             event.stopPropagation();
         }
         if (confirm('¿Estás seguro de que deseas eliminar esta receta?')) {
-            this.recipes = this.recipes.filter(r => r.id !== id);
-            this.filterRecipes();
+            this.loading = true;
+            this.errorMessage = '';
+
+            this.adminService.deleteRecipe(id).subscribe({
+                next: () => {
+                    console.log('Recipe deleted:', id);
+                    this.recipes = this.recipes.filter(r => r.id !== id);
+                    this.filterRecipes();
+                    this.loading = false;
+                    this.cdr.detectChanges();
+                },
+                error: (err) => {
+                    console.error('Error deleting recipe:', err);
+                    this.errorMessage = 'Error al eliminar la receta. Intenta nuevamente.';
+                    this.loading = false;
+                    this.cdr.detectChanges();
+                }
+            });
         }
     }
 }

@@ -33,5 +33,5 @@ export const routes: Routes = [
       { path: 'profile', component: Profile }
     ]
   },
-  { path: '**', redirectTo: '/diets' }
+  { path: '**', redirectTo: '/dietas' }
 ];

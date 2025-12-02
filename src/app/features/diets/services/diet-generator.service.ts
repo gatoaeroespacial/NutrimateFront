@@ -2,18 +2,26 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { Recipe } from '../../../shared/models/recipe';
+import { DietService } from './diet.service';
 
 @Injectable({ providedIn: 'root' })
 export class DietGeneratorService {
-  constructor(private http: HttpClient) { }
+  constructor(
+    private http: HttpClient,
+    private dietService: DietService
+  ) { }
 
-  // Simula una llamada a API que genera una dieta
+  /**
+   * Generate a diet by getting all recipes from backend
+   */
   generateDiet(): Observable<Recipe[]> {
-    // Cargamos un JSON de prueba desde /public/mock
-    return this.http.get<Recipe[]>('/mock/generated-diet.json');
+    return this.dietService.getAllRecipes();
   }
 
+  /**
+   * Get all recipes from backend
+   */
   getAllRecipes(): Observable<Recipe[]> {
-    return this.http.get<Recipe[]>('/mock/generated-diet.json');
+    return this.dietService.getAllRecipes();
   }
 }

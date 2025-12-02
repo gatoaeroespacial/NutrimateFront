@@ -4,12 +4,15 @@ import { MatCardModule } from '@angular/material/card';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import { MatButtonModule } from '@angular/material/button';
-import { RouterLink } from '@angular/router';
+import { RouterLink, Router } from '@angular/router';
+import { CommonModule } from '@angular/common';
+import { AuthService } from '../../../core/services/auth.service';
 
 @Component({
   selector: 'app-register',
   standalone: true,
   imports: [
+    CommonModule,
     ReactiveFormsModule,
     MatCardModule,
     MatFormFieldModule,
@@ -22,8 +25,15 @@ import { RouterLink } from '@angular/router';
 })
 export class Register {
   registerForm: FormGroup;
+  loading = false;
+  errorMessage = '';
+  successMessage = '';
 
-  constructor(private fb: FormBuilder) {
+  constructor(
+    private fb: FormBuilder,
+    private authService: AuthService,
+    private router: Router
+  ) {
     this.registerForm = this.fb.group({
       name: ['', Validators.required],
       lastName: ['', Validators.required],
@@ -43,8 +53,40 @@ export class Register {
 
   onSubmit() {
     if (this.registerForm.valid) {
-      console.log('Register data:', this.registerForm.value);
-      // TODO: Implement actual register logic
+      this.loading = true;
+      this.errorMessage = '';
+      this.successMessage = '';
+
+      // Map form values to backend expected format
+      const formValue = this.registerForm.value;
+      const userData = {
+        first_name: formValue.name,
+        last_name: formValue.lastName,
+        email: formValue.email,
+        age: formValue.age,
+        height: formValue.height,
+        weight: formValue.weight,
+        password: formValue.password,
+        ideal: {}
+      };
+
+      this.authService.register(userData).subscribe({
+        next: (response) => {
+          console.log('Registration successful:', response);
+          this.loading = false;
+          this.successMessage = 'Registro exitoso. Redirigiendo al login...';
+
+          // Redirect to login after 2 seconds
+          setTimeout(() => {
+            this.router.navigate(['/login']);
+          }, 2000);
+        },
+        error: (error) => {
+          console.error('Registration error:', error);
+          this.errorMessage = error.message || 'Error al registrar usuario. Intenta nuevamente.';
+          this.loading = false;
+        }
+      });
     }
   }
 }

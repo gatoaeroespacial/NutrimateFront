@@ -170,7 +170,7 @@ export class Progress implements OnInit {
       registrationDate: new Date().toISOString().split('T')[0]
     };
 
-    this.progressService.saveMeasurement(this.newWeight!, this.newHeight!, newBMI, newProgressEntry).subscribe({
+    this.progressService.saveMeasurement(this.newWeight!, this.newHeight!).subscribe({
       next: (response) => {
         console.log('✅ Medición guardada exitosamente en localStorage');
 
