@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+
 import { FormBuilder, FormGroup, Validators, ReactiveFormsModule } from '@angular/forms';
 import { MatCardModule } from '@angular/material/card';
 import { MatFormFieldModule } from '@angular/material/form-field';
@@ -30,7 +32,8 @@ export class Profile implements OnInit {
 
   constructor(
     private fb: FormBuilder,
-    private progressService: ProgressService
+    private progressService: ProgressService,
+    private router: Router
   ) {
     this.profileForm = this.fb.group({
       name: ['', Validators.required],
@@ -97,5 +100,10 @@ export class Profile implements OnInit {
         }
       });
     }
+  }
+
+  logout() {
+    localStorage.removeItem('user-progress');
+    this.router.navigate(['/login']);
   }
 }
