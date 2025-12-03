@@ -21,6 +21,7 @@ export const routes: Routes = [
       { path: '', redirectTo: 'dietas', pathMatch: 'full' },
       { path: 'dietas', loadComponent: () => import('./features/admin/diets/admin-diets').then(m => m.AdminDiets) },
       { path: 'tags', loadComponent: () => import('./features/admin/tags/tags').then(m => m.AdminTags) },
+      { path: 'users', loadComponent: () => import('./features/admin/users/users').then(m => m.AdminUsers) },
       { path: 'profile', component: Profile }
     ]
   },
