@@ -107,7 +107,7 @@ export class AuthService {
      */
     isAdmin(): boolean {
         const user = this.getCurrentUser();
-        return user?.is_staff || user?.is_superuser || false;
+        return user?.is_superuser === true;
     }
 
     /**
