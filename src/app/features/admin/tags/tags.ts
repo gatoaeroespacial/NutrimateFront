@@ -70,15 +70,6 @@ export class AdminTags implements OnInit {
         this.errorMessage = '';
     }
 
-    openEditForm(tag: Tag) {
-        this.editingTag = tag;
-        this.formName = tag.name;
-        this.formDescription = tag.description || '';
-        this.showForm = true;
-        this.successMessage = '';
-        this.errorMessage = '';
-    }
-
     closeForm() {
         this.showForm = false;
         this.editingTag = null;
@@ -87,64 +78,32 @@ export class AdminTags implements OnInit {
     saveTag() {
         this.loading = true;
 
-        if (this.editingTag && this.editingTag.id) {
-            // Edit
-            const updatedTag: Tag = {
-                name: this.formName,
-                description: this.formDescription
-            };
+        // Create
+        const newTag: Tag = {
+            name: this.formName,
+            description: this.formDescription
+        };
 
-            this.adminService.updateTag(this.editingTag.id, updatedTag).subscribe({
-                next: (tag) => {
-                    // Update local list
-                    const index = this.tags.findIndex(t => t.id === tag.id);
-                    if (index !== -1) {
-                        this.tags[index] = tag;
-                        this.tags = [...this.tags]; // Refresh table
-                    }
-                    this.loading = false;
-                    this.closeForm();
-                    this.successMessage = 'Tag actualizado correctamente';
-                    this.cd.detectChanges(); // Force change detection
-                    setTimeout(() => {
-                        this.successMessage = '';
-                        this.cd.detectChanges();
-                    }, 3000);
-                },
-                error: (err) => {
-                    console.error('Error updating tag', err);
-                    this.errorMessage = 'Error al actualizar la etiqueta';
-                    this.loading = false;
-                }
-            });
-        } else {
-            // Create
-            const newTag: Tag = {
-                name: this.formName,
-                description: this.formDescription
-            };
-
-            this.adminService.createTag(newTag).subscribe({
-                next: (createdTag) => {
-                    this.tags.push(createdTag);
-                    this.tags = [...this.tags]; // Refresh table
-                    this.loading = false;
-                    this.closeForm();
-                    this.successMessage = 'Tag creado correctamente';
-                    this.cd.detectChanges(); // Force change detection
-                    // Auto-clear after 3 seconds
-                    setTimeout(() => {
-                        this.successMessage = '';
-                        this.cd.detectChanges();
-                    }, 3000);
-                },
-                error: (err) => {
-                    console.error('Error creating tag', err);
-                    this.errorMessage = 'Error al crear la etiqueta';
-                    this.loading = false;
-                }
-            });
-        }
+        this.adminService.createTag(newTag).subscribe({
+            next: (createdTag) => {
+                this.tags.push(createdTag);
+                this.tags = [...this.tags]; // Refresh table
+                this.loading = false;
+                this.closeForm();
+                this.successMessage = 'Tag creado correctamente';
+                this.cd.detectChanges(); // Force change detection
+                // Auto-clear after 3 seconds
+                setTimeout(() => {
+                    this.successMessage = '';
+                    this.cd.detectChanges();
+                }, 3000);
+            },
+            error: (err) => {
+                console.error('Error creating tag', err);
+                this.errorMessage = 'Error al crear la etiqueta';
+                this.loading = false;
+            }
+        });
     }
 
     deleteTag(id: number) {
