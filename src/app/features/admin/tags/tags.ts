@@ -146,6 +146,7 @@ export class AdminTags implements OnInit {
                 next: () => {
                     this.tags = this.tags.filter(t => t.id !== id);
                     this.loading = false;
+                    this.cd.detectChanges(); // Force change detection to avoid NG0100
                 },
                 error: (err) => {
                     console.error('Error deleting tag', err);
