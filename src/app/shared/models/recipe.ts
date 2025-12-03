@@ -1,20 +1,27 @@
 export interface Recipe {
   id: number;
   name: string;
-  short_description: string;
+  description: string;
+  ingredients: string[];
+  preparation_steps: string;
+  nutritional_info: {
+    per_serving?: NutritionInfo;
+    per_100g?: NutritionInfo;
+  };
+  image_url?: string;
   image?: string;
-  imageFile?: File;
-  ingredients?: string[];
+  meal: string;
+  goal: string;
+  tags?: number[];
+
+  // Legacy properties for backward compatibility with admin panel
+  short_description?: string;
   preparation?: string;
   nutrition?: {
     per_serving?: NutritionInfo;
     per_100g?: NutritionInfo;
   };
-  tags?: {
-    conditions?: string[];
-    type?: string;
-    intentions?: string[];
-  };
+  imageFile?: File;
 }
 
 export interface NutritionInfo {

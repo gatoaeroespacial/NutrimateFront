@@ -13,12 +13,19 @@ export interface DietCreateRequest {
     recipes: number[]; // Array of recipe IDs
 }
 
+export interface Menu {
+    id: number;
+    day: number;
+    recipes?: number[];
+    detailed_recipes?: Recipe[];
+}
+
 export interface DietResponse {
     id: number;
-    user: number;
+    user?: number;
     startDate: string;
     endDate: string;
-    recipes: number[];
+    menus?: Menu[];
 }
 
 @Injectable({ providedIn: 'root' })
