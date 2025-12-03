@@ -12,6 +12,7 @@ export interface User {
   peso: number;
   altura: number;
   enfermedades: string[];
+  tags?: number[];
   idealActual: number;
   progreso: ProgressEntry[];
 }

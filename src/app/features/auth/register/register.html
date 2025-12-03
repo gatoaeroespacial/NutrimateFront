@@ -90,8 +90,8 @@
                     <mat-form-field appearance="outline" class="half-width">
                         <mat-label>Condiciones de Salud</mat-label>
                         <mat-select formControlName="healthTags" multiple>
-                            @for (condition of healthConditions; track condition) {
-                            <mat-option [value]="condition">{{condition}}</mat-option>
+                            @for (condition of healthConditions; track condition.id) {
+                            <mat-option [value]="condition.id">{{condition.name}}</mat-option>
                             }
                         </mat-select>
                         @if (registerForm.get('healthTags')?.hasError('required')) {

@@ -32,6 +32,12 @@ export interface RegisterRequest {
     goal?: string;
 }
 
+export interface Tag {
+    id?: number;
+    name: string;
+    description?: string;
+}
+
 export interface RegisterResponse {
     id: number;
     email: string;
@@ -73,6 +79,13 @@ export class AuthService {
      */
     register(userData: RegisterRequest): Observable<RegisterResponse> {
         return this.apiService.post<RegisterResponse>('/users/register/', userData);
+    }
+
+    /**
+     * Get all tags
+     */
+    getTags(): Observable<Tag[]> {
+        return this.apiService.get<Tag[]>('/diets/tags/');
     }
 
     /**

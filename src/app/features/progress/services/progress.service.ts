@@ -72,6 +72,7 @@ export class ProgressService {
         peso: backendUser.weight || 0,
         altura: backendUser.height || 0,
         enfermedades: [],
+        tags: backendUser.tags || [],
         idealActual: backendUser.ideal?.ideal_weight || 0,
         progreso: progressEntries
       };

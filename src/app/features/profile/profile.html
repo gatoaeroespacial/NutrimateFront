@@ -47,6 +47,22 @@
                         </div>
                     </div>
                 </div>
+
+                <mat-divider></mat-divider>
+
+                <div class="info-row" *ngIf="userTags.length > 0">
+                    <div class="info-item full-width">
+                        <mat-icon>local_offer</mat-icon>
+                        <div class="info-content">
+                            <span class="label">Condiciones de Salud</span>
+                            <mat-chip-set>
+                                <mat-chip *ngFor="let tag of userTags">
+                                    {{tag.name}}
+                                </mat-chip>
+                            </mat-chip-set>
+                        </div>
+                    </div>
+                </div>
             </div>
 
             <div class="logout-container" style="margin-top: 2rem; display: flex; justify-content: center;">

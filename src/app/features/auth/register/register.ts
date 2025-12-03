@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators, ReactiveFormsModule } from '@angular/forms';
 import { MatCardModule } from '@angular/material/card';
 import { MatFormFieldModule } from '@angular/material/form-field';
@@ -6,7 +6,7 @@ import { MatInputModule } from '@angular/material/input';
 import { MatButtonModule } from '@angular/material/button';
 import { RouterLink, Router } from '@angular/router';
 import { MatSelectModule } from '@angular/material/select';
-import { AuthService } from '../../../core/services/auth.service';
+import { AuthService, Tag } from '../../../core/services/auth.service';
 import { CommonModule } from '@angular/common';
 
 @Component({
@@ -25,12 +25,12 @@ import { CommonModule } from '@angular/common';
   templateUrl: './register.html',
   styleUrl: './register.scss'
 })
-export class Register {
+export class Register implements OnInit {
   registerForm: FormGroup;
   loading = false;
   errorMessage = '';
   successMessage = '';
-  healthConditions: string[] = ['Diabetes', 'Hipertensión', 'Alergia al gluten', 'Intolerancia a la lactosa', 'Vegetariano', 'Vegano'];
+  healthConditions: Tag[] = [];
 
   constructor(
     private fb: FormBuilder,
@@ -49,6 +49,21 @@ export class Register {
       password: ['', [Validators.required, Validators.minLength(6)]],
       confirmPassword: ['', Validators.required]
     }, { validators: this.passwordMatchValidator });
+  }
+
+  ngOnInit() {
+    this.loadTags();
+  }
+
+  loadTags() {
+    this.authService.getTags().subscribe({
+      next: (tags) => {
+        this.healthConditions = tags;
+      },
+      error: (err) => {
+        console.error('Error loading tags:', err);
+      }
+    });
   }
 
   passwordMatchValidator(g: FormGroup) {
@@ -90,7 +105,7 @@ export class Register {
           goal: goal,
           ideal_weight: idealWeight
         },
-        tags: []
+        tags: formValue.healthTags // This will be an array of IDs
       };
 
       console.log('📤 Enviando datos de registro:', userData);
