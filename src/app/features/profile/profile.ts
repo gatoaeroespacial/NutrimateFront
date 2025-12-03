@@ -45,14 +45,47 @@ export class Profile implements OnInit {
   }
 
   loadUserTags() {
+    // First, try to load from localStorage (cached from registration/login)
+    const cachedTags = localStorage.getItem('health_tags');
+
+    if (cachedTags) {
+      try {
+        const allTags: Tag[] = JSON.parse(cachedTags);
+        if (this.user && this.user.tags) {
+          this.userTags = allTags.filter(tag => this.user!.tags!.includes(tag.id!));
+          console.log('✅ Tags cargados desde caché:', this.userTags);
+          this.cdr.detectChanges();
+          return; // Exit early if we have cached tags
+        }
+      } catch (e) {
+        console.error('Error parsing cached tags:', e);
+      }
+    }
+
+    // Fallback: Try to fetch from API (will fail with 403 for non-admin users)
     this.authService.getTags().subscribe({
       next: (allTags) => {
         if (this.user && this.user.tags) {
           this.userTags = allTags.filter(tag => this.user!.tags!.includes(tag.id!));
+          console.log('✅ Tags cargados desde API:', this.userTags);
+          // Cache for future use
+          localStorage.setItem('health_tags', JSON.stringify(allTags));
           this.cdr.detectChanges();
         }
       },
-      error: (err) => console.error('Error loading tags:', err)
+      error: (err) => {
+        console.warn('⚠️ No se pudieron cargar los tags desde la API (requiere permisos de admin)');
+        // Final fallback: Create tag objects with just IDs
+        if (this.user && this.user.tags) {
+          this.userTags = this.user.tags.map(tagId => ({
+            id: tagId,
+            name: `Condición de salud #${tagId}`,
+            description: 'Información no disponible'
+          }));
+          console.log('ℹ️ Usando IDs de tags como fallback:', this.userTags);
+          this.cdr.detectChanges();
+        }
+      }
     });
   }
 
