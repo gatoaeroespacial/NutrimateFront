@@ -20,6 +20,7 @@ export const routes: Routes = [
     children: [
       { path: '', redirectTo: 'dietas', pathMatch: 'full' },
       { path: 'dietas', loadComponent: () => import('./features/admin/diets/admin-diets').then(m => m.AdminDiets) },
+      { path: 'tags', loadComponent: () => import('./features/admin/tags/tags').then(m => m.AdminTags) },
       { path: 'profile', component: Profile }
     ]
   },
