@@ -59,9 +59,16 @@ export class Register implements OnInit {
     this.authService.getTags().subscribe({
       next: (tags) => {
         this.healthConditions = tags;
+        // Store tags in localStorage for later use (e.g., in profile page)
+        localStorage.setItem('health_tags', JSON.stringify(tags));
       },
       error: (err) => {
         console.error('Error loading tags:', err);
+        // Try to load from localStorage if available
+        const cachedTags = localStorage.getItem('health_tags');
+        if (cachedTags) {
+          this.healthConditions = JSON.parse(cachedTags);
+        }
       }
     });
   }

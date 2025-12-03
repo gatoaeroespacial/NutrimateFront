@@ -165,23 +165,29 @@ export class ProgressService {
 
         return progressObservable.pipe(
           map(progressResponse => {
+            console.log('📦 Respuesta del backend:', progressResponse);
+
+            // Calculate BMI manually if backend doesn't return it
+            const newBMI = progressResponse.bmi || this.calculateBMI(newWeight, newHeight);
+            console.log('📊 Nuevo IMC:', newBMI);
+
             const weightDiff = Math.abs(newWeight - previousWeight);
-            const bmiDiff = Math.abs(progressResponse.bmi - previousBMI);
+            const bmiDiff = Math.abs(newBMI - previousBMI);
             const weightImprovement = user.idealActual ?
               (user.idealActual < previousWeight ? newWeight < previousWeight : newWeight > previousWeight) :
               false;
-            const bmiImprovement = progressResponse.bmi < previousBMI;
+            const bmiImprovement = newBMI < previousBMI;
 
             return {
-              newBMI: progressResponse.bmi,
-              previousBMI: previousBMI,
+              newBMI: parseFloat(newBMI.toFixed(2)),
+              previousBMI: parseFloat(previousBMI.toFixed(2)),
               bmiDifference: parseFloat(bmiDiff.toFixed(2)),
               isImprovement: bmiImprovement,
               newWeight: newWeight,
               previousWeight: previousWeight,
               weightDifference: parseFloat(weightDiff.toFixed(2)),
               weightImprovement: weightImprovement,
-              category: this.getBMICategory(progressResponse.bmi),
+              category: this.getBMICategory(newBMI),
               percentage: 0,
               achievedGoal: false
             };
