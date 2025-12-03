@@ -134,4 +134,15 @@ export class AdminService {
     getUsers(): Observable<AdminUser[]> {
         return this.apiService.get<AdminUser[]>('/users/get-users/');
     }
+
+    /**
+     * Create a new admin user
+     */
+    createAdmin(userData: any): Observable<any> {
+        return this.apiService.post<any>('/users/admin/create/', {
+            ...userData,
+            is_superuser: true,
+            is_staff: true
+        });
+    }
 }

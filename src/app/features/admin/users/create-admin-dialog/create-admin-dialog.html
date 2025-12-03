@@ -1,0 +1,84 @@
+<h2 mat-dialog-title>Crear Nuevo Administrador</h2>
+
+<mat-dialog-content>
+    <form [formGroup]="adminForm" (ngSubmit)="onSubmit()">
+        <div class="row">
+            <mat-form-field appearance="outline" class="half-width">
+                <mat-label>Nombre</mat-label>
+                <input matInput formControlName="first_name">
+                @if (adminForm.get('first_name')?.hasError('required')) {
+                <mat-error>Requerido</mat-error>
+                }
+            </mat-form-field>
+
+            <mat-form-field appearance="outline" class="half-width">
+                <mat-label>Apellidos</mat-label>
+                <input matInput formControlName="last_name">
+                @if (adminForm.get('last_name')?.hasError('required')) {
+                <mat-error>Requerido</mat-error>
+                }
+            </mat-form-field>
+        </div>
+
+        <mat-form-field appearance="outline" class="full-width">
+            <mat-label>Correo Electrónico</mat-label>
+            <input matInput formControlName="email" type="email">
+            @if (adminForm.get('email')?.hasError('required')) {
+            <mat-error>Requerido</mat-error>
+            }
+            @if (adminForm.get('email')?.hasError('email')) {
+            <mat-error>Correo inválido</mat-error>
+            }
+        </mat-form-field>
+
+        <mat-form-field appearance="outline" class="full-width">
+            <mat-label>Contraseña</mat-label>
+            <input matInput formControlName="password" type="password">
+            @if (adminForm.get('password')?.hasError('required')) {
+            <mat-error>Requerido</mat-error>
+            }
+            @if (adminForm.get('password')?.hasError('minlength')) {
+            <mat-error>Mínimo 6 caracteres</mat-error>
+            }
+        </mat-form-field>
+
+        <div class="row">
+            <mat-form-field appearance="outline" class="third-width">
+                <mat-label>Edad</mat-label>
+                <input matInput formControlName="age" type="number">
+                @if (adminForm.get('age')?.hasError('required')) {
+                <mat-error>Requerido</mat-error>
+                }
+            </mat-form-field>
+
+            <mat-form-field appearance="outline" class="third-width">
+                <mat-label>Altura (cm)</mat-label>
+                <input matInput formControlName="height" type="number">
+                @if (adminForm.get('height')?.hasError('required')) {
+                <mat-error>Requerido</mat-error>
+                }
+            </mat-form-field>
+
+            <mat-form-field appearance="outline" class="third-width">
+                <mat-label>Peso (kg)</mat-label>
+                <input matInput formControlName="weight" type="number">
+                @if (adminForm.get('weight')?.hasError('required')) {
+                <mat-error>Requerido</mat-error>
+                }
+            </mat-form-field>
+        </div>
+
+        @if (error) {
+        <div class="error-message">
+            {{ error }}
+        </div>
+        }
+    </form>
+</mat-dialog-content>
+
+<mat-dialog-actions align="end">
+    <button mat-button (click)="onCancel()">Cancelar</button>
+    <button mat-flat-button color="primary" (click)="onSubmit()" [disabled]="adminForm.invalid">
+        Crear Administrador
+    </button>
+</mat-dialog-actions>
