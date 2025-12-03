@@ -4,18 +4,43 @@
         <p>Mantente al día con los mejores consejos de salud y nutrición</p>
     </header>
 
+    <!-- Loading spinner -->
+    @if (loading) {
+    <div class="loading-container">
+        <mat-spinner></mat-spinner>
+        <p>Cargando noticias...</p>
+    </div>
+    }
+
+    <!-- Error message -->
+    @if (error && !loading) {
+    <div class="error-container">
+        <p>⚠️ No se pudieron cargar las noticias. Mostrando contenido de ejemplo.</p>
+    </div>
+    }
+
+    <!-- News grid -->
+    @if (!loading) {
     <div class="news-grid">
         @for (item of newsItems; track item.title) {
         <mat-card class="news-card">
-            <img mat-card-image [src]="item.image" [alt]="item.title">
+            <img mat-card-image [src]="item.image" [alt]="item.title"
+                (error)="$event.target.src='https://images.unsplash.com/photo-1490645935967-10de6ba17061?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80'">
             <mat-card-content>
                 <span class="news-date">{{ item.date | date:'longDate' }}</span>
+                @if (item.source) {
+                <span class="news-source"> • {{ item.source }}</span>
+                }
                 <h2 class="news-title">{{ item.title }}</h2>
                 <p class="news-description">{{ item.description }}</p>
                 <p class="news-body">{{ item.body }}</p>
             </mat-card-content>
             <mat-card-actions>
+                @if (item.url) {
+                <button mat-button color="primary" (click)="openArticle(item)">LEER MÁS</button>
+                } @else {
                 <button mat-button color="primary">LEER MÁS</button>
+                }
                 <button mat-icon-button>
                     <span class="material-icons">share</span>
                 </button>
@@ -23,4 +48,5 @@
         </mat-card>
         }
     </div>
+    }
 </div>

@@ -45,17 +45,29 @@
 
                     <mat-form-field appearance="outline" class="third-width">
                         <mat-label>Altura (cm)</mat-label>
-                        <input matInput formControlName="height" type="number" min="1">
+                        <input matInput formControlName="height" type="number" min="60" max="270">
                         @if (registerForm.get('height')?.hasError('required')) {
                         <mat-error>Requerido</mat-error>
+                        }
+                        @if (registerForm.get('height')?.hasError('min')) {
+                        <mat-error>Mínimo 60 cm</mat-error>
+                        }
+                        @if (registerForm.get('height')?.hasError('max')) {
+                        <mat-error>Máximo 270 cm</mat-error>
                         }
                     </mat-form-field>
 
                     <mat-form-field appearance="outline" class="third-width">
                         <mat-label>Peso (kg)</mat-label>
-                        <input matInput formControlName="weight" type="number" min="1">
+                        <input matInput formControlName="weight" type="number" min="30" max="170">
                         @if (registerForm.get('weight')?.hasError('required')) {
                         <mat-error>Requerido</mat-error>
+                        }
+                        @if (registerForm.get('weight')?.hasError('min')) {
+                        <mat-error>Mínimo 30 kg</mat-error>
+                        }
+                        @if (registerForm.get('weight')?.hasError('max')) {
+                        <mat-error>Máximo 170 kg</mat-error>
                         }
                     </mat-form-field>
                 </div>
@@ -63,9 +75,15 @@
                 <div class="row">
                     <mat-form-field appearance="outline" class="half-width">
                         <mat-label>Peso Ideal / Meta (kg)</mat-label>
-                        <input matInput formControlName="idealWeight" type="number" min="1">
+                        <input matInput formControlName="idealWeight" type="number" min="30" max="170">
                         @if (registerForm.get('idealWeight')?.hasError('required')) {
                         <mat-error>Requerido</mat-error>
+                        }
+                        @if (registerForm.get('idealWeight')?.hasError('min')) {
+                        <mat-error>Mínimo 30 kg</mat-error>
+                        }
+                        @if (registerForm.get('idealWeight')?.hasError('max')) {
+                        <mat-error>Máximo 170 kg</mat-error>
                         }
                     </mat-form-field>
 
@@ -101,9 +119,21 @@
                     }
                 </mat-form-field>
 
+                @if (errorMessage) {
+                <div class="error-message">
+                    {{ errorMessage }}
+                </div>
+                }
+
+                @if (successMessage) {
+                <div class="success-message">
+                    {{ successMessage }}
+                </div>
+                }
+
                 <div class="actions">
-                    <button mat-flat-button color="primary" type="submit" [disabled]="registerForm.invalid">
-                        Registrarse
+                    <button mat-flat-button color="primary" type="submit" [disabled]="registerForm.invalid || loading">
+                        {{ loading ? 'Registrando...' : 'Registrarse' }}
                     </button>
                 </div>
             </form>
