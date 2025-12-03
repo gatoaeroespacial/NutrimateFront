@@ -105,7 +105,11 @@ export class AdminTags implements OnInit {
                     this.loading = false;
                     this.closeForm();
                     this.successMessage = 'Tag actualizado correctamente';
-                    setTimeout(() => this.successMessage = '', 3000);
+                    this.cd.detectChanges(); // Force change detection
+                    setTimeout(() => {
+                        this.successMessage = '';
+                        this.cd.detectChanges();
+                    }, 3000);
                 },
                 error: (err) => {
                     console.error('Error updating tag', err);
@@ -127,8 +131,12 @@ export class AdminTags implements OnInit {
                     this.loading = false;
                     this.closeForm();
                     this.successMessage = 'Tag creado correctamente';
+                    this.cd.detectChanges(); // Force change detection
                     // Auto-clear after 3 seconds
-                    setTimeout(() => this.successMessage = '', 3000);
+                    setTimeout(() => {
+                        this.successMessage = '';
+                        this.cd.detectChanges();
+                    }, 3000);
                 },
                 error: (err) => {
                     console.error('Error creating tag', err);
