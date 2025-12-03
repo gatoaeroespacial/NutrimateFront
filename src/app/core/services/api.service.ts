@@ -12,39 +12,85 @@ export class ApiService {
 
     constructor(private http: HttpClient) { }
 
+    private getHeaders(options?: { headers?: HttpHeaders | { [header: string]: string | string[] } }): HttpHeaders {
+        let headers = new HttpHeaders();
+        const token = localStorage.getItem('auth_token');
+
+        if (token) {
+            headers = headers.set('Authorization', `Token ${token}`);
+        }
+
+        if (options?.headers) {
+            if (options.headers instanceof HttpHeaders) {
+                const httpHeaders = options.headers;
+                httpHeaders.keys().forEach(key => {
+                    const value = httpHeaders.get(key);
+                    if (value) {
+                        headers = headers.set(key, value);
+                    }
+                });
+            } else {
+                Object.keys(options.headers).forEach(key => {
+                    headers = headers.set(key, (options.headers as any)[key]);
+                });
+            }
+        }
+        return headers;
+    }
+
     /**
      * GET request
      */
     get<T>(endpoint: string, options?: { headers?: HttpHeaders | { [header: string]: string | string[] }, params?: any }): Observable<T> {
-        return this.http.get<T>(`${this.apiUrl}${endpoint}`, options);
+        const requestOptions = {
+            ...options,
+            headers: this.getHeaders(options)
+        };
+        return this.http.get<T>(`${this.apiUrl}${endpoint}`, requestOptions);
     }
 
     /**
      * POST request
      */
     post<T>(endpoint: string, data: any, options?: { headers?: HttpHeaders | { [header: string]: string | string[] }, params?: any }): Observable<T> {
-        return this.http.post<T>(`${this.apiUrl}${endpoint}`, data, options);
+        const requestOptions = {
+            ...options,
+            headers: this.getHeaders(options)
+        };
+        return this.http.post<T>(`${this.apiUrl}${endpoint}`, data, requestOptions);
     }
 
     /**
      * PATCH request
      */
     patch<T>(endpoint: string, data: any, options?: { headers?: HttpHeaders | { [header: string]: string | string[] }, params?: any }): Observable<T> {
-        return this.http.patch<T>(`${this.apiUrl}${endpoint}`, data, options);
+        const requestOptions = {
+            ...options,
+            headers: this.getHeaders(options)
+        };
+        return this.http.patch<T>(`${this.apiUrl}${endpoint}`, data, requestOptions);
     }
 
     /**
      * PUT request
      */
     put<T>(endpoint: string, data: any, options?: { headers?: HttpHeaders | { [header: string]: string | string[] }, params?: any }): Observable<T> {
-        return this.http.put<T>(`${this.apiUrl}${endpoint}`, data, options);
+        const requestOptions = {
+            ...options,
+            headers: this.getHeaders(options)
+        };
+        return this.http.put<T>(`${this.apiUrl}${endpoint}`, data, requestOptions);
     }
 
     /**
      * DELETE request
      */
     delete<T>(endpoint: string, options?: { headers?: HttpHeaders | { [header: string]: string | string[] }, params?: any }): Observable<T> {
-        return this.http.delete<T>(`${this.apiUrl}${endpoint}`, options);
+        const requestOptions = {
+            ...options,
+            headers: this.getHeaders(options)
+        };
+        return this.http.delete<T>(`${this.apiUrl}${endpoint}`, requestOptions);
     }
 
     /**

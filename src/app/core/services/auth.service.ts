@@ -139,6 +139,16 @@ export class AuthService {
     }
 
     /**
+     * Update current user data locally
+     */
+    updateCurrentUser(data: Partial<any>): void {
+        const currentUser = this.getCurrentUser() || {};
+        const updatedUser = { ...currentUser, ...data };
+        this.setUser(updatedUser);
+        this.currentUserSubject.next(updatedUser);
+    }
+
+    /**
      * Get user from storage
      */
     private getUserFromStorage(): any {

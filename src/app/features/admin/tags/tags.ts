@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit, ChangeDetectorRef } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { MatTableModule } from '@angular/material/table';
 import { MatButtonModule } from '@angular/material/button';
@@ -7,12 +7,7 @@ import { MatCardModule } from '@angular/material/card';
 import { FormsModule } from '@angular/forms';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
-
-export interface Tag {
-    id: number;
-    name: string;
-    description: string;
-}
+import { AdminService, Tag } from '../services/admin.service';
 
 @Component({
     selector: 'app-admin-tags',
@@ -30,16 +25,12 @@ export interface Tag {
     templateUrl: './tags.html',
     styleUrl: './tags.scss'
 })
-export class AdminTags {
-    tags: Tag[] = [
-        { id: 1, name: 'Diabetes', description: 'Evitar azúcares simples, productos con azúcar añadido y carbohidratos refinados.' },
-        { id: 2, name: 'Hipertensión', description: 'Reducir el consumo de sodio, alimentos procesados y grasas saturadas.' },
-        { id: 3, name: 'Celiaquía', description: 'Estrictamente sin gluten (trigo, cebada, centeno).' },
-        { id: 4, name: 'Intolerancia a la Lactosa', description: 'Evitar leche y derivados lácteos que contengan lactosa.' },
-        { id: 5, name: 'Colesterol Alto', description: 'Limitar grasas trans, grasas saturadas y carnes rojas procesadas.' }
-    ];
-
-    displayedColumns: string[] = ['name', 'description', 'actions'];
+export class AdminTags implements OnInit {
+    tags: Tag[] = [];
+    displayedColumns: string[] = ['id', 'name', 'description', 'actions'];
+    loading = false;
+    errorMessage = '';
+    successMessage = '';
 
     // Form state
     showForm = false;
@@ -47,18 +38,45 @@ export class AdminTags {
     formName = '';
     formDescription = '';
 
+    constructor(private adminService: AdminService, private cd: ChangeDetectorRef) { }
+
+    ngOnInit() {
+        this.loadTags();
+    }
+
+    loadTags() {
+        this.loading = true;
+        this.adminService.getAllTags().subscribe({
+            next: (tags) => {
+                console.log('Tags loaded from backend:', tags);
+                this.tags = tags;
+                this.loading = false;
+                this.cd.detectChanges(); // Force change detection to avoid NG0100
+            },
+            error: (err) => {
+                console.error('Error loading tags', err);
+                this.errorMessage = 'Error al cargar las etiquetas';
+                this.loading = false;
+            }
+        });
+    }
+
     openCreateForm() {
         this.editingTag = null;
         this.formName = '';
         this.formDescription = '';
         this.showForm = true;
+        this.successMessage = ''; // Clear message when opening form
+        this.errorMessage = '';
     }
 
     openEditForm(tag: Tag) {
         this.editingTag = tag;
         this.formName = tag.name;
-        this.formDescription = tag.description;
+        this.formDescription = tag.description || '';
         this.showForm = true;
+        this.successMessage = '';
+        this.errorMessage = '';
     }
 
     closeForm() {
@@ -67,26 +85,83 @@ export class AdminTags {
     }
 
     saveTag() {
-        if (this.editingTag) {
+        this.loading = true;
+
+        if (this.editingTag && this.editingTag.id) {
             // Edit
-            this.editingTag.name = this.formName;
-            this.editingTag.description = this.formDescription;
-        } else {
-            // Create
-            const newId = Math.max(...this.tags.map(t => t.id), 0) + 1;
-            this.tags.push({
-                id: newId,
+            const updatedTag: Tag = {
                 name: this.formName,
                 description: this.formDescription
+            };
+
+            this.adminService.updateTag(this.editingTag.id, updatedTag).subscribe({
+                next: (tag) => {
+                    // Update local list
+                    const index = this.tags.findIndex(t => t.id === tag.id);
+                    if (index !== -1) {
+                        this.tags[index] = tag;
+                        this.tags = [...this.tags]; // Refresh table
+                    }
+                    this.loading = false;
+                    this.closeForm();
+                    this.successMessage = 'Tag actualizado correctamente';
+                    this.cd.detectChanges(); // Force change detection
+                    setTimeout(() => {
+                        this.successMessage = '';
+                        this.cd.detectChanges();
+                    }, 3000);
+                },
+                error: (err) => {
+                    console.error('Error updating tag', err);
+                    this.errorMessage = 'Error al actualizar la etiqueta';
+                    this.loading = false;
+                }
             });
-            this.tags = [...this.tags]; // Refresh table
+        } else {
+            // Create
+            const newTag: Tag = {
+                name: this.formName,
+                description: this.formDescription
+            };
+
+            this.adminService.createTag(newTag).subscribe({
+                next: (createdTag) => {
+                    this.tags.push(createdTag);
+                    this.tags = [...this.tags]; // Refresh table
+                    this.loading = false;
+                    this.closeForm();
+                    this.successMessage = 'Tag creado correctamente';
+                    this.cd.detectChanges(); // Force change detection
+                    // Auto-clear after 3 seconds
+                    setTimeout(() => {
+                        this.successMessage = '';
+                        this.cd.detectChanges();
+                    }, 3000);
+                },
+                error: (err) => {
+                    console.error('Error creating tag', err);
+                    this.errorMessage = 'Error al crear la etiqueta';
+                    this.loading = false;
+                }
+            });
         }
-        this.closeForm();
     }
 
     deleteTag(id: number) {
         if (confirm('¿Estás seguro de eliminar esta etiqueta?')) {
-            this.tags = this.tags.filter(t => t.id !== id);
+            this.loading = true;
+            this.adminService.deleteTag(id).subscribe({
+                next: () => {
+                    this.tags = this.tags.filter(t => t.id !== id);
+                    this.loading = false;
+                    this.cd.detectChanges(); // Force change detection to avoid NG0100
+                },
+                error: (err) => {
+                    console.error('Error deleting tag', err);
+                    this.errorMessage = 'Error al eliminar la etiqueta';
+                    this.loading = false;
+                }
+            });
         }
     }
 }
