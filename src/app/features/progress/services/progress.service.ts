@@ -5,6 +5,7 @@ import { Observable, of, throwError } from 'rxjs';
 import { map, catchError, switchMap } from 'rxjs/operators';
 import { User, ProgressEntry } from '../../../shared/models/user';
 import { ApiService } from '../../../core/services/api.service';
+import { AuthService } from '../../../core/services/auth.service';
 
 export interface ProgressCreateRequest {
   current_weight: number;
@@ -39,37 +40,33 @@ export interface ComparisonResult {
 export class ProgressService {
   constructor(
     private http: HttpClient,
-    private apiService: ApiService
+    private apiService: ApiService,
+    private authService: AuthService
   ) { }
 
   getUserData(): Observable<User> {
-    return this.apiService.get<any>('/users/me/').pipe(
-      map(user => {
-        const progressEntries: ProgressEntry[] = [];
-        if (user.progress) {
-          progressEntries.push({
-            bmi: user.progress.bmi,
-            registrationDate: user.progress.last_updated
-          });
-        }
-        return {
-          id: user.id,
-          nombre: `${user.first_name}`.trim(),
-          apellido: `${user.last_name}`.trim(),
-          email: user.email,
-          edad: user.age,
-          peso: user.weight,
-          altura: user.height,
-          enfermedades: [],
-          idealActual: (user.ideal && user.ideal.ideal_weight) || 0,
-          progreso: progressEntries
-        };
-      }),
-      catchError(error => {
-        console.error('❌ Error cargando datos del usuario:', error);
-        return throwError(() => error);
-      })
-    );
+    // Get user from AuthService instead of API call
+    const currentUser = this.authService.getCurrentUser();
+
+    if (!currentUser) {
+      return throwError(() => new Error('No user logged in'));
+    }
+
+    // Map the user data from AuthService to our User model
+    const user: User = {
+      id: currentUser.id,
+      nombre: currentUser.name || '',
+      apellido: currentUser.lastName || '',
+      email: currentUser.email,
+      edad: 0, // These will be loaded from progress endpoint if needed
+      peso: 0,
+      altura: 0,
+      enfermedades: [],
+      idealActual: 0,
+      progreso: []
+    };
+
+    return of(user);
   }
 
   updateUserProfile(userData: Partial<User>): Observable<boolean> {

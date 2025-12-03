@@ -1,9 +1,9 @@
 // src/app/features/diets/services/diet-generator.service.ts
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { Observable, catchError, of } from 'rxjs';
+import { Observable, catchError, of, map } from 'rxjs';
 import { Recipe } from '../../../shared/models/recipe';
-import { DietService } from './diet.service';
+import { DietService, DietResponse } from './diet.service';
 
 @Injectable({ providedIn: 'root' })
 export class DietGeneratorService {
@@ -13,7 +13,23 @@ export class DietGeneratorService {
   ) { }
 
   generateDiet(): Observable<Recipe[]> {
-    return this.dietService.getAllRecipes().pipe(
+    // Call the backend endpoint that creates a diet and returns selected recipes
+    return this.dietService.createDiet([]).pipe(
+      map((dietResponse: DietResponse) => {
+        // Extract all recipes from all menus
+        const allRecipes: Recipe[] = [];
+
+        if (dietResponse.menus) {
+          dietResponse.menus.forEach(menu => {
+            if (menu.detailed_recipes) {
+              allRecipes.push(...menu.detailed_recipes);
+            }
+          });
+        }
+
+        console.log('✅ Dieta creada con', allRecipes.length, 'recetas');
+        return allRecipes;
+      }),
       catchError(error => {
         console.error('❌ Error generando dieta:', error);
         // Retornar array vacío en caso de error

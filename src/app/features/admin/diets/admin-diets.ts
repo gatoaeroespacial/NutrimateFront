@@ -65,7 +65,8 @@ export class AdminDiets implements OnInit {
         const term = this.searchTerm.toLowerCase();
         this.filteredRecipes = this.recipes.filter(recipe =>
             recipe.name.toLowerCase().includes(term) ||
-            recipe.short_description.toLowerCase().includes(term)
+            recipe.short_description?.toLowerCase().includes(term) ||
+            recipe.description?.toLowerCase().includes(term)
         );
     }
 

@@ -5,9 +5,8 @@ import { Router } from '@angular/router';
 import { catchError, throwError } from 'rxjs';
 
 export const authInterceptor: HttpInterceptorFn = (req, next) => {
-    const authService = inject(AuthService);
     const router = inject(Router);
-    const token = authService.getToken();
+    const token = localStorage.getItem('auth_token');
 
     // Clone the request and add authorization header if token exists
     let authReq = req;
@@ -24,7 +23,9 @@ export const authInterceptor: HttpInterceptorFn = (req, next) => {
             // Handle 401 Unauthorized errors
             if (error.status === 401) {
                 // Clear auth data and redirect to login
-                authService.logout().subscribe();
+                localStorage.removeItem('auth_token');
+                localStorage.removeItem('current_user');
+                router.navigate(['/login']);
             }
             return throwError(() => error);
         })

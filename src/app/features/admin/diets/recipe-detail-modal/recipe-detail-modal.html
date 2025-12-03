@@ -9,13 +9,7 @@
                 </div>
                 <div class="header-info">
                     <h2 class="recipe-title">{{ recipe.name }}</h2>
-                    <p class="recipe-desc">{{ recipe.short_description }}</p>
-
-                    <div class="tags">
-                        @if (recipe.tags?.type) {
-                        <span class="tag type">{{ recipe.tags?.type }}</span>
-                        }
-                    </div>
+                    <p class="recipe-desc">{{ recipe.short_description || recipe.description }}</p>
                 </div>
             </div>
 
@@ -32,7 +26,7 @@
                 <div class="column preparation">
                     <h3>Preparación</h3>
                     <div class="preparation-text">
-                        {{ recipe.preparation }}
+                        {{ recipe.preparation || recipe.preparation_steps }}
                     </div>
                 </div>
             </div>
@@ -41,19 +35,23 @@
                 <h3>Información Nutricional <span class="subtitle">(por porción)</span></h3>
                 <div class="nutrition-grid">
                     <div class="nutrient">
-                        <span class="value">{{ recipe.nutrition?.per_serving?.calories_kcal || 0 }}</span>
+                        <span class="value">{{ recipe.nutrition?.per_serving?.calories_kcal ||
+                            recipe.nutritional_info?.per_serving?.calories_kcal || 0 }}</span>
                         <span class="label">Kcal</span>
                     </div>
                     <div class="nutrient">
-                        <span class="value">{{ recipe.nutrition?.per_serving?.protein_g || 0 }}g</span>
+                        <span class="value">{{ recipe.nutrition?.per_serving?.protein_g ||
+                            recipe.nutritional_info?.per_serving?.protein_g || 0 }}g</span>
                         <span class="label">Proteína</span>
                     </div>
                     <div class="nutrient">
-                        <span class="value">{{ recipe.nutrition?.per_serving?.carbs_g || 0 }}g</span>
+                        <span class="value">{{ recipe.nutrition?.per_serving?.carbs_g ||
+                            recipe.nutritional_info?.per_serving?.carbs_g || 0 }}g</span>
                         <span class="label">Carbos</span>
                     </div>
                     <div class="nutrient">
-                        <span class="value">{{ recipe.nutrition?.per_serving?.fat_g || 0 }}g</span>
+                        <span class="value">{{ recipe.nutrition?.per_serving?.fat_g ||
+                            recipe.nutritional_info?.per_serving?.fat_g || 0 }}g</span>
                         <span class="label">Grasas</span>
                     </div>
                 </div>
