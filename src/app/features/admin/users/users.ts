@@ -4,7 +4,9 @@ import { MatTableModule } from '@angular/material/table';
 import { MatCardModule } from '@angular/material/card';
 import { MatIconModule } from '@angular/material/icon';
 import { MatButtonModule } from '@angular/material/button';
+import { MatDialog, MatDialogModule } from '@angular/material/dialog';
 import { AdminService, AdminUser } from '../services/admin.service';
+import { CreateAdminDialog } from './create-admin-dialog/create-admin-dialog';
 
 @Component({
     selector: 'app-admin-users',
@@ -14,7 +16,8 @@ import { AdminService, AdminUser } from '../services/admin.service';
         MatTableModule,
         MatCardModule,
         MatIconModule,
-        MatButtonModule
+        MatButtonModule,
+        MatDialogModule
     ],
     templateUrl: './users.html',
     styleUrl: './users.scss'
@@ -25,7 +28,8 @@ export class AdminUsers implements OnInit {
 
     constructor(
         private adminService: AdminService,
-        private cd: ChangeDetectorRef
+        private cd: ChangeDetectorRef,
+        private dialog: MatDialog
     ) { }
 
     ngOnInit() {
@@ -40,6 +44,18 @@ export class AdminUsers implements OnInit {
             },
             error: (error) => {
                 console.error('Error loading users:', error);
+            }
+        });
+    }
+
+    openCreateAdminDialog() {
+        const dialogRef = this.dialog.open(CreateAdminDialog, {
+            width: '600px'
+        });
+
+        dialogRef.afterClosed().subscribe(result => {
+            if (result) {
+                this.loadUsers();
             }
         });
     }

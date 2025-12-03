@@ -1,0 +1,27 @@
+.row {
+    display: flex;
+    gap: 16px;
+
+    .half-width {
+        flex: 1;
+    }
+
+    .third-width {
+        flex: 1;
+    }
+}
+
+.full-width {
+    width: 100%;
+}
+
+.error-message {
+    color: #f44336;
+    margin-bottom: 16px;
+    font-size: 14px;
+}
+
+mat-dialog-content {
+    min-width: 400px;
+    padding-top: 20px !important;
+}
