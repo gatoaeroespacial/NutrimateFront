@@ -1,0 +1,44 @@
+.users-container {
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+mat-card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.spacer {
+    flex: 1 1 auto;
+}
+
+.user-icon {
+    color: red;
+    vertical-align: middle;
+    margin-right: 5px;
+}
+
+.admin-icon {
+    color: green;
+    vertical-align: middle;
+    margin-right: 5px;
+}
+
+.no-data-message {
+    text-align: center;
+    padding: 20px;
+    color: #666;
+    font-style: italic;
+}
+
+th.mat-header-cell {
+    font-weight: bold;
+    color: #333;
+}
+
+.users-table {
+    width: 100%;
+}
