@@ -1,10 +1,13 @@
 <nav class="navbar">
   <div class="nav-container">
     @if (showOptions) {
-    <a routerLink="/diets" routerLinkActive="active" class="nav-link">Dietas</a>
-    <a routerLink="/progress" routerLinkActive="active" class="nav-link">Progreso</a>
+    <div class="nav-left">
+      <a routerLink="/diets" routerLinkActive="active" class="nav-link">Dietas</a>
+      <a routerLink="/progress" routerLinkActive="active" class="nav-link">Progreso</a>
+      <a routerLink="/history" routerLinkActive="active" class="nav-link">Historial</a>
+    </div>
     }
-    <div class="ghost-logo"></div>
+
     <div class="logo-container">
       <div class="outer-circle">
         <div class="inner-circle">
@@ -12,9 +15,12 @@
         </div>
       </div>
     </div>
+
     @if (showOptions) {
-    <a routerLink="/history" routerLinkActive="active" class="nav-link">Historial</a>
-    <a routerLink="/profile" routerLinkActive="active" class="nav-link">Perfil</a>
+    <div class="nav-right">
+      <a routerLink="/news" routerLinkActive="active" class="nav-link">Noticias</a>
+      <a routerLink="/profile" routerLinkActive="active" class="nav-link">Perfil</a>
+    </div>
     }
   </div>
 </nav>

@@ -30,6 +30,7 @@ export const routes: Routes = [
       { path: 'diets/recipe/:id', component: RecipeDetail },
       { path: 'progress', component: Progress },
       { path: 'history', component: History },
+      { path: 'news', loadComponent: () => import('./features/news/news').then(m => m.News) },
       { path: 'profile', component: Profile }
     ]
   },
