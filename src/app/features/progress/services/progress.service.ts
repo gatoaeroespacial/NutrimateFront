@@ -4,7 +4,6 @@ import { Observable, of, throwError } from 'rxjs';
 import { map, catchError, switchMap } from 'rxjs/operators';
 import { User, ProgressEntry } from '../../../shared/models/user';
 import { ApiService } from '../../../core/services/api.service';
-import { AuthService } from '../../../core/services/auth.service';
 
 export interface ProgressCreateRequest {
   current_weight: number;
@@ -39,18 +38,73 @@ export interface ComparisonResult {
 export class ProgressService {
   constructor(
     private http: HttpClient,
-    private apiService: ApiService,
-    private authService: AuthService
+    private apiService: ApiService
   ) { }
 
   getUserData(): Observable<User> {
-    // Get user from AuthService instead of API call
-    const currentUser = this.authService.getCurrentUser();
+    // Get user data from localStorage (stored during login)
+    const userJson = localStorage.getItem('current_user');
 
-    if (!currentUser) {
+    if (!userJson) {
       return throwError(() => new Error('No user logged in'));
     }
 
+    try {
+      const backendUser = JSON.parse(userJson);
+
+      const progressEntries: ProgressEntry[] = [];
+
+      // Add current progress if exists
+      if (backendUser.progress) {
+        progressEntries.push({
+          bmi: 0, // Will be calculated or fetched
+          registrationDate: new Date().toISOString()
+        });
+      }
+
+      const user: User = {
+        id: backendUser.id,
+        nombre: backendUser.first_name || '',
+        apellido: backendUser.last_name || '',
+        email: backendUser.email,
+        edad: backendUser.age || 0,
+        peso: backendUser.weight || 0,
+        altura: backendUser.height || 0,
+        enfermedades: [],
+        idealActual: backendUser.ideal?.ideal_weight || 0,
+        progreso: progressEntries
+      };
+
+      console.log('✅ Datos del usuario cargados:', user);
+      return of(user);
+    } catch (error) {
+      console.error('❌ Error parseando datos del usuario:', error);
+      return throwError(() => new Error('Error loading user data'));
+    }
+  }
+
+  updateUserProfile(userData: Partial<User>): Observable<boolean> {
+    // Update localStorage with new data
+    const userJson = localStorage.getItem('current_user');
+    if (userJson) {
+      try {
+        const currentUser = JSON.parse(userJson);
+        if (userData.nombre) currentUser.first_name = userData.nombre;
+        if (userData.apellido) currentUser.last_name = userData.apellido;
+        if (userData.email) currentUser.email = userData.email;
+        if (userData.edad) currentUser.age = userData.edad;
+        if (userData.altura) currentUser.height = userData.altura;
+        if (userData.peso) currentUser.weight = userData.peso;
+
+        localStorage.setItem('current_user', JSON.stringify(currentUser));
+        console.log('✅ Perfil actualizado en localStorage');
+        return of(true);
+      } catch (error) {
+        console.error('❌ Error actualizando perfil:', error);
+        return of(false);
+      }
+    }
+    return of(false);
     // Map the user data from AuthService to our User model
     // Check for both camelCase (frontend) and snake_case (backend) properties
     const user: User = {
@@ -121,12 +175,9 @@ export class ProgressService {
   }
 
   getProgressHistory(): Observable<ProgressEntry[]> {
-    return this.apiService.get<any[]>('/users/progress/history/').pipe(
-      map(history => history.map(entry => ({
-        bmi: entry.bmi,
-        registrationDate: entry.recorded_at
-      })))
-    );
+    // This endpoint doesn't exist yet, return empty array
+    console.warn('⚠️ Progress history endpoint not available');
+    return of([]);
   }
 
   processProgressCalculation(newWeight: number, newHeight: number): Observable<ComparisonResult> {
