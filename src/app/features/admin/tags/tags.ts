@@ -27,7 +27,7 @@ import { AdminService, Tag } from '../services/admin.service';
 })
 export class AdminTags implements OnInit {
     tags: Tag[] = [];
-    displayedColumns: string[] = ['name', 'description', 'actions'];
+    displayedColumns: string[] = ['id', 'name', 'description', 'actions'];
     loading = false;
     errorMessage = '';
     successMessage = '';

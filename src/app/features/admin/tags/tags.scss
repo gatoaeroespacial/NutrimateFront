@@ -82,13 +82,18 @@ table {
 }
 
 /* Column widths */
+.mat-column-id {
+    width: 10%;
+    color: #888;
+}
+
 .mat-column-name {
     width: 20%;
     font-weight: 500;
 }
 
 .mat-column-description {
-    width: 60%;
+    width: 50%;
 }
 
 .mat-column-actions {
