@@ -53,6 +53,7 @@ export class Profile implements OnInit {
 
   ngOnInit() {
     this.progressService.getUserData().subscribe(user => {
+      console.log('Profile received user data:', user);
       if (user) {
         this.profileForm.patchValue({
           name: user.nombre,
@@ -60,7 +61,7 @@ export class Profile implements OnInit {
           age: user.edad,
           height: user.altura,
           weight: user.peso,
-          lastName: user.apellido // Mocking for now
+          lastName: user.apellido
         });
       }
     });

@@ -1,4 +1,3 @@
-// src/app/features/progress/services/progress.service.ts
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable, of, throwError } from 'rxjs';
@@ -53,14 +52,15 @@ export class ProgressService {
     }
 
     // Map the user data from AuthService to our User model
+    // Check for both camelCase (frontend) and snake_case (backend) properties
     const user: User = {
       id: currentUser.id,
-      nombre: currentUser.name || '',
-      apellido: currentUser.lastName || '',
+      nombre: currentUser.name || currentUser.first_name || '',
+      apellido: currentUser.lastName || currentUser.last_name || '',
       email: currentUser.email,
-      edad: 0, // These will be loaded from progress endpoint if needed
-      peso: 0,
-      altura: 0,
+      edad: currentUser.age || 0,
+      peso: currentUser.weight || 0,
+      altura: currentUser.height || 0,
       enfermedades: [],
       idealActual: 0,
       progreso: []
@@ -70,21 +70,38 @@ export class ProgressService {
   }
 
   updateUserProfile(userData: Partial<User>): Observable<boolean> {
-    const apiData: any = {};
-    if (userData.nombre) {
-      const nameParts = userData.nombre.split(' ');
-      apiData.first_name = nameParts[0];
-      if (nameParts.length > 1) apiData.last_name = nameParts.slice(1).join(' ');
-    }
-    if (userData.email) apiData.email = userData.email;
-    if (userData.edad) apiData.age = userData.edad;
-    if (userData.altura) apiData.height = userData.altura;
-    if (userData.peso) apiData.weight = userData.peso;
+    // Map User model fields back to AuthService format
+    const localUpdate: any = {};
 
-    return this.apiService.patch('/users/me/', apiData).pipe(
-      map(() => true),
-      catchError(() => of(false))
-    );
+    // Save as both formats to ensure compatibility
+    if (userData.nombre) {
+      localUpdate.name = userData.nombre;
+      localUpdate.first_name = userData.nombre;
+    }
+    if (userData.apellido) {
+      localUpdate.lastName = userData.apellido;
+      localUpdate.last_name = userData.apellido;
+    }
+
+    if (userData.email) localUpdate.email = userData.email;
+    if (userData.edad) localUpdate.age = userData.edad;
+    if (userData.peso) localUpdate.weight = userData.peso;
+    if (userData.altura) localUpdate.height = userData.altura;
+
+    // Update local storage
+    this.authService.updateCurrentUser(localUpdate);
+
+    // If weight/height are present, try to update progress in backend (best effort)
+    if (userData.peso || userData.altura) {
+      const weight = userData.peso || 0;
+      const height = userData.altura || 0;
+      // We don't wait for this to complete to return success for the profile update
+      this.updateProgress(weight, height).subscribe({
+        error: (err) => console.warn('Failed to update progress in backend:', err)
+      });
+    }
+
+    return of(true);
   }
 
   createProgress(weight: number, height: number): Observable<ProgressCreateResponse> {

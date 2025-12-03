@@ -4,7 +4,7 @@ export interface Recipe {
   description: string;
   ingredients: string[];
   preparation_steps: string;
-  nutritional_info: {
+  nutritional_info?: {
     per_serving?: NutritionInfo;
     per_100g?: NutritionInfo;
   };
