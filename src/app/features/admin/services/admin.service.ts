@@ -9,6 +9,23 @@ export interface Tag {
     description?: string;
 }
 
+export interface AdminUser {
+    id: number;
+    email: string;
+    first_name: string;
+    last_name: string;
+    age: number;
+    height: number;
+    weight: number;
+    date_joined: string;
+    progress: any;
+    tags: number[];
+    ideal: any;
+    email_opt_out: boolean;
+    is_staff: boolean;
+    is_superuser: boolean;
+}
+
 export interface RecipeCreateRequest {
     name: string;
     description: string;
@@ -107,5 +124,14 @@ export class AdminService {
             endpoint += `?template=${template}`;
         }
         return this.apiService.post<{ detail: string; count: number }>(endpoint, {});
+    }
+
+    // ============ User Management ============
+
+    /**
+     * Get all users
+     */
+    getUsers(): Observable<AdminUser[]> {
+        return this.apiService.get<AdminUser[]>('/users/get-users/');
     }
 }
