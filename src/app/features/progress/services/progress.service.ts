@@ -62,10 +62,11 @@ export class ProgressService {
         });
       }
 
+      // Map the user data - support both camelCase (frontend) and snake_case (backend) properties
       const user: User = {
         id: backendUser.id,
-        nombre: backendUser.first_name || '',
-        apellido: backendUser.last_name || '',
+        nombre: backendUser.name || backendUser.first_name || '',
+        apellido: backendUser.lastName || backendUser.last_name || '',
         email: backendUser.email,
         edad: backendUser.age || 0,
         peso: backendUser.weight || 0,
@@ -89,8 +90,16 @@ export class ProgressService {
     if (userJson) {
       try {
         const currentUser = JSON.parse(userJson);
-        if (userData.nombre) currentUser.first_name = userData.nombre;
-        if (userData.apellido) currentUser.last_name = userData.apellido;
+
+        // Save as both formats to ensure compatibility
+        if (userData.nombre) {
+          currentUser.name = userData.nombre;
+          currentUser.first_name = userData.nombre;
+        }
+        if (userData.apellido) {
+          currentUser.lastName = userData.apellido;
+          currentUser.last_name = userData.apellido;
+        }
         if (userData.email) currentUser.email = userData.email;
         if (userData.edad) currentUser.age = userData.edad;
         if (userData.altura) currentUser.height = userData.altura;
@@ -98,6 +107,18 @@ export class ProgressService {
 
         localStorage.setItem('current_user', JSON.stringify(currentUser));
         console.log('✅ Perfil actualizado en localStorage');
+
+        // If weight/height are present, try to update progress in backend (best effort)
+        if (userData.peso || userData.altura) {
+          const weight = userData.peso || currentUser.weight || 0;
+          const height = userData.altura || currentUser.height || 0;
+          // We don't wait for this to complete to return success for the profile update
+          this.updateProgress(weight, height).subscribe({
+            next: () => console.log('✅ Progreso actualizado en backend'),
+            error: (err) => console.warn('⚠️ No se pudo actualizar progreso en backend:', err)
+          });
+        }
+
         return of(true);
       } catch (error) {
         console.error('❌ Error actualizando perfil:', error);
@@ -105,57 +126,6 @@ export class ProgressService {
       }
     }
     return of(false);
-    // Map the user data from AuthService to our User model
-    // Check for both camelCase (frontend) and snake_case (backend) properties
-    const user: User = {
-      id: currentUser.id,
-      nombre: currentUser.name || currentUser.first_name || '',
-      apellido: currentUser.lastName || currentUser.last_name || '',
-      email: currentUser.email,
-      edad: currentUser.age || 0,
-      peso: currentUser.weight || 0,
-      altura: currentUser.height || 0,
-      enfermedades: [],
-      idealActual: 0,
-      progreso: []
-    };
-
-    return of(user);
-  }
-
-  updateUserProfile(userData: Partial<User>): Observable<boolean> {
-    // Map User model fields back to AuthService format
-    const localUpdate: any = {};
-
-    // Save as both formats to ensure compatibility
-    if (userData.nombre) {
-      localUpdate.name = userData.nombre;
-      localUpdate.first_name = userData.nombre;
-    }
-    if (userData.apellido) {
-      localUpdate.lastName = userData.apellido;
-      localUpdate.last_name = userData.apellido;
-    }
-
-    if (userData.email) localUpdate.email = userData.email;
-    if (userData.edad) localUpdate.age = userData.edad;
-    if (userData.peso) localUpdate.weight = userData.peso;
-    if (userData.altura) localUpdate.height = userData.altura;
-
-    // Update local storage
-    this.authService.updateCurrentUser(localUpdate);
-
-    // If weight/height are present, try to update progress in backend (best effort)
-    if (userData.peso || userData.altura) {
-      const weight = userData.peso || 0;
-      const height = userData.altura || 0;
-      // We don't wait for this to complete to return success for the profile update
-      this.updateProgress(weight, height).subscribe({
-        error: (err) => console.warn('Failed to update progress in backend:', err)
-      });
-    }
-
-    return of(true);
   }
 
   createProgress(weight: number, height: number): Observable<ProgressCreateResponse> {
