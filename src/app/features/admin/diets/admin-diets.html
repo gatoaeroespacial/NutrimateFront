@@ -21,7 +21,9 @@
         @for (recipe of filteredRecipes; track recipe.id) {
         <div class="recipe-card" (click)="openViewModal(recipe)">
             <div class="recipe-image">
-                <img [src]="recipe.image || 'assets/placeholder-food.jpg'" [alt]="recipe.name">
+                <img [src]="recipe.image_url || recipe.image || 'https://images.unsplash.com/photo-1546069901-ba9599a7e63c?w=400&h=300&fit=crop'"
+                    [alt]="recipe.name"
+                    (error)="$event.target.src='https://via.placeholder.com/400x300/cccccc/666666?text=No+Image'">
                 <div class="recipe-actions">
                     <button class="action-btn edit" (click)="openEditModal(recipe, $event)" title="Editar">✎</button>
                     <button class="action-btn delete" (click)="deleteRecipe(recipe.id, $event)"
