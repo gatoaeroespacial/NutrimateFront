@@ -7,6 +7,13 @@
         </button>
     </div>
 
+    @if (successMessage) {
+    <div class="success-alert">
+        <mat-icon>check_circle</mat-icon>
+        {{ successMessage }}
+    </div>
+    }
+
     @if (showForm) {
     <mat-card class="form-card">
         <mat-card-header>
