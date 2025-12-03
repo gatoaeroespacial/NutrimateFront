@@ -1,0 +1,26 @@
+<div class="news-container">
+    <header class="news-header">
+        <h1>Últimas Noticias</h1>
+        <p>Mantente al día con los mejores consejos de salud y nutrición</p>
+    </header>
+
+    <div class="news-grid">
+        @for (item of newsItems; track item.title) {
+        <mat-card class="news-card">
+            <img mat-card-image [src]="item.image" [alt]="item.title">
+            <mat-card-content>
+                <span class="news-date">{{ item.date | date:'longDate' }}</span>
+                <h2 class="news-title">{{ item.title }}</h2>
+                <p class="news-description">{{ item.description }}</p>
+                <p class="news-body">{{ item.body }}</p>
+            </mat-card-content>
+            <mat-card-actions>
+                <button mat-button color="primary">LEER MÁS</button>
+                <button mat-icon-button>
+                    <span class="material-icons">share</span>
+                </button>
+            </mat-card-actions>
+        </mat-card>
+        }
+    </div>
+</div>

@@ -4,6 +4,7 @@
   display: block;
   position: relative;
 }
+
 .navbar {
   background-color: #84994F;
   padding: 0 2rem;
@@ -36,12 +37,12 @@
 
 .nav-left {
   justify-content: flex-end;
-  padding-right: 3rem;
+  padding-right: 7rem;
 }
 
 .nav-right {
   justify-content: flex-start;
-  padding-left: 3rem;
+  padding-left: 7rem;
 }
 
 .nav-link {
@@ -55,12 +56,12 @@
   white-space: nowrap;
   position: relative;
   z-index: 5;
-  
+
   &:hover {
     background-color: rgba(255, 255, 255, 0.1);
     transform: translateY(-2px);
   }
-  
+
   &.active {
     background-color: rgba(255, 255, 255, 0.2);
     font-weight: 600;
