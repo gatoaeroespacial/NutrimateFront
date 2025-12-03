@@ -88,6 +88,13 @@ export class AdminService {
         return this.apiService.delete<void>(`/diets/tags/${tagId}/`);
     }
 
+    /**
+     * Update a tag
+     */
+    updateTag(id: number, tag: Tag): Observable<Tag> {
+        return this.apiService.put<Tag>(`/diets/tags/${id}/`, tag);
+    }
+
     // ============ Notification Management ============
 
     /**

@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ChangeDetectorRef } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { MatTableModule } from '@angular/material/table';
 import { MatButtonModule } from '@angular/material/button';
@@ -38,7 +38,7 @@ export class AdminTags implements OnInit {
     formName = '';
     formDescription = '';
 
-    constructor(private adminService: AdminService) { }
+    constructor(private adminService: AdminService, private cd: ChangeDetectorRef) { }
 
     ngOnInit() {
         this.loadTags();
@@ -48,8 +48,10 @@ export class AdminTags implements OnInit {
         this.loading = true;
         this.adminService.getAllTags().subscribe({
             next: (tags) => {
+                console.log('Tags loaded from backend:', tags);
                 this.tags = tags;
                 this.loading = false;
+                this.cd.detectChanges(); // Force change detection to avoid NG0100
             },
             error: (err) => {
                 console.error('Error loading tags', err);
@@ -73,6 +75,8 @@ export class AdminTags implements OnInit {
         this.formName = tag.name;
         this.formDescription = tag.description || '';
         this.showForm = true;
+        this.successMessage = '';
+        this.errorMessage = '';
     }
 
     closeForm() {
@@ -84,38 +88,31 @@ export class AdminTags implements OnInit {
         this.loading = true;
 
         if (this.editingTag && this.editingTag.id) {
-            // Edit - Backend might not support edit yet based on previous conversation, 
-            // but I'll implement it assuming it might or just handle create for now as requested.
-            // The user request specifically asked for "create new tags" and "list".
-            // The prompt said "allow editing and deletion", so I should try to implement it.
-            // However, the AdminService doesn't have an updateTag method in the file I viewed.
-            // I will check AdminService again or just implement create for now and log a warning for edit.
+            // Edit
+            const updatedTag: Tag = {
+                name: this.formName,
+                description: this.formDescription
+            };
 
-            // Wait, I checked AdminService in step 233 and it has:
-            // getAllTags, createTag, createTags, deleteTag.
-            // It DOES NOT have updateTag.
-            // So for now I can't implement edit on the backend.
-            // I will just update the local list for edit or show an error.
-            // Or I can implement a mock edit locally.
-
-            // Actually, the user said "allow for editing and deletion".
-            // Since the service doesn't support it, I will implement create and delete fully,
-            // and for edit I will just update the local state to show it works in UI, 
-            // or maybe I should add updateTag to AdminService?
-            // The user said "No edites la interfaz, solo proporciona lo necesario para poner el json como viene".
-            // I will stick to what is available.
-
-            // Let's assume for now we only support create and delete fully.
-            // I'll leave the edit logic as local update for now or maybe I shouldn't support it if backend doesn't.
-            // But the UI has the button.
-
-            // I'll implement createTag.
-            // For edit, I'll just close the form for now or maybe I should add the method to service?
-            // I'll stick to the plan: "Update saveTag to call AdminService.createTag()".
-
-            console.warn('Update tag not supported by backend service yet.');
-            this.loading = false;
-            this.closeForm();
+            this.adminService.updateTag(this.editingTag.id, updatedTag).subscribe({
+                next: (tag) => {
+                    // Update local list
+                    const index = this.tags.findIndex(t => t.id === tag.id);
+                    if (index !== -1) {
+                        this.tags[index] = tag;
+                        this.tags = [...this.tags]; // Refresh table
+                    }
+                    this.loading = false;
+                    this.closeForm();
+                    this.successMessage = 'Tag actualizado correctamente';
+                    setTimeout(() => this.successMessage = '', 3000);
+                },
+                error: (err) => {
+                    console.error('Error updating tag', err);
+                    this.errorMessage = 'Error al actualizar la etiqueta';
+                    this.loading = false;
+                }
+            });
         } else {
             // Create
             const newTag: Tag = {
